@@ -1,0 +1,147 @@
+:root {
+    --header-bg: #ffffff;
+    --nav-color: #003366;
+    --border: #e0e0e0;
+
+    --h-pad: 28px;
+    --gap: 40px;
+    --header-h: 84px;
+
+    --logo-size: 30px;
+    --nav-size: 20px;
+
+    --search-height: 36px;
+    --search-radius: 18px;
+    --search-width: 220px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #111;
+    background: var(--header-bg);
+}
+
+.site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--header-h);
+    background: var(--header-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--h-pad);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: var(--logo-size);
+    line-height: 1;
+    color: #000;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.main-nav {
+    display: flex;
+    gap: var(--gap);
+}
+
+.main-nav a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: var(--nav-size);
+    color: var(--nav-color);
+    text-decoration: none;
+    line-height: 1;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: var(--search-height);
+}
+
+.search input {
+    width: var(--search-width);
+    height: 100%;
+    border: 1px solid var(--nav-color);
+    border-radius: var(--search-radius);
+    padding: 0 12px 0 36px;
+    font-size: 16px;
+    outline: none;
+    color: var(--nav-color);
+    background: #fff;
+}
+
+.search input::placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    color: var(--nav-color);
+}
+
+.hero {
+    position: relative;
+    padding-top: var(--header-h);
+    width: 100%;
+    height: 500px;
+    background:
+            linear-gradient(to bottom, rgba(0,0,0,0) 85%, rgba(0,0,0,0.6) 100%),
+            url("./bryggen2.jpg") no-repeat center 15%;
+    background-size: cover;
+    filter: grayscale(45%);
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.page-content {
+    min-height: 150vh;
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 60px auto 0 15%;
+    color: #111;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+}
