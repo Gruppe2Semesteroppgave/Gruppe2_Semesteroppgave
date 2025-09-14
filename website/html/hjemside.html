@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regnbyen Bergen A/S – Hjem</title>
+  <link rel="stylesheet" href="../css/regnbyen.css">
+</head>
+<body>
+  <header id="top">
+    <h2>Regnbyen Bergen A/S</h2>
+    <nav>
+      <ul>
+        <li><a href="hjemside.html" aria-current="page">Hjem</a></li>
+        <li><a href="prosjekt.html">Om prosjektet</a></li>
+        <li><a href="klær.html">Klær</a></li>
+        <li><a href="hus.html">Hus</a></li>
+        <li><a href="bil.html">Bil</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <h1>Velkommen til Regnbyen Bergen A/S</h1>
+    <p>Vi samler praktiske råd og lokale ressurser for å trives i Bergensregnet – fra klær
+       og boligvedlikehold til trygg transport og daglige tips.</p>
+
+    <figure>
+      <img src="../img/Bryggen.jpg" alt="Bryggen i Bergen i regnvær" width="720" />
+      <figcaption>Bergen i regn – bakteppet for prosjektet vårt.</figcaption>
+    </figure>
+
+    <p><a href="prosjekt.html">Les mer om prosjektet</a></p>
+
+    <!-- LØSNINGER / KATEGORIER -->
+    <section aria-labelledby="losninger">
+      <h2 id="losninger">Løsninger</h2>
+      <ul>
+        <li><strong>Klær:</strong> lag-på-lag, vannsøyle (mm) og sklisikkert fottøy – <a href="klær.html">gå til siden</a></li>
+        <li><strong>Hus:</strong> drenering, maling og ventilasjon i vått klima – <a href="hus.html">gå til siden</a></li>
+        <li><strong>Bil:</strong> våtgrep, sikt og enkelt vedlikehold – <a href="bil.html">gå til siden</a></li>
+      </ul>
+    </section>
+
+    <!-- OM RB (FIRMA-KUTUSU) -->
+    <aside aria-labelledby="om-rb">
+      <h2 id="om-rb">Om Regnbyen Bergen A/S</h2>
+      <p>RB er et tenkt selskap laget for dette studentprosjektet (DAT111/ING100).
+         Målet er å gjøre hverdagen enklere i regnvær gjennom et brukervennlig nettsted.</p>
+    </aside>
+
+    <!-- MINI "CHAT"/SKJEMA (DEMO – FUNGERER IKKE) -->
+    <section aria-labelledby="hjelp">
+      <h2 id="hjelp">Hva trenger du hjelp med?</h2>
+      <p>Velg det som passer best, eller skriv til oss (demo – ikke funksjonell).</p>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Velg et alternativ</legend>
+          <label><input type="radio" name="valg" value="1" /> 1. Jeg har et spørsmål om prosjektet</label><br />
+          <label><input type="radio" name="valg" value="2" /> 2. Jeg har et spørsmål om nettsiden</label><br />
+          <label><input type="radio" name="valg" value="3" /> 3. Annet</label>
+        </fieldset>
+        <label for="melding">Skriv inn meldingen din:</label><br />
+        <input id="melding" name="melding" type="text" placeholder="Hei! Jeg lurer på ..." />
+        <button type="submit">Send (demo)</button>
+      </form>
+    </section>
+
+    <!-- SAMARBEID / PARTNERE -->
+    <section aria-labelledby="samarbeid">
+      <h2 id="samarbeid">Kontakt og samarbeid</h2>
+      <p>Vi ønsker innspill fra innbyggere, studenter og lokale aktører. Se <a href="kontakt.html">Kontakt</a>-siden.</p>
+      <ul>
+        <li>Høgskulen på Vestlandet (HVL)</li>
+        <li>Bergen kommune</li>
+        <li>Lokale initiativer og frivillige</li>
+      </ul>
+    </section>
+
+    <!-- SIST OPPDATERT -->
+    <section aria-labelledby="oppdatert">
+      <h2 id="oppdatert">Sist oppdatert</h2>
+      <ul>
+        <li>16.09 – Første HTML-versjon klar (Innlevering 1)</li>
+      </ul>
+      <p><a href="#top">↑ Til toppen</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
+  </footer>
+</body>
+</html>
