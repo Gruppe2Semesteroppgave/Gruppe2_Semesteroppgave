@@ -15,14 +15,12 @@ header#top {
     z-index: 1000;
 }
 
-/* site title */
 header#top h2 {
     margin: 0;
     font-weight: 800;
     color: #000;
 }
 
-/* nav */
 header#top nav ul {
     margin: 0;
     padding: 0;
@@ -40,5 +38,4 @@ header#top nav a[aria-current="page"] {
     text-decoration: underline;
 }
 
-/* so content doesn't slide under the fixed header */
 main { padding-top: 84px; }
