@@ -8,8 +8,8 @@ header#top {
     position: fixed;
     top: 0; left: 0; right: 0;
     height: 84px;
-    background: #fff;
-    border-bottom: 1px solid #e0e0e0;
+    background: #333333;
+    border-bottom: 1px solid #333333;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +21,7 @@ header#top h2 { margin: 0; }
 header#top h2 a {
     text-decoration: none;
     font-weight: 400;
-    color: #000;
+    color: #ffffff;
     font-family: 'UnifrakturMaguntia', cursive;
 }
 
@@ -33,7 +33,7 @@ header#top nav ul {
     gap: 40px;
 }
 header#top nav a {
-    color: #003366;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
@@ -43,7 +43,10 @@ header#top nav a[aria-current="page"] {
     text-decoration: underline;
 }
 
-main { padding-top: 84px; }
+main {
+    padding-top: 84px;
+    background: #333333;
+}
 
 .bryggen-hero {
     width: 100%;
@@ -56,7 +59,7 @@ main { padding-top: 84px; }
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 10%;
+    object-position: center 24%;
     filter: grayscale(45%);
 }
 
@@ -70,7 +73,6 @@ main { padding-top: 84px; }
     margin: 0 auto;
 }
 
-/* Placement (start / span) */
 .div1 { grid-column: 1 / span 3; grid-row: 1 / span 1; }
 .div2 { grid-column: 4 / span 2; grid-row: 1 / span 3; }
 .div3 { grid-column: 1 / span 3; grid-row: 2 / span 2; }
@@ -78,8 +80,8 @@ main { padding-top: 84px; }
 .div5 { grid-column: 4 / span 2; grid-row: 4 / span 2; }
 
 .parent > div {
-    background: #fff;
-    border: 1px solid #eaeaea;
+    background: #ffffff;
+    border: 1px solid #333333;
     border-radius: 8px;
     padding: 16px;
 }
@@ -92,7 +94,7 @@ main { padding-top: 84px; }
 footer {
     border-top: 1px solid #eaeaea;
     padding: 16px 28px 40px;
-    color: #333;
+    color: #333333;
     max-width: 1200px;
     margin: 16px auto 0;
 }
