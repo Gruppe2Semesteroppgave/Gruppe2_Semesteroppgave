@@ -4,24 +4,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Regnbyen Bergen A/S – Hus</title>
-  <link rel="stylesheet" href="../css/regnbyen.css">
+   <link rel="stylesheet" href="../css/RegnbyenElisa.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <header id="top">
-    <h2>Regnbyen Bergen A/S</h2>
-    <nav>
-      <ul>
-        <li><a href="hjemside.html">Hjem</a></li>
+  
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+   <!-- HEADER / NAVBAR -->
+  <header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+
+    <nav class="navbar" aria-label="Hovedmeny">
+      <ul class="menu">
+        <li><a href="hjemside.html" >Hjem</a></li>
         <li><a href="prosjekt.html">Om prosjektet</a></li>
-        <li><a href="klær.html">Klær</a></li>
-        <li><a href="hus.html" aria-current="page">Hus</a></li>
-        <li><a href="bil.html">Bil</a></li>
+
+        <!-- Guider -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">Guider</summary>
+            <ul class="submenu" role="listbox" aria-label="Guider">
+              <li><a href="klær.html">Klær</a></li>
+              <li><a href="sko.html">Sko</a></li>
+              <li><a href="hus.html" aria-current="page">Hus</a></li>
+              <li><a href="bil.html">Bil</a></li>
+            </ul>
+          </details>
+        </li>
+
+        <!-- Vær -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">Vær</summary>
+            <ul class="submenu" role="listbox" aria-label="Vær">
+              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+              <li><a href="transport-sikkerhet.html">Transport & sikkerhet</a></li>
+            </ul>
+          </details>
+        </li>
+
+        <!-- For bedrifter -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">For bedrifter</summary>
+            <ul class="submenu" role="listbox" aria-label="For bedrifter">
+              <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+              <li><a href="annonsering.html">Annonsering</a></li>
+            </ul>
+          </details>
+        </li>
+
+        <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
     </nav>
-  </header>
 
-  <main>
+    <form class="nav-search" role="search" action="#" aria-label="Søk">
+      <label for="q" class="sr-only">Søk</label>
+      <input id="q" name="q" type="search" placeholder="Søk..." />
+    </form>
+  </div>
+</header>
+  <main id="main">
     <h1>Vedlikehold av hus i regnvær</h1>
     <p>
       I et vått og kystnært klima som Bergen er det lurt å prioritere drenering,
@@ -31,7 +78,8 @@
 
     <section aria-labelledby="anbefalinger">
       <h2 id="anbefalinger">Anbefalinger (tabell)</h2>
-      <table>
+       <div class="table-wrap">
+      <table class="zebra">
         <caption>Hus &amp; regnvær – hva bør du prioritere?</caption>
         <thead>
           <tr>
@@ -73,6 +121,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </section>
 
     <section aria-labelledby="sjekkliste">

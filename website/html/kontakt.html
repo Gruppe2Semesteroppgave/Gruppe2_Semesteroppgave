@@ -4,25 +4,73 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Regnbyen Bergen A/S – Kontakt</title>
-  <link rel="stylesheet" href="../css/regnbyen.css">
+  <link rel="stylesheet" href="../css/RegnbyenElisa.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <header id="top">
-    <h2>Regnbyen Bergen A/S</h2>
-    <nav>
-      <ul>
-        <li><a href="hjemside.html">Hjem</a></li>
+  <div id = "page-top" arial-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+   <!-- HEADER / NAVBAR -->
+  <header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+
+    <nav class="navbar" aria-label="Hovedmeny">
+      <ul class="menu">
+        <li><a href="hjemside.html" >Hjem</a></li>
         <li><a href="prosjekt.html">Om prosjektet</a></li>
-        <li><a href="klær.html">Klær</a></li>
-        <li><a href="hus.html">Hus</a></li>
-         <li><a href="bil.html" aria-current="page">Bil</a></li>
+
+        <!-- Guider -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">Guider</summary>
+            <ul class="submenu" role="listbox" aria-label="Guider">
+              <li><a href="klær.html">Klær</a></li>
+              <li><a href="sko.html">Sko</a></li>
+              <li><a href="hus.html">Hus</a></li>
+              <li><a href="bil.html">Bil</a></li>
+            </ul>
+          </details>
+        </li>
+
+        <!-- Vær -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">Vær</summary>
+            <ul class="submenu" role="listbox" aria-label="Vær">
+              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+              <li><a href="transport-sikkerhet.html">Transport & sikkerhet</a></li>
+            </ul>
+          </details>
+        </li>
+
+        <!-- For bedrifter -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">For bedrifter</summary>
+            <ul class="submenu" role="listbox" aria-label="For bedrifter">
+              <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+              <li><a href="annonsering.html">Annonsering</a></li>
+            </ul>
+          </details>
+        </li>
+
+        <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
         <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
       </ul>
     </nav>
-  </header>
 
+    <form class="nav-search" role="search" action="#" aria-label="Søk">
+      <label for="q" class="sr-only">Søk</label>
+      <input id="q" name="q" type="search" placeholder="Søk..." />
+    </form>
+  </div>
+</header>
   
-  <main>
+  <main id="main">
     <h1>Kontakt og samarbeid</h1>
     <p>Her finner du prosjektgruppen vår. Klikk på et navn for å hoppe til beskrivelsen.</p>
 
@@ -39,79 +87,78 @@
       </ul>
     </nav>
 
-     <section id="Yelyzaveta" aria-labelledby="Yel-title">
-      <h2 id="Yel-title">Yelyzaveta </h2>
+     <!-- PROSJEKTGRUPPEN – 3x2 GRID -->
+<section id="team" aria-labelledby="team-title">
+  <h2 id="team-title">Prosjektgruppen</h2>
+
+  <div class="team-grid">
+    <section id="Yelyzaveta" class="member member--blue"   aria-labelledby="Yel-title">
       <figure>
-        <img src="../img/yelyza.jpg" alt="Yelyzaveta" />
+        <img src="../img/yelyza.jpg" alt="Yelyzaveta">
         <figcaption>Scrum Master</figcaption>
       </figure>
-      <p>Oppgaver:</p>
-      <p>E-post: <em></em></p>
-      <p><a href="#top">↑ Til toppen</a></p>
-      <hr />
+      <h3 id="Yel-title">Yelyzaveta</h3>
+      <p class="role">Scrum Master</p>
+      <p class="email"><em>yelyzavetalahniuk@gmail.com</em></p>
+      <p><a href="#page-top">↑ Til toppen</a></p>
     </section>
-    
 
-    <section id="Elisa" aria-labelledby="Elis-title">
-      <h2 id="Elis-title">Elisa Rumeysa Solberg</h2>
+    <section id="Elisa" aria-labelledby="Elis-title" class="member member--purple">
       <figure>
-        <img src="../img/elisa.jpg" alt="Elisa Rumeysa Solberg" />
-        <figcaption>Prosjekt Medlem</figcaption>
+        <img src="../img/elisa.jpg" alt="Elisa Rumeysa Solberg">
+        <figcaption>Prosjekt medlem</figcaption>
       </figure>
-      <p>Oppgaver:html .</p>
-      <p>E-post: <em>elsol0297@hvl.no</em></p>
-      <p><a href="#top">↑ Til toppen</a></p>
-      <hr />
+      <h3 id="Elis-title">Elisa Rumeysa Solberg</h3>
+      <p class="role">Prosjekt medlem</p>
+      <p class="email"><em>elsol0297@hvl.no</em></p>
+      <p><a href="#page-top">↑ Til toppen</a></p>
     </section>
 
-    <section id="Alissa" aria-labelledby="alis-title">
-      <h2 id="alis-title">Alissa Ruya Aksel</h2>
+    <section id="Alissa" aria-labelledby="alis-title" class="member member--amber">
       <figure>
-        <img src="../img/alissa.jpg" alt="Alissa" />
-        <figcaption>Prosjekt Medlem</figcaption>
+        <img src="../img/alissa.jpg" alt="Alissa">
+        <figcaption>Prosjekt medlem</figcaption>
       </figure>
-      <p>Oppgaver:</p>
-      <p>E-post: <em></em></p>
-      <p><a href="#top">↑ Til toppen</a></p>
-      <hr />
+      <h3 id="alis-title">Alissa Ruya Aksel</h3>
+      <p class="role">Prosjekt medlem</p>
+      <p class="email"><em>alaks9670@hvl.no</em></p>
+      <p><a href="#page-top">↑ Til toppen</a></p>
     </section>
 
-    <section id="Lasse" aria-labelledby="las-title">
-      <h2 id="las-title">Lasse </h2>
+    <section id="Lasse" aria-labelledby="las-title" class="member member--orange">
       <figure>
-        <img src="../img/lasse.jpg" alt="Lasse" />
-        <figcaption>Prosjekt Medlem</figcaption>
+        <img src="../img/lasse.jpg" alt="Lasse">
+        <figcaption>Prosjekt medlem</figcaption>
       </figure>
-      <p>Oppgaver:</p>
-      <p>E-post: <em>laaajo@gmail.com</em></p>
-      <p><a href="#top">↑ Til toppen</a></p>
-      <hr />
+      <h3 id="las-title">Lasse Aas Johannessen</h3>
+      <p class="role">Prosjekt medlem</p>
+      <p class="email"><em>laaajo@gmail.com</em></p>
+      <p><a href="#page-top">↑ Til toppen</a></p>
     </section>
 
-    <section id="Emma" aria-labelledby="emm-title">
-      <h2 id="emm-title">Emma</h2>
+    <section id="Emma" aria-labelledby="emm-title" class="member member--rose">
       <figure>
-        <img src="../img/emma.jpg" alt="Emma" />
-        <figcaption>Prosjekt Medlem</figcaption>
+        <img src="../img/emma.jpg" alt="Emma">
+        <figcaption>Prosjekt medlem</figcaption>
       </figure>
-      <p>Oppgaver: </p>
-      <p>E-post: <em></em></p>
-      <p><a href="#top">↑ Til toppen</a></p>
-      <hr />
+      <h3 id="emm-title">Emma Wergedahl</h3>
+      <p class="role">Prosjekt medlem</p>
+      <p class="email"><em>emmawergedahl1@gmail.com</em></p>
+      <p><a href="#page-top">↑ Til toppen</a></p>
     </section>
 
-   
-
-    <section id="Samsam " aria-labelledby="sam-title">
-      <h2 id="sam-title">Samsam</h2>
+    <section id="Samsam" aria-labelledby="sam-title" class="member member--teal">
       <figure>
-        <img src="../img/samsam.jpg" alt="Samsam " />
-        <figcaption>Prosjekt Medlem</figcaption>
+        <img src="../img/samsam.jpg" alt="Samsam">
+        <figcaption>Prosjekt medlem</figcaption>
       </figure>
-      <p>Oppgaver: </p>
-      <p>E-post: <em></em></p>
-      <p><a href="#top">↑ Til toppen</a></p>
-    </section>
+      <h3 id="sam-title">Samsam Abdi-Karim</h3>
+      <p class="role">Prosjekt medlem</p>
+      <p class="email"><em>samsamabdikarim@gmail.com</em></p>
+      <p><a href="#page-top">↑ Til toppen</a></p>
+  </div>
+</section>
+
 
     <section aria-labelledby="oversikt">
       <h2 id="oversikt">Rolleoversikt (tabell)</h2>
