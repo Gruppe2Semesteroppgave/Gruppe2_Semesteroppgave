@@ -226,6 +226,56 @@ h2 {
     background: #fff;
 }
 
+/* kontakt-side */
+
+/* Project grid */
+.project {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 24px auto;
+}
+
+/* Project cards */
+.project-child {
+    border: 1px solid #cfd8e3;
+    border-radius: 12px;
+    padding: 16px;
+    background: #ffffff;
+    background-clip: padding-box;
+    box-shadow:
+            0 4px 8px rgba(0, 0, 0, 0.12),
+            0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* Left accent strip (same pattern as .info-item) */
+.project .project-child { border-left: 6px solid #cfd8e3; }
+.project .project-child:nth-child(1) { border-left-color: #7a0a2b; }
+.project .project-child:nth-child(2) { border-left-color: #8B4513; }
+.project .project-child:nth-child(3) { border-left-color: #37069a; }
+.project .project-child:nth-child(4) { border-left-color: #000000; }
+.project .project-child:nth-child(5) { border-left-color: #ba8942; }
+.project .project-child:nth-child(6) { border-left-color: #49c7d3; }
+.project .project-child:nth-child(7) { border-left-color: #4b1567; }
+
+/* Typography (match .info-item) */
+.project-child,
+.project-child h2,
+.project-child p,
+.project-child li,
+.project-child label,
+.project-child input,
+.project-child button {
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.project-child h2 { font-weight: 600; }
+.project-child p,
+.project-child li,
+.project-child label { font-weight: 400; }
+
+
 footer {
     background: #ffffff;
     min-height: 72px;

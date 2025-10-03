@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regnbyen Bergen A/S – Annonsering</title>
+    <link rel="stylesheet" href="../css/RegnbyenLasse.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="site-header" id="top">
+    <nav class="nav">
+        <!-- Left: logo -->
+        <a class="logo" href="hjemside.html">Regnbyen Bergen</a>
+
+        <!-- Right: links -->
+        <ul class="nav-links">
+            <li><a href="prosjekt.html">Om prosjektet</a></li>
+            <li><a href="klaer.html">Klær</a></li>
+            <li><a href="hus.html">Hus</a></li>
+            <li><a href="bil.html">Bil</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main">
+    <h1>Plasser reklamen din hos oss</h1>
+    <p>Vi når innbyggere, studenter og besøkende i Bergen – i et praktisk regnfokus.</p>
+
+    <section aria-labelledby="mediepakke">
+        <h2 id="mediepakke">Mediepakke (kort)</h2>
+        <div class="table-wrap">
+            <table class="zebra">
+                <caption>Formater & plassering (eksempel)</caption>
+                <thead><tr><th>Format</th><th>Størrelse</th><th>Plassering</th></tr></thead>
+                <tbody>
+                <tr><td>Topbanner</td><td>1200×250</td><td>Hjem / Prosjekt</td></tr>
+                <tr><td>Sidebar</td><td>300×600</td><td>Klær / Hus / Bil</td></tr>
+                <tr><td>Innholdsblokk</td><td>728×90</td><td>Aktiviteter</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section aria-labelledby="kontakt-annonse">
+        <h2 id="kontakt-annonse">Forespørselsskjema</h2>
+        <form class="form" action="#" method="post">
+            <label>Bedriftsnavn
+                <input type="text" name="firma" placeholder="Firmanavn AS" required />
+            </label>
+            <label>E-post
+                <input type="email" name="epost" placeholder="post@firmanavn.no" required />
+            </label>
+            <label>Ønsket plassering
+                <select name="plassering">
+                    <option>Topbanner</option>
+                    <option>Sidebar</option>
+                    <option>Innholdsblokk</option>
+                </select>
+            </label>
+            <label>Melding
+                <textarea name="melding" rows="6" placeholder="Kort om produktet og målgruppe"></textarea>
+            </label>
+            <button class="btn primary" type="submit">Send forespørsel (demo)</button>
+        </form>
+    </section>
+
+    <p><a href="#top">↑ Til toppen</a></p>
+</main>
+
+<footer>
+    <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
+</footer>
+</body>
+</html>
