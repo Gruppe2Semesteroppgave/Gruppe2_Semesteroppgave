@@ -27,11 +27,10 @@ body {
 
 .logo {
     color: #333333;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-decoration: none;
     font-family: "UnifrakturMaguntia", serif;
     font-weight: 500;
-
 }
 
 /* Right-side links */
@@ -41,6 +40,7 @@ body {
     gap: 12px;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-links a {
@@ -50,6 +50,61 @@ body {
     text-decoration: none;
     padding: 8px 10px;
     border-radius: 8px;
+}
+
+/* løsninger dropdown */
+.nav-links > li {
+position: relative;
+}
+
+/* <details> shell */
+.dropdown {
+    position: relative;
+}
+
+/* Make <summary> look like your nav links */
+.dropdown > summary {
+    cursor: pointer;
+    list-style: none;                     /* remove default marker */
+    padding: 8px 10px;                    /* match .nav-links a */
+    border-radius: 8px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 600;
+    color: #3d197e;
+    outline: none;                        /* we'll handle focus below */
+    display: inline-block;
+}
+
+/* Submenu panel */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;                              /* change to right:0 if you prefer right-align */
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #cfd8e3;
+    border-radius: 12px;
+    box-shadow:
+            0 10px 24px rgba(0,0,0,.12),
+            0 4px 10px rgba(0,0,0,.10);
+    padding: 8px;
+    margin: 0;
+    list-style: none;
+    display: none;                        /* hidden by default */
+    z-index: 1000;
+}
+
+.dropdown[open] .dropdown-menu { display: block; }
+
+/* Links inside the dropdown */
+.dropdown-menu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #3d197e;
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
 }
 
 /* Add space only when a .hero follows the header */
@@ -226,7 +281,7 @@ h2 {
     background: #fff;
 }
 
-/* kontakt-side */
+                                /* kontakt-side grid */
 
 /* Project grid */
 .project {
@@ -254,9 +309,9 @@ h2 {
 .project .project-child:nth-child(1) { border-left-color: #7a0a2b; }
 .project .project-child:nth-child(2) { border-left-color: #8B4513; }
 .project .project-child:nth-child(3) { border-left-color: #37069a; }
-.project .project-child:nth-child(4) { border-left-color: #000000; }
+.project .project-child:nth-child(4) { border-left-color: #49c7d3; }
 .project .project-child:nth-child(5) { border-left-color: #ba8942; }
-.project .project-child:nth-child(6) { border-left-color: #49c7d3; }
+.project .project-child:nth-child(6) { border-left-color: #000000; }
 .project .project-child:nth-child(7) { border-left-color: #4b1567; }
 
 /* Typography (match .info-item) */
@@ -275,7 +330,6 @@ h2 {
 .project-child li,
 .project-child label { font-weight: 400; }
 
-
 footer {
     background: #ffffff;
     min-height: 72px;
@@ -289,6 +343,3 @@ footer {
 footer p {
     margin: 0;                    /* remove default spacing */
 }
-
-
-

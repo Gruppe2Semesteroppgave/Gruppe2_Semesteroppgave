@@ -2,7 +2,7 @@
 <html lang="no">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Regnbyen Bergen A/S – Hjem</title>
     <link rel="stylesheet" href="../css/RegnbyenLasse.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,18 +13,37 @@
 
 <body>
 <header class="site-header" id="top">
-    <nav class="nav">
+    <nav class="nav" role="navigation">
         <!-- Left: logo -->
         <a class="logo" href="hjemside.html">Regnbyen Bergen</a>
 
         <!-- Right: links -->
         <ul class="nav-links">
             <li><a href="prosjekt.html">Om prosjektet</a></li>
-            <li><a href="klaer.html">Klær</a></li>
-            <li><a href="hus.html">Hus</a></li>
-            <li><a href="bil.html">Bil</a></li>
             <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+
+            <!-- Dropdown: Løsninger -->
+            <li class="nav-dropdown">
+                <details class="dropdown">
+                    <summary>Løsninger▾</summary>
+                    <ul class="dropdown-menu">
+                        <li><a href="transport-sikkerhet.html">Transport</a></li>
+                        <li><a href="klaer.html">Klær</a></li>
+                        <li><a href="sko.html">Sko</a></li>
+                        <li><a href="hus.html">Hus</a></li>
+                        <li><a href="bil.html" >Bil</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li class="nav-dropdown">
+                <details class="dropdown">
+                    <summary>Kontakt▾</summary>
+                    <ul class="dropdown-menu">
+                        <li><a href="kontakt.html">Kontakt oss</a></li>
+                        <li><a href="annonsering.html">Annonsering</a></li>
+                    </ul>
+                </details>
+            </li>
         </ul>
     </nav>
 </header>
@@ -32,7 +51,7 @@
 <main>
 <!-- HERO -->
 <figure class="hero">
-    <img src="../img/Bryggen2.jpg" alt="Bryggen i Bergen i regnvær">
+    <img src="../img/bryggen2.jpg" alt="Bryggen i Bergen i regnvær">
     <h1 class="hero-title">Velkommen til Regnbyen Bergen A/S</h1>
 </figure>
 
