@@ -4,11 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Regnbyen Bergen A/S – Klær</title>
-  <link rel="stylesheet" href="../css/style.css"/>
+
+  <!-- Stiller -->
+  <link rel="stylesheet" href="../css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body class="klaer">
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
   <!-- HEADER / NAVBAR -->
@@ -68,14 +71,15 @@
     </div>
   </header>
 
-  <main id="main">
+  <!-- MAIN -->
+  <main id="main" class="container">
     <h1>Klær og tilbehør i Bergensregnet</h1>
     <p>
       For et vått kystklima er lag-på-lag, riktig vannsøyle (mm) og god pusteevne viktig.
       Refleksdetaljer og vannavvisende overflater gir komfort og bedre synlighet i regn.
     </p>
 
-    <!-- Anbefalinger (tabell) — sko satırı KALDIRILDI -->
+    <!-- Anbefalinger (tabell) -->
     <section aria-labelledby="anbefalinger">
       <h2 id="anbefalinger">Anbefalinger (tabell)</h2>
       <div class="table-wrap">
@@ -119,11 +123,11 @@
       </div>
     </section>
 
-    <!-- ÜRÜNLER: SADECE KLÆR -->
+    <!-- PRODUKTER: KLÆR (kartlar üst şeritli) -->
     <section class="section" aria-labelledby="produkter">
       <h2 id="produkter">Anbefalte produkter (klær)</h2>
       <div class="cards grid-3">
-        <article class="card feature card--klaer" aria-labelledby="p1-tittel">
+        <article class="card feature card--blue" aria-labelledby="p1-tittel">
           <figure>
             <img src="../img/klaerprod1.jpg" alt="Regnjakke – høy vannsøyle (illustrasjon)">
             <figcaption class="sr-only">Regn jakke – høy vannsøyle</figcaption>
@@ -133,7 +137,7 @@
           <p><a class="btn-link" href="#">Mer info</a></p>
         </article>
 
-        <article class="card feature card--klaer" aria-labelledby="p2-tittel">
+        <article class="card feature card--green" aria-labelledby="p2-tittel">
           <figure>
             <img src="../img/klaer.prod2.avif" alt="Regnsett for barn – jakke + bukse (illustrasjon)">
             <figcaption class="sr-only">Regnsett for barn</figcaption>
@@ -143,23 +147,23 @@
           <p><a class="btn-link" href="#">Mer info</a></p>
         </article>
 
-        <article class="card feature card--klaer" aria-labelledby="p3-tittel">
-           <figure>
-             <img src="../img/klaerprod3.webp" alt="Regnbukse – høy vannsøyle og tapede sømmer (illustrasjon)">
-             <figcaption class="sr-only">Regnbukse – høy vannsøyle, tapede sømmer</figcaption>
-           </figure>
-           <h3 id="p3-tittel">Regnbukse</h3>
-           <p>Høy vannsøyle (10–20k mm), tapede sømmer og justerbar midje/ankel.</p>
-           <p><a class="btn-link" href="#">Mer info</a></p>
-       </article> 
+        <article class="card feature card--amber" aria-labelledby="p3-tittel">
+          <figure>
+            <img src="../img/klaerprod3.webp" alt="Regnbukse – høy vannsøyle og tapede sømmer (illustrasjon)">
+            <figcaption class="sr-only">Regnbukse – høy vannsøyle, tapede sømmer</figcaption>
+          </figure>
+          <h3 id="p3-tittel">Regnbukse</h3>
+          <p>Høy vannsøyle (10–20k mm), tapede sømmer og justerbar midje/ankel.</p>
+          <p><a class="btn-link" href="#">Mer info</a></p>
+        </article>
       </div>
     </section>
 
-    <!-- TİLBEHØR / AKSESUARLAR -->
+    <!-- TILBEHØR (kartlar üst şeritli) -->
     <section class="section" aria-labelledby="tilbehor">
       <h2 id="tilbehor">Tilbehør / Aksessuarer</h2>
       <div class="cards grid-3">
-        <article class="card feature card--klaer" aria-labelledby="a1-tittel">
+        <article class="card feature card--purple" aria-labelledby="a1-tittel">
           <figure>
             <img src="../img/klaer.prod4.png" alt="Storm-paraply (illustrasjon)">
             <figcaption class="sr-only">Storm-paraply</figcaption>
@@ -169,40 +173,40 @@
           <p><a class="btn-link" href="#">Mer info</a></p>
         </article>
 
-         <article class="card feature card--klaer" aria-labelledby="p3-tittel">
+        <article class="card feature card--teal" aria-labelledby="a2-tittel">
           <figure>
             <img src="../img/klaer.prod5.jpg" alt="Vanntett sekk – refleksdetaljer (illustrasjon)">
             <figcaption class="sr-only">Vanntett sekk – refleksdetaljer</figcaption>
           </figure>
-          <h3 id="p3-tittel">Vanntett sekk</h3>
+          <h3 id="a2-tittel">Vanntett sekk</h3>
           <p>Rulltopp, reflekser og regntrekk – perfekt til pendling.</p>
           <p><a class="btn-link" href="#">Mer info</a></p>
         </article>
 
-        <article class="card feature card--klaer" aria-labelledby="a2-tittel">
+        <article class="card feature card--rose" aria-labelledby="a3-tittel">
           <figure>
             <img src="../img/klaer.prod6.jpg" alt="Regntrekk for sekk (illustrasjon)">
             <figcaption class="sr-only">Regntrekk for sekk</figcaption>
           </figure>
-          <h3 id="a2-tittel">Regntrekk til sekk</h3>
+          <h3 id="a3-tittel">Regntrekk til sekk</h3>
           <p>Refleksstripe, elastisk kant, passer 15–30L.</p>
           <p><a class="btn-link" href="#">Mer info</a></p>
         </article>
 
-        <article class="card feature card--klaer" aria-labelledby="a3-tittel">
+        <article class="card feature card--amber" aria-labelledby="a4-tittel">
           <figure>
             <img src="../img/klaer.prod7.jpeg" alt="Regnhatt / sydvest (illustrasjon)">
             <figcaption class="sr-only">Regnhatt / sydvest</figcaption>
           </figure>
-          <h3 id="a3-tittel">Regnhatt (sydvest)</h3>
+          <h3 id="a4-tittel">Regnhatt (sydvest)</h3>
           <p>Bred brem for ansikt/syn, justerbar stropp, lett å tørke.</p>
           <p><a class="btn-link" href="#">Mer info</a></p>
         </article>
       </div>
     </section>
 
-    <!-- Passform -->
-    <section aria-labelledby="passform">
+    <!-- Passform (sol şeritli kutu) -->
+    <section class="section-box section--blue" aria-labelledby="passform">
       <h2 id="passform">Størrelse &amp; passform (korte tips)</h2>
       <ul>
         <li>La det være plass til ett mellomlag under skalljakken.</li>
@@ -211,8 +215,8 @@
       </ul>
     </section>
 
-    <!-- Vedlikehold -->
-    <section aria-labelledby="vedlikehold">
+    <!-- Vedlikehold (sol şeritli kutu) -->
+    <section class="section-box section--teal" aria-labelledby="vedlikehold">
       <h2 id="vedlikehold">Vedlikehold</h2>
       <ul>
         <li>Vask tekniske plagg uten tøymykner; skyllemiddel tetter membran.</li>
@@ -221,14 +225,16 @@
       </ul>
     </section>
 
-    <!-- Reklame -->
-    <aside aria-labelledby="reklame">
-      <h2 id="reklame">Reklamefelt</h2>
-      <p>Annonsør: <strong>RainCo</strong> – «Hold deg tørr i Bergensregnet».</p>
-    </aside>
+    <!-- Reklame (sol şeritli kutu) -->
+    <section class="section-box section--amber">
+      <aside aria-labelledby="reklame">
+        <h2 id="reklame">Reklamefelt</h2>
+        <p>Annonsør: <strong>RainCo</strong> – «Hold deg tørr i Bergensregnet».</p>
+      </aside>
+    </section>
 
-    <!-- Sikkerhet -->
-    <section aria-labelledby="sikkerhet">
+    <!-- Sikkerhet (sol şeritli kutu) -->
+    <section class="section-box section--purple" aria-labelledby="sikkerhet">
       <h2 id="sikkerhet">Sikkerhet</h2>
       <ul>
         <li>Bruk refleks i mørke/yr; vær godt synlig i trafikken.</li>
