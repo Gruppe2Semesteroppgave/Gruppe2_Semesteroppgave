@@ -808,7 +808,7 @@ table.zebra tbody tr:hover {
   color: #1d4ed8;
 }
 
-/* Bölüm kutuları (solda renk şeridi) */
+/* venstre farge */
 .section-box {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -851,3 +851,188 @@ table.zebra tbody tr:hover {
 .section-box h2 {
   margin-top: 0;
 }
+ /* ===================== Kontakt – sytls ===================== */
+
+ /* venstre farger */
+.stripe-box{
+  position: relative;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(15,23,42,.08);
+  padding:16px 18px;
+  margin:18px 0;
+}
+.stripe-box::before{
+  content:"";
+  position:absolute;
+  top:-1px; bottom:-1px; left:-1px; width:6px;
+  border-top-left-radius:14px; border-bottom-left-radius:14px;
+  background:#2563eb; /* varsayılan mavi */
+}
+
+/* farger */
+.stripe-blue::before   { background:#2563eb; } /* mavi */
+.stripe-purple::before { background:#7c3aed; } /* mor  */
+
+
+
+
+/* --- Kort indeks --- */
+
+nav[aria-label="Gruppemedlemmer"]{
+  background:#ffffff; border:1px solid #e5e7eb; border-radius:14px;
+  box-shadow:0 8px 24px rgba(15,23,42,.08);
+  padding:16px; margin:8px 0 16px;
+}
+nav[aria-label="Gruppemedlemmer"] ul{
+  list-style:none; margin:8px 0 0; padding:0; display:flex; gap:10px; flex-wrap:wrap;
+}
+nav[aria-label="Gruppemedlemmer"] a{
+  display:inline-block; padding:8px 12px; border:1px solid #e2e8f0;
+  border-radius:999px; background:#f1f5f9; color:#0f172a; font-weight:600; text-decoration:none;
+}
+nav[aria-label="Gruppemedlemmer"] a:hover{ background:#e2e8f0 }
+
+nav[aria-label="Gruppemedlemmer"] a[aria-current="true"],
+nav[aria-label="Gruppemedlemmer"] a[aria-current="page"]{
+  background:#e0e7ff; border-color:#c7d2fe; color:#1e3a8a;
+}
+
+
+
+/* --- Team grid (3 , responsive) --- */
+.team-grid{
+  display:grid; grid-template-columns: repeat(3, 1fr);
+  gap:24px; margin-top:12px;
+}
+@media (max-width: 980px){ .team-grid{ grid-template-columns: repeat(2, 1fr) } }
+@media (max-width: 640px){ .team-grid{ grid-template-columns: 1fr } }
+
+/* --- medlem kort --- */
+.member{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  box-shadow:0 10px 24px rgba(15,23,42,.08);
+  padding:18px;
+  text-align:center;
+  position:relative;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  border-top:6px solid #2563eb; /* default; sınıflar override eder */
+}
+.member:hover{
+  transform: translateY(-3px);
+  box-shadow:0 16px 36px rgba(15,23,42,.12);
+  border-color:#dfe6ee;
+}
+
+/* bilder  */
+.member figure{ margin:0 0 12px; position:relative; overflow:hidden; border-radius:14px; }
+.member img{
+  width:160px; height:160px; object-fit:cover; display:block;
+  margin:0 auto; border:1px solid #e5e7eb; border-radius:14px;
+  box-shadow:0 6px 14px rgba(15,23,42,.12);
+}
+/* oppe farger */
+.member figure::after{
+  content:""; position:absolute; left:0; right:0; top:0; height:56px;
+  background: linear-gradient(to bottom, rgba(37,99,235,0.55), rgba(37,99,235,0));
+  pointer-events:none;
+  border-top-left-radius:14px; border-top-right-radius:14px;
+}
+
+.member h3{ margin:10px 0 4px; color:#0b1324; letter-spacing:.2px; }
+.member .role{ margin:0 0 4px; color:#475569 }
+.member .email{ margin:0 0 6px }
+.member .email em{ font-style:normal; font-weight:700; color:#0f172a }
+
+/* --- members farger--- */
+.member.member--blue   { border-top-color:#2563eb; }
+.member.member--green  { border-top-color:#16a34a; }
+.member.member--amber  { border-top-color:#f59e0b; }
+.member.member--purple { border-top-color:#7c3aed; }
+.member.member--rose   { border-top-color:#e11d48; }
+.member.member--teal   { border-top-color:#14b8a6; }
+.member.member--orange { border-top-color:#f97316; }
+
+.member.member--blue   figure::after{ background:linear-gradient(to bottom, rgba(37,99,235,0.55), rgba(37,99,235,0)); }
+.member.member--green  figure::after{ background:linear-gradient(to bottom, rgba(22,163,74,0.55),  rgba(22,163,74,0)); }
+.member.member--amber  figure::after{ background:linear-gradient(to bottom, rgba(245,158,11,0.55), rgba(245,158,11,0)); }
+.member.member--purple figure::after{ background:linear-gradient(to bottom, rgba(124,58,237,0.55), rgba(124,58,237,0)); }
+.member.member--rose   figure::after{ background:linear-gradient(to bottom, rgba(225,29,72,0.55),  rgba(225,29,72,0)); }
+.member.member--teal   figure::after{ background:linear-gradient(to bottom, rgba(20,184,166,0.55), rgba(20,184,166,0)); }
+.member.member--orange figure::after{ background:linear-gradient(to bottom, rgba(249,115,22,0.55), rgba(249,115,22,0)); }
+
+/* ========== BIL SAYFASI ========== */
+
+/* HERO  */
+.hero{
+  position: relative;
+  min-height: 42vh;
+  display: grid;
+  align-items: end;
+  background: #0b1324 url("") center/cover no-repeat;
+  background-image: var(--hero-image);
+  color: #fff;
+}
+.hero::after{
+  
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(to top, rgba(2,6,23,.65) 0%, rgba(2,6,23,.35) 30%, rgba(2,6,23,0) 75%);
+}
+.hero .container{ position:relative; z-index:1; padding: 64px 0 28px; }
+.hero-title{
+  margin:0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+}
+
+/* grid */
+.cards.grid-3{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 22px; margin-top: 12px;
+}
+.card{
+  background:#fff; border:1px solid #e5e7eb; border-radius:16px;
+  box-shadow:0 10px 24px rgba(15,23,42,.08);
+  padding:18px; position:relative;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{ transform: translateY(-3px); box-shadow:0 16px 36px rgba(15,23,42,.12); }
+.card figure{ margin:0 0 12px; }
+.card img{ width:100%; height:180px; object-fit:cover; border-radius:12px; }
+
+/* opp farge*/
+.card::before{
+  content:""; position:absolute; left:-1px; right:-1px; top:-1px; height:6px;
+  border-top-left-radius:16px; border-top-right-radius:16px;
+  background:#2563eb; /* default (mavi) */
+}
+
+.card.card--bil::before{ background:#1e3a8a; } /* navy */
+
+/* Buton link */
+.btn-link{ font-weight:700; color:#2563eb; text-decoration:none; }
+.btn-link:hover{ color:#1d4ed8; }
+
+/* venstere */
+.section.section-box{
+  position:relative; background:#fff; border:1px solid #e5e7eb; border-radius:14px;
+  box-shadow:0 8px 24px rgba(15,23,42,.08);
+  padding:16px 18px; margin:18px 0;
+}
+.section.section-box::before{
+  content:""; position:absolute; top:-1px; bottom:-1px; left:-1px; width:6px;
+  border-top-left-radius:14px; border-bottom-left-radius:14px;
+  background:#2563eb; /* default */
+}
+.section.section-box.section--teal::before { background:#14b8a6; } /* Vedlikehold */
+.section.section-box.section--blue::before { background:#2563eb; } /* Verksted */
+
+/* */
+.section ul{ margin:8px 0 0 18px; }
+    

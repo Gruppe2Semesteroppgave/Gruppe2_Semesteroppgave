@@ -13,61 +13,53 @@
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
   <!-- HEADER / NAVBAR -->
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+ <header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-      <nav class="navbar" aria-label="Hovedmeny">
-        <ul class="menu">
-          <li><a href="hjemside.html">Hjem</a></li>
-          <li><a href="prosjekt.html">Om prosjektet</a></li>
+    <nav class="navbar" aria-label="Hovedmeny">
+      <ul class="menu">
+        <li><a href="hjemside.html" >Hjem</a></li>
+        <li><a href="prosjekt.html">Om prosjektet</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
 
-          <!-- Guider -->
-          <li class="dropdown">
-            <details>
-              <summary aria-haspopup="listbox">Guider</summary>
-              <ul class="submenu" role="listbox" aria-label="Guider">
-                <li><a href="klaer.html">Klær</a></li>
-                <li><a href="sko.html">Sko</a></li>
-                <li><a href="hus.html">Hus</a></li>
-                <li><a href="bil.html">Bil</a></li>
-              </ul>
-            </details>
-          </li>
+        <!-- Løsninger -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">Løsninger</summary>
+            <ul class="submenu" role="listbox" aria-label="Løsninger">
+              <li><a href="bil.html">Bil</a></li>
+              <li><a href="hus.html">Hus</a></li>
+              <li><a href="klaer.html">Klær</a></li>
+              <li><a href="sko.html">Sko</a></li>
+              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+              <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
 
-          <!-- Vær -->
-          <li class="dropdown">
-            <details>
-              <summary aria-haspopup="listbox">Vær</summary>
-              <ul class="submenu" role="listbox" aria-label="Vær">
-                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-                <li><a href="transport-sikkerhet.html">Transport & sikkerhet</a></li>
-              </ul>
-            </details>
-          </li>
+              <!-- For bedrifter (nested under Løsninger) -->
+              <li class="dropdown">
+                <details>
+                  <summary aria-haspopup="listbox">For bedrifter</summary>
+                  <ul class="submenu" role="listbox" aria-label="For bedrifter">
+                    <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                    <li><a href="annonsering.html">Annonsering</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
 
-          <!-- For bedrifter -->
-          <li class="dropdown">
-            <details>
-              <summary aria-haspopup="listbox">For bedrifter</summary>
-              <ul class="submenu" role="listbox" aria-label="For bedrifter">
-                <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
-                <li><a href="annonsering.html">Annonsering</a></li>
-              </ul>
-            </details>
-          </li>
+    <!-- (İstersen bunu kaldırabilirsin) -->
+    <form class="nav-search" role="search" action="#" aria-label="Søk">
+      <label for="q" class="sr-only">Søk</label>
+      <input id="q" name="q" type="search" placeholder="Søk..." />
+    </form>
+  </div>
+</header>
 
-          <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
-        </ul>
-      </nav>
 
-      <form class="nav-search" role="search" action="#" aria-label="Søk">
-        <label for="q" class="sr-only">Søk</label>
-        <input id="q" name="q" type="search" placeholder="Søk..." />
-      </form>
-    </div>
-  </header>
 
   <main id="main">
     <section class="section" aria-labelledby="page-title">
@@ -77,8 +69,8 @@
       </div>
     </section>
 
-    <!-- Kısa indeks -->
-    <section class="section" aria-labelledby="nav-team">
+    <!-- Kort indeks -->
+    <section  class="section stripe-box stripe-blue" aria-labelledby="nav-team">
       <div class="container">
         <nav aria-label="Gruppemedlemmer">
           <h2 id="nav-team">Prosjektgruppen</h2>
@@ -94,13 +86,13 @@
       </div>
     </section>
 
-    <!-- PROSJEKTGRUPPEN – 3 kolondan 2 satır -->
+    <!-- PROSJEKTGRUPPEN –  -->
     <section id="team" class="section" aria-labelledby="team-title">
       <div class="container">
         <h2 id="team-title">Prosjektgruppen</h2>
 
         <div class="team-grid">
-          <!-- 1. satır -->
+         
           <section id="Yelyzaveta" class="member member--blue" aria-labelledby="Yel-title">
             <figure>
               <img src="../img/yelyza.jpg" alt="Yelyzaveta">
@@ -134,7 +126,7 @@
             <p><a href="#page-top">↑ Til toppen</a></p>
           </section>
 
-          <!-- 2. satır -->
+        
           <section id="Lasse" class="member member--orange" aria-labelledby="las-title">
             <figure>
               <img src="../img/lasse.jpg" alt="Lasse">
@@ -172,7 +164,7 @@
     </section>
 
     <!-- Rolleoversikt -->
-    <section class="section" aria-labelledby="oversikt">
+    <section class="section stripe-box stripe-purple" aria-labelledby="oversikt">
       <div class="container">
         <h2 id="oversikt">Rolleoversikt (tabell)</h2>
         <div class="table-wrap">

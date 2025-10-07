@@ -10,62 +10,52 @@
 <body>
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
-  <!-- HEADER / NAVBAR -->
+   <!-- HEADER / NAVBAR -->
   <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+  <div class="container nav-wrap">
+    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-      <nav class="navbar" aria-label="Hovedmeny">
-        <ul class="menu">
-          <li><a href="hjemside.html">Hjem</a></li>
-          <li><a href="prosjekt.html">Om prosjektet</a></li>
+    <nav class="navbar" aria-label="Hovedmeny">
+      <ul class="menu">
+        <li><a href="hjemside.html" >Hjem</a></li>
+        <li><a href="prosjekt.html">Om prosjektet</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
 
-          <!-- Guider -->
-          <li class="dropdown">
-            <details open>
-              <summary aria-haspopup="listbox">Guider</summary>
-              <ul class="submenu" role="listbox" aria-label="Guider">
-                <li><a href="klaer.html">Klær</a></li>
-                <li><a href="sko.html" aria-current="page">Sko</a></li>
-                <li><a href="hus.html">Hus</a></li>
-                <li><a href="bil.html">Bil</a></li>
-              </ul>
-            </details>
-          </li>
+        <!-- Løsninger -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">Løsninger</summary>
+            <ul class="submenu" role="listbox" aria-label="Løsninger">
+              <li><a href="bil.html">Bil</a></li>
+              <li><a href="hus.html">Hus</a></li>
+              <li><a href="klaer.html">Klær</a></li>
+              <li><a href="sko.html">Sko</a></li>
+              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+              <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
 
-          <!-- Vær -->
-          <li class="dropdown">
-            <details>
-              <summary aria-haspopup="listbox">Vær</summary>
-              <ul class="submenu" role="listbox" aria-label="Vær">
-                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-                <li><a href="transport-sikkerhet.html">Transport & sikkerhet</a></li>
-              </ul>
-            </details>
-          </li>
+              <!-- For bedrifter (nested under Løsninger) -->
+              <li class="dropdown">
+                <details>
+                  <summary aria-haspopup="listbox">For bedrifter</summary>
+                  <ul class="submenu" role="listbox" aria-label="For bedrifter">
+                    <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                    <li><a href="annonsering.html">Annonsering</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
 
-          <!-- For bedrifter -->
-          <li class="dropdown">
-            <details>
-              <summary aria-haspopup="listbox">For bedrifter</summary>
-              <ul class="submenu" role="listbox" aria-label="For bedrifter">
-                <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
-                <li><a href="annonsering.html">Annonsering</a></li>
-              </ul>
-            </details>
-          </li>
-
-          <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-
-      <form class="nav-search" role="search" action="#" aria-label="Søk">
-        <label for="q" class="sr-only">Søk</label>
-        <input id="q" name="q" type="search" placeholder="Søk..." />
-      </form>
-    </div>
-  </header>
+    
+    <form class="nav-search" role="search" action="#" aria-label="Søk">
+      <label for="q" class="sr-only">Søk</label>
+      <input id="q" name="q" type="search" placeholder="Søk..." />
+    </form>
+  </div>
+</header>
 
   <main id="main">
     <section class="section" aria-labelledby="page-title">

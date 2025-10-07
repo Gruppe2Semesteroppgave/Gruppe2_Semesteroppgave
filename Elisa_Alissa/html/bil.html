@@ -13,62 +13,52 @@
   
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
-  <!-- HEADER / NAVBAR -->
+   <!-- HEADER / NAVBAR -->
   <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+  <div class="container nav-wrap">
+    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-      <nav class="navbar" aria-label="Hovedmeny">
-        <ul class="menu">
-          <li><a href="hjemside.html">Hjem</a></li>
-          <li><a href="prosjekt.html">Om prosjektet</a></li>
+    <nav class="navbar" aria-label="Hovedmeny">
+      <ul class="menu">
+        <li><a href="hjemside.html" >Hjem</a></li>
+        <li><a href="prosjekt.html">Om prosjektet</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
 
-          <!-- Guider -->
-          <li class="dropdown">
-            <details>
-              <summary aria-haspopup="listbox" title="Åpne Guider-meny">Guider</summary>
-              <ul class="submenu" role="listbox" aria-label="Guider">
-                <li><a href="klaer.html">Klær</a></li>
-                <li><a href="sko.html">Sko</a></li>
-                <li><a href="hus.html">Hus</a></li>
-                <li><a href="bil.html" aria-current="page">Bil</a></li>
-              </ul>
-            </details>
-          </li>
+        <!-- Løsninger -->
+        <li class="dropdown">
+          <details>
+            <summary aria-haspopup="listbox">Løsninger</summary>
+            <ul class="submenu" role="listbox" aria-label="Løsninger">
+              <li><a href="bil.html">Bil</a></li>
+              <li><a href="hus.html">Hus</a></li>
+              <li><a href="klaer.html">Klær</a></li>
+              <li><a href="sko.html">Sko</a></li>
+              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+              <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
 
-          <!-- Vær -->
-          <li class="dropdown">
-            <details>
-              <summary aria-haspopup="listbox" title="Åpne Vær-meny">Vær</summary>
-              <ul class="submenu" role="listbox" aria-label="Vær">
-                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-                <li><a href="transport-sikkerhet.html">Transport & sikkerhet</a></li>
-              </ul>
-            </details>
-          </li>
+              <!-- For bedrifter (nested under Løsninger) -->
+              <li class="dropdown">
+                <details>
+                  <summary aria-haspopup="listbox">For bedrifter</summary>
+                  <ul class="submenu" role="listbox" aria-label="For bedrifter">
+                    <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                    <li><a href="annonsering.html">Annonsering</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
 
-          <!-- For bedrifter -->
-          <li class="dropdown">
-            <details>
-              <summary aria-haspopup="listbox" title="Åpne For bedrifter-meny">For bedrifter</summary>
-              <ul class="submenu" role="listbox" aria-label="For bedrifter">
-                <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
-                <li><a href="annonsering.html">Annonsering</a></li>
-              </ul>
-            </details>
-          </li>
-
-          <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-
-      <form class="nav-search" role="search" action="#" aria-label="Søk">
-        <label for="q" class="sr-only">Søk</label>
-        <input id="q" name="q" type="search" placeholder="Søk..." />
-      </form>
-    </div>
-  </header>
+    
+    <form class="nav-search" role="search" action="#" aria-label="Søk">
+      <label for="q" class="sr-only">Søk</label>
+      <input id="q" name="q" type="search" placeholder="Søk..." />
+    </form>
+  </div>
+</header>
 
   <!-- HERO: sayfa görseli üste -->
   <section class="hero section" style="--hero-image: url('../img/bil.jpg');" aria-labelledby="hero-title">
@@ -89,7 +79,7 @@
       </div>
     </section>
 
-    <!-- ÜRÜNLER: 3 kart (görselleri sen ekleyeceksin) -->
+    <!--  -->
     <section class="section" aria-labelledby="produkter">
       <div class="container">
         <h2 id="produkter">Anbefalte produkter</h2>
@@ -97,7 +87,7 @@
         <div class="cards grid-3">
           <article class="card feature card--bil" aria-labelledby="p1-tittel">
             <figure>
-              <!-- Kendi görsel yolunu ekle -->
+              <!-- -->
               <img src="../img/bil_product1.jpg" alt="Regnvær-dekk modell">
               <figcaption class="sr-only">Regnvær-dekk </figcaption>
             </figure>
@@ -181,7 +171,7 @@
     </section>
 
     <!-- Vedlikehold -->
-    <section class="section" aria-labelledby="vedlikehold">
+    <section class="section section-box section--teal" aria-labelledby="vedlikehold">
       <div class="container">
         <h2 id="vedlikehold">Enkle vedlikeholdstips</h2>
         <ul>
@@ -195,7 +185,7 @@
     </section>
 
     <!-- Verksted -->
-    <section class="section" aria-labelledby="verksted">
+    <section class="section section-box section--blue" aria-labelledby="verksted">
       <div class="container">
         <h2 id="verksted">Verksted i Bergen</h2>
         <p>Det er flere forskjellige bilverksteder både i og rundt Bergen.
