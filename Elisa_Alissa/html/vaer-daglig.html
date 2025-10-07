@@ -8,10 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="vaer">
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
    <!-- HEADER / NAVBAR -->
+    <div id="top"></div>
   <header class="site-header" id="top">
   <div class="container nav-wrap">
     <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
@@ -33,6 +34,7 @@
               <li><a href="sko.html">Sko</a></li>
               <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
               <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+              
 
               <!-- For bedrifter (nested under Løsninger) -->
               <li class="dropdown">
@@ -90,12 +92,12 @@
       </div>
     </section>
 
-    <!-- Tips kartları -->
+    <!-- Tips kort -->
     <section class="section" aria-labelledby="tips">
       <div class="container">
         <h2 id="tips">Regn-tips (kort)</h2>
         <div class="grid two">
-          <article class="card">
+          <article class="card card--ls" style="--ls-color:#2563eb;">
             <h3>Før du går ut</h3>
             <ul>
               <li>Sjekk vind – sterk vind gjør paraply ubrukelig.</li>
@@ -103,7 +105,7 @@
               <li>Vanntett sko eller støvler + ekstra sokker.</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="card card--ls" style="--ls-color:#7c3aed;">
             <h3>Underveis</h3>
             <ul>
               <li>Refleks i skumring og regn.</li>
@@ -118,15 +120,27 @@
     <!-- Regn-pakke -->
     <section class="section" aria-labelledby="pakke">
       <div class="container">
+        <div class="section-box section--teal">
         <h2 id="pakke">Liten “regn-pakke”</h2>
         <ul>
           <li>Mini-paraply eller hette</li>
           <li>Vanntett pose for elektronikk</li>
           <li>Ekstra sokker & lite håndkle</li>
         </ul>
-        <p><a href="#top">↑ Til toppen</a></p>
+      
+      </div>
       </div>
     </section>
+    <!-- Reklamfelt -->
+    <section class="section" aria-labelledby="reklame">
+      <div class="container">
+        <aside class="card card--partners">
+          <h2 id="reklame">Reklamefelt</h2>
+          <p>Annonsør: DryWear – «Vanntette klær for alle vær».</p>
+        </aside>
+      </div>
+    </section>
+    <p><a href="#top">↑ Til toppen</a></p>
   </main>
 
   <footer class="site-footer">

@@ -10,12 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="hus">
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
   <!-- HEADER / NAVBAR -->
-  <!-- HEADER / NAVBAR -->
-  <header class="site-header" id="top">
+  
+  <header class="site-header" >
   <div class="container nav-wrap">
     <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
@@ -36,6 +36,7 @@
               <li><a href="sko.html">Sko</a></li>
               <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
               <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+              <li><a href="transport-sikkerhet.html"> transport-sikkerhet</a></li>
 
               <!-- For bedrifter (nested under Løsninger) -->
               <li class="dropdown">
@@ -61,7 +62,7 @@
   </div>
 </header>
 
-  <!-- HERO: sayfa görseli üste -->
+  <!-- HERO SECTION -->
   <section class="hero section" style="--hero-image: url('../img/hus.jpg');" aria-labelledby="hero-title">
     <div class="container">
       <h1 id="hero-title" class="hero-title">Vedlikehold av hus i regnvær</h1>
@@ -69,7 +70,7 @@
   </section>
 
   <main id="main">
-    <!-- Giriş -->
+   
     <section class="section" aria-labelledby="intro">
       <div class="container">
         <h2 id="intro" class="sr-only">Introduksjon</h2>
@@ -132,12 +133,12 @@
       </div>
     </section>
 
-    <!-- Önerilerden sonra: 3 ürün kartı -->
+    <!-- Anbefalte produkter -->
     <section class="section" aria-labelledby="produkter">
       <div class="container">
         <h2 id="produkter">Anbefalte produkter</h2>
 
-        <div class="cards grid-3">
+        <div id="produkterhus" class="cards grid-3">
           <article class="card feature card--hus" aria-labelledby="p1-tittel">
             <figure>
               <img src="../img/husprod1.jpg" alt="Takrennerens-sett (illustrasjon)">
@@ -174,6 +175,7 @@
     <!-- Sjekklister -->
     <section class="section" aria-labelledby="sjekkliste">
       <div class="container">
+        <div class="section-box section--amber">
         <h2 id="sjekkliste">Sesongvise sjekklister</h2>
         <ul>
           <li><strong>Vår:</strong> Rens takrenner, sjekk nedløp og drenering.</li>
@@ -181,10 +183,24 @@
           <li><strong>Høst:</strong> Fjern løv fra rister/sluk; kontroller tetningslister.</li>
           <li><strong>Vinter:</strong> Følg med på istapper/ising; luft godt etter dusj.</li>
         </ul>
+        </div>
       </div>
     </section>
 
-    <!-- Reklam alanı -->
+    <!-- Sikkerhet -->
+    <section class="section" aria-labelledby="sikkerhet">
+      <div class="container">
+        <div class="section-box section--purple">
+        <h2 id="sikkerhet">Sikkerhet</h2>
+        <ul>
+          <li>Bruk fallsikring ved arbeid i høyden (tak/renner).</li>
+          <li>Slå av strømmen før arbeid i våtrom.</li>
+          <li>Følg produsentens anvisninger for kjemikalier og maling.</li>
+        </ul>
+      </div>
+      </div>
+    </section>
+    <!-- Reklamefelt -->
     <section class="section" aria-labelledby="reklame">
       <div class="container">
         <aside class="card card--partners">
@@ -193,25 +209,14 @@
         </aside>
       </div>
     </section>
-
-    <!-- Sikkerhet -->
-    <section class="section" aria-labelledby="sikkerhet">
-      <div class="container">
-        <h2 id="sikkerhet">Sikkerhet</h2>
-        <ul>
-          <li>Bruk fallsikring ved arbeid i høyden (tak/renner).</li>
-          <li>Slå av strømmen før arbeid i våtrom.</li>
-          <li>Følg produsentens anvisninger for kjemikalier og maling.</li>
-        </ul>
-        <p><a href="#top">↑ Til toppen</a></p>
-      </div>
-    </section>
+    <p><a href="#top">↑ Til toppen</a></p>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
     </div>
+    
   </footer>
 </body>
 </html>

@@ -14,9 +14,9 @@
 <body class="klaer">
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
+  <div id="top"></div>
   <!-- HEADER / NAVBAR -->
-  <!-- HEADER / NAVBAR -->
-  <header class="site-header" id="top">
+  <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
@@ -37,6 +37,10 @@
               <li><a href="sko.html">Sko</a></li>
               <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
               <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+              <li><a href="transport-sikkerhet.html"> transport-sikkerhet</a></li>
+
+              <!-- For bedrifter (nested under Løsninger) -->
+              <li class="dropdown">
 
               <!-- For bedrifter (nested under Løsninger) -->
               <li class="dropdown">
@@ -73,7 +77,7 @@
     <!-- Anbefalinger (tabell) -->
     <section aria-labelledby="anbefalinger">
       <h2 id="anbefalinger">Anbefalinger (tabell)</h2>
-      <div class="table-wrap">
+      <div class="table-wrap table--stripe-left" style="--table-stripe:#75036f;">
         <table class="zebra">
           <caption>Klær &amp; regn – hva lønner seg?</caption>
           <thead>
@@ -216,14 +220,7 @@
       </ul>
     </section>
 
-    <!-- Reklame (sol şeritli kutu) -->
-    <section class="section-box section--amber">
-      <aside aria-labelledby="reklame">
-        <h2 id="reklame">Reklamefelt</h2>
-        <p>Annonsør: <strong>RainCo</strong> – «Hold deg tørr i Bergensregnet».</p>
-      </aside>
-    </section>
-
+  
     <!-- Sikkerhet (sol şeritli kutu) -->
     <section class="section-box section--purple" aria-labelledby="sikkerhet">
       <h2 id="sikkerhet">Sikkerhet</h2>
@@ -232,8 +229,18 @@
         <li>Velg lue/pannebånd som passer under hetten ved vind.</li>
         <li>Bytt våte sokker raskt for å unngå nedkjøling.</li>
       </ul>
-      <p><a href="#top">↑ Til toppen</a></p>
+     
     </section>
+    <!-- Reklamfelt -->
+    <section class="section" aria-labelledby="reklame">
+      <div class="container">
+        <aside class="card card--partners">
+          <h2 id="reklame">Reklamefelt</h2>
+          <p>Annonsør: <strong>RainCo</strong> – «Hold deg tørr i Bergensregnet».</p>
+        </aside>
+      </div>
+    </section>
+     <p><a href="#top">↑ Til toppen</a></p>
   </main>
 
   <footer class="site-footer">

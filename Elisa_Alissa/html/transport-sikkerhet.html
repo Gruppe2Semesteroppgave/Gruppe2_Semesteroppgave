@@ -1,170 +1,227 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Regnbyen Bergen A/S – Transport & sikkerhet</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-</head>
-<body>
-  <a class="skip-link" href="#main">Hopp til innhold</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regnbyen Bergen A/S – Transport & sikkerhet</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="transport">
+    <a class="skip-link" href="#main">Hopp til innhold</a>
 
-   <!-- HEADER / NAVBAR -->
-  <header class="site-header" id="top">
-  <div class="container nav-wrap">
-    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+    <!-- HEADER / NAVBAR -->
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-    <nav class="navbar" aria-label="Hovedmeny">
-      <ul class="menu">
-        <li><a href="hjemside.html" >Hjem</a></li>
-        <li><a href="prosjekt.html">Om prosjektet</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <nav class="navbar" aria-label="Hovedmeny">
+          <ul class="menu">
+            <li><a href="hjemside.html">Hjem</a></li>
+            <li><a href="prosjekt.html">Om prosjektet</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
 
-        <!-- Løsninger -->
-        <li class="dropdown">
-          <details>
-            <summary aria-haspopup="listbox">Løsninger</summary>
-            <ul class="submenu" role="listbox" aria-label="Løsninger">
-              <li><a href="bil.html">Bil</a></li>
-              <li><a href="hus.html">Hus</a></li>
-              <li><a href="klaer.html">Klær</a></li>
-              <li><a href="sko.html">Sko</a></li>
-              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-              <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+            <!-- Løsninger -->
+            <li class="dropdown">
+              <details>
+                <summary aria-haspopup="listbox">Løsninger</summary>
+                <ul class="submenu" role="listbox" aria-label="Løsninger">
+                  <li><a href="bil.html">Bil</a></li>
+                  <li><a href="hus.html">Hus</a></li>
+                  <li><a href="klaer.html">Klær</a></li>
+                  <li><a href="sko.html">Sko</a></li>
+                  <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                  <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+                  <li>
+                    <a href="transport-sikkerhet.html" aria-current="page"
+                      >Transport & sikkerhet</a
+                    >
+                  </li>
 
-              <!-- For bedrifter (nested under Løsninger) -->
-              <li class="dropdown">
-                <details>
-                  <summary aria-haspopup="listbox">For bedrifter</summary>
-                  <ul class="submenu" role="listbox" aria-label="For bedrifter">
-                    <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
-                    <li><a href="annonsering.html">Annonsering</a></li>
-                  </ul>
-                </details>
-              </li>
-            </ul>
-          </details>
-        </li>
-      </ul>
-    </nav>
+                  <!-- For bedrifter -->
+                  <li class="dropdown">
+                    <details>
+                      <summary aria-haspopup="listbox">For bedrifter</summary>
+                      <ul
+                        class="submenu"
+                        role="listbox"
+                        aria-label="For bedrifter"
+                      >
+                        <li>
+                          <a href="for-bedrifter-produkter.html">Produkter</a>
+                        </li>
+                        <li><a href="annonsering.html">Annonsering</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
 
-    
-    <form class="nav-search" role="search" action="#" aria-label="Søk">
-      <label for="q" class="sr-only">Søk</label>
-      <input id="q" name="q" type="search" placeholder="Søk..." />
-    </form>
-  </div>
-</header>>
-
-  <!-- HERO (başlık + iki görsel) -->
-  <section class="section" aria-labelledby="hero-title">
-    <div class="container">
-      <h1 id="hero-title">Transport i regnvær & sikkerhet</h1>
-      <p>Korte råd for tryggere reiser med buss, Bybanen og til fots i Bergensregnet.</p>
-
-      <div class="grid two" role="group" aria-label="Bybanen og buss i regn">
-        <figure class="card">
-          <img src="../img/trans1.jpeg" alt="Bybanen på en regnfull dag i Bergen">
-          <figcaption class="sr-only">Bybanen i regn</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="../img/trans2.jpg" alt="Bybuss ved plattform i regnvær">
-          <figcaption class="sr-only">Bybuss i regn</figcaption>
-        </figure>
+        <form class="nav-search" role="search" action="#" aria-label="Søk">
+          <label for="q" class="sr-only">Søk</label>
+          <input id="q" name="q" type="search" placeholder="Søk..." />
+        </form>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <main id="main">
-    <section class="section" aria-labelledby="kollektiv">
+    <!-- HERO (başlık + iki görsel) -->
+    <section class="section" aria-labelledby="hero-title">
       <div class="container">
-        <h2 id="kollektiv">Kollektiv: buss & Bybanen</h2>
-        <div class="grid two">
-          <article class="card">
-            <h3>Før avreise</h3>
-            <ul>
-              <li>Beregn ekstra tid ved kraftig regn/uvær.</li>
-              <li>Bruk hette – plattformer kan være glatte.</li>
-              <li>Ha billett klart for å unngå stress i kø.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Under reisen</h3>
-            <ul>
-              <li>Hold deg fast (våte gulv = mindre friksjon).</li>
-              <li>Vær oppmerksom ved stopp – unngå løping.</li>
-              <li>Utstyret tørt i sekkens hovedrom, ikke åpen lomme.</li>
-            </ul>
-          </article>
+        <h1 id="hero-title">Transport i regnvær & sikkerhet</h1>
+        <p>
+          Korte råd for tryggere reiser med buss, Bybanen og til fots i
+          Bergensregnet.
+        </p>
+
+        <div class="grid two" role="group" aria-label="Bybanen og buss i regn">
+          <figure class="card">
+            <span class="badge">Bybanen</span>
+            <img
+              src="../img/trans1.jpeg"
+              alt="Bybanen på en regnfull dag i Bergen"
+            />
+            <figcaption class="sr-only">Bybanen i regn</figcaption>
+          </figure>
+          <figure class="card">
+            <span class="badge" style="background: #14b8a6">Buss</span>
+            <img src="../img/trans2.jpg" alt="Bybuss ved plattform i regnvær" />
+            <figcaption class="sr-only">Bybuss i regn</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="fot">
-      <div class="container">
-        <h2 id="fot">Fotgjenger & sykkel</h2>
-        <div class="grid two">
-          <article class="card">
-            <h3>Fotgjengere</h3>
-            <ul>
-              <li>Refleks på jakke/sekken i skumring/regn.</li>
-              <li>Unngå blank brostein; gå på ru overflate når mulig.</li>
-              <li>Se opp for vannpytter – sprut fra kjøretøy.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Sykkel</h3>
-            <ul>
-              <li>Brems tidligere; våte felger/rotorer bremser tregere.</li>
-              <li>Lavere dekktrykk gir bedre grep, men ikke for lavt.</li>
-              <li>Lys foran/bak + skjermer mot sprut.</li>
-            </ul>
-          </article>
+    <main id="main">
+      <!-- Kollektiv -->
+      <section class="section" id="kollektiv" aria-labelledby="kollektiv-title">
+        <div class="container">
+          <h2 id="kollektiv-title">Kollektiv: buss & Bybanen</h2>
+          <div class="grid two">
+            <article class="card">
+              <h3>Før avreise</h3>
+              <ul>
+                <li>Beregn ekstra tid ved kraftig regn/uvær.</li>
+                <li>Bruk hette – plattformer kan være glatte.</li>
+                <li>Ha billett klart for å unngå stress i kø.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Under reisen</h3>
+              <ul>
+                <li>Hold deg fast (våte gulv = mindre friksjon).</li>
+                <li>Vær oppmerksom ved stopp – unngå løping.</li>
+                <li>Utstyret tørt i sekkens hovedrom, ikke åpen lomme.</li>
+              </ul>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" aria-labelledby="sjekk">
-      <div class="container">
-        <h2 id="sjekk">Sikkerhetssjekk (kort liste)</h2>
-        <ul>
-          <li>Skli-sikre sko (se <a href="sko.html">Sko</a>)</li>
-          <li>Vanntett deksel/pose for mobil og kort</li>
-          <li>Refleks & liten lommelykt ved dårlig sikt</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="driftsinfo">
-      <div class="container">
-        <h2 id="driftsinfo">Driftsinfo (eksempel-tabell)</h2>
-        <div class="table-wrap">
-          <table class="zebra">
-            <caption>Mulige endringer i regn (eksempel)</caption>
-            <thead><tr><th>Linje</th><th>Type</th><th>Status</th><th>Notat</th></tr></thead>
-            <tbody>
-              <tr><td>Bybanen</td><td>Skinne</td><td>Normal</td><td>Glatt plattform – hold deg fast</td></tr>
-              <tr><td>Buss 12</td><td>Buss</td><td>Forsinket</td><td>Tung trafikk i rushtid + regn</td></tr>
-              <tr><td>Buss 50E</td><td>Buss</td><td>Omvei</td><td>Vann i tunnel – midlertidig rute</td></tr>
-            </tbody>
-          </table>
+      <!-- Fotgjenger & sykkel -->
+      <section class="section" id="fot" aria-labelledby="fot-title">
+        <div class="container">
+          <h2 id="fot-title">Fotgjenger & sykkel</h2>
+          <div class="grid two">
+            <article class="card">
+              <h3>Fotgjengere</h3>
+              <ul>
+                <li>Refleks på jakke/sekken i skumring/regn.</li>
+                <li>Unngå blank brostein; gå på ru overflate når mulig.</li>
+                <li>Se opp for vannpytter – sprut fra kjøretøy.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Sykkel</h3>
+              <ul>
+                <li>Brems tidligere; våte felger/rotorer bremser tregere.</li>
+                <li>Lavere dekktrykk gir bedre grep, men ikke for lavt.</li>
+                <li>Lys foran/bak + skjermer mot sprut.</li>
+              </ul>
+            </article>
+          </div>
         </div>
-        <p class="muted">*Kun demodata. Siden er statisk i prosjektet.</p>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
+      <!-- Sikkerhetssjekk -->
+      <section class="section" id="sjekk">
+        <div class="container">
+          <div class="section-box section--teal">
+            <h2>Sikkerhetssjekk (kort liste)</h2>
+            <ul>
+              <li>Skli-sikre sko (se <a href="sko.html">Sko</a>)</li>
+              <li>Vanntett deksel/pose for mobil og kort</li>
+              <li>Refleks & liten lommelykt ved dårlig sikt</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Driftsinfo -->
+      <section
+        class="section"
+        id="driftsinfo"
+        aria-labelledby="driftsinfo-title"
+      >
+        <div class="container">
+          <div class="section-box section--blue">
+            <h2 id="driftsinfo-title">Driftsinfo (eksempel-tabell)</h2>
+            <div class="table-wrap">
+              <table class="zebra table--left-accent">
+                <caption>
+                  Mulige endringer i regn (eksempel)
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Linje</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Notat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Bybanen</td>
+                    <td>Skinne</td>
+                    <td>Normal</td>
+                    <td>Glatt plattform – hold deg fast</td>
+                  </tr>
+                  <tr>
+                    <td>Buss 12</td>
+                    <td>Buss</td>
+                    <td>Forsinket</td>
+                    <td>Tung trafikk i rushtid + regn</td>
+                  </tr>
+                  <tr>
+                    <td>Buss 50E</td>
+                    <td>Buss</td>
+                    <td>Omvei</td>
+                    <td>Vann i tunnel – midlertidig rute</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="muted">*Kun demodata. Siden er statisk i prosjektet.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <p><a href="#top">↑ Til toppen</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
       <div class="container">
-        <p><a href="#top">↑ Til toppen</a></p>
+        <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

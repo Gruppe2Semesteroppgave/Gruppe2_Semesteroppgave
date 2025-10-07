@@ -9,11 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="aktiviteler aktiviteter">
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
   <!-- HEADER / NAVBAR -->
-  <header class="site-header" id="top">
+    <div id="top"></div>
+  <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
@@ -34,6 +35,7 @@
               <li><a href="sko.html">Sko</a></li>
               <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
               <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+              <li><a href="transport-sikkerhet.html"> transport-sikkerhet</a></li>
 
               <!-- For bedrifter (nested under Løsninger) -->
               <li class="dropdown">
@@ -73,15 +75,15 @@
       <div class="container">
         <h2 id="kategorier">Kategorier</h2>
         <div class="cards grid-3">
-          <article class="card">
+          <article class="card card--ls" style="--ls-color:#2563eb;">
             <h3>Museer</h3>
             <p>Kode, Akvariet, Bryggens Museum – perfekt for våte dager.</p>
           </article>
-          <article class="card">
+          <article class="card card--ls" style="--ls-color:#7c3aed; ">
             <h3>Kafeer</h3>
             <p>Hyggelige steder å jobbe/lese og varme deg på en kaffe.</p>
           </article>
-          <article class="card">
+          <article class="card card--ls" style="--ls-color:#d97706;">
             <h3>Aktiviteter</h3>
             <p>Escape room, svømmehall, bibliotek, bowling og mer.</p>
           </article>
@@ -89,12 +91,12 @@
       </div>
     </section>
 
-    <!-- YENİ: 3 alt tema -->
+    <!-- Flere forslag -->
     <section class="section" aria-labelledby="temaforslag">
       <div class="container">
         <h2 id="temaforslag">Flere forslag</h2>
         <div class="cards grid-3">
-          <article class="card" aria-labelledby="barn-tittel">
+          <article class="card card--ls" style="--ls-color:#2563eb;" aria-labelledby="barn-tittel">
             <h3 id="barn-tittel">For barn</h3>
             <ul>
               <li>Akvariet – fôringsshow og innendørs soner</li>
@@ -103,7 +105,7 @@
             </ul>
           </article>
 
-          <article class="card" aria-labelledby="date-tittel">
+          <article class="card card--ls" style="--ls-color:#7c3aed;" aria-labelledby="date-tittel">
             <h3 id="date-tittel">Date night</h3>
             <ul>
               <li>Gallerirunde på KODE + dessertkafé</li>
@@ -112,7 +114,7 @@
             </ul>
           </article>
 
-          <article class="card" aria-labelledby="gratis-tittel">
+          <article class="card card--ls" style="--ls-color:#f59e0b; " aria-labelledby="gratis-tittel">
             <h3 id="gratis-tittel">Gratis / lavbudsjett</h3>
             <ul>
               <li>Bybanen til endestasjon + kort byvandring</li>
@@ -148,7 +150,7 @@
     <section class="section" aria-labelledby="ruter">
       <div class="container">
         <h2 id="ruter">Foreslåtte ruter</h2>
-        <article class="card">
+        <article class="card card--ls" style="--ls-color:#14b8a6;">
           <h3>“3-timers regnbytur”</h3>
           <ol>
             <li>Kort byvandring på Bryggen (med regnjakke!)</li>
@@ -158,12 +160,17 @@
         </article>
       </div>
     </section>
-
-    <section class="section">
+    <!-- Reklamfelt -->
+     
+    <section class="section" aria-labelledby="reklame">
       <div class="container">
-        <p><a href="#top">↑ Til toppen</a></p>
+        <aside class="card card--partners">
+          <h2 id="reklame">Reklamefelt</h2>
+          <p>Annonsør: WetGrip Dekk – «Bedre kontroll på våt vei».</p>
+        </aside>
       </div>
     </section>
+    <p><a href="#top">↑ Til toppen</a></p>
   </main>
 
   <footer class="site-footer">

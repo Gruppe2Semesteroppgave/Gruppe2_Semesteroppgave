@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="../css/style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="sko">
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
    <!-- HEADER / NAVBAR -->
-  <header class="site-header" id="top">
+    <div id="top"></div>
+  <header class="site-header" >
   <div class="container nav-wrap">
     <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
@@ -32,6 +33,7 @@
               <li><a href="sko.html">Sko</a></li>
               <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
               <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+              
 
               <!-- For bedrifter (nested under Løsninger) -->
               <li class="dropdown">
@@ -68,15 +70,15 @@
     <section class="section" aria-labelledby="typer">
       <div class="container">
         <h2 id="typer">Typer & bruk</h2>
-        <div class="grid two">
-          <article class="card">
+        <div class="grid two ">
+          <article class="card card--ls" style="--ls-color:#981384;">
             <h3>Regnstøvler</h3>
             <ul>
               <li>Vanntett, lett å rengjøre</li>
               <li>Passer til bybruk & kort pendling</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="card card--ls" style="--ls-color:#981384;">
             <h3>Membransko (Gore-Tex o.l.)</h3>
             <ul>
               <li>Vanntett + pustende</li>
@@ -91,7 +93,7 @@
     <section class="section" aria-labelledby="produkter">
       <div class="container">
         <h2 id="produkter">Anbefalte produkter</h2>
-        <div class="cards grid-3">
+        <div id="produkter" class="cards grid-3">
           <!-- 1: Barnesko -->
           <article class="card feature card--klaer" aria-labelledby="p1-tittel">
             <figure>
@@ -149,26 +151,39 @@
 
     <section class="section" aria-labelledby="passform">
       <div class="container">
+        <div class="section-box section--amber"> 
         <h2 id="passform">Passform & komfort</h2>
         <ul>
           <li>Plass til ullsokk uten å klemme tær</li>
           <li>Hælgrep som ikke glipper</li>
           <li>Bytt våte sokker raskt</li>
         </ul>
+        </div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="vedlikehold">
       <div class="container">
+        <div class="section-box section--purple">
         <h2 id="vedlikehold">Vedlikehold</h2>
         <ul>
           <li>Tørk ved romtemperatur (ikke på radiator)</li>
           <li>Bruk skotørker ved behov</li>
           <li>Impregner jevnlig for bedre vannavvisning</li>
         </ul>
-        <p><a href="#top">↑ Til toppen</a></p>
+        </div>
       </div>
     </section>
+     <!-- Reklamefelt -->
+    <section class="section" aria-labelledby="reklame">
+      <div class="container">
+        <aside class="card card--partners">
+          <h2 id="reklame">Reklamefelt</h2>
+          <p>Annonsør: <strong>DryFeet</strong> – «Hold føttene tørre hele dagen».</p>
+        </aside>
+      </div>
+    </section>
+    <p><a href="#top">↑ Til toppen</a></p>
   </main>
 
   <footer class="site-footer">
