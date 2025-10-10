@@ -4,62 +4,67 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Regnbyen Bergen A/S – For bedrifter</title>
-  <link rel="stylesheet" href="../css/style.css"/>
+
+  <!-- Stil -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Fontlar -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bedrifter">
   <a class="skip-link" href="#main">Hopp til innhold</a>
 
-   <!-- HEADER / NAVBAR -->
+  <!-- HEADER / NAVBAR -->
   <header class="site-header" id="top">
-  <div class="container nav-wrap">
-    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+    <div class="container nav-wrap">
+      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-    <nav class="navbar" aria-label="Hovedmeny">
-      <ul class="menu">
-        <li><a href="hjemside.html" >Hjem</a></li>
-        <li><a href="prosjekt.html">Om prosjektet</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+      <nav class="navbar" aria-label="Hovedmeny">
+        <ul class="menu">
+          <li><a href="hjemside.html">Hjem</a></li>
+          <li><a href="prosjekt.html">Om prosjektet</a></li>
 
-        <!-- Løsninger -->
-        <li class="dropdown">
-          <details>
-            <summary aria-haspopup="listbox">Løsninger</summary>
-            <ul class="submenu" role="listbox" aria-label="Løsninger">
-              <li><a href="bil.html">Bil</a></li>
-              <li><a href="hus.html">Hus</a></li>
-              <li><a href="klaer.html">Klær</a></li>
-              <li><a href="sko.html">Sko</a></li>
-              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-              <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-              <li><a href="transport-sikkerhet.html"> transport-sikkerhet</a></li>
+          <!-- Løsninger -->
+          <li class="dropdown">
+            <details>
+              <summary aria-haspopup="listbox">Løsninger</summary>
+              <ul class="submenu" role="listbox" aria-label="Løsninger">
+                <li><a href="bil.html">Bil</a></li>
+                <li><a href="hus.html">Hus</a></li>
+                <li><a href="klaer.html">Klær</a></li>
+                <li><a href="sko.html">Sko</a></li>
+                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+                <li><a href="transport-sikkerhet.html">Transport & sikkerhet</a></li>
 
-              <!-- For bedrifter (nested under Løsninger) -->
-              <li class="dropdown">
-                <details>
-                  <summary aria-haspopup="listbox">For bedrifter</summary>
-                  <ul class="submenu" role="listbox" aria-label="For bedrifter">
-                    <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
-                    <li><a href="annonsering.html">Annonsering</a></li>
-                  </ul>
-                </details>
-              </li>
-            </ul>
-          </details>
-        </li>
-      </ul>
-    </nav>
+                <!-- For bedrifter -->
+                <li class="dropdown">
+                  <details>
+                    <summary aria-haspopup="listbox">For bedrifter</summary>
+                    <ul class="submenu" role="listbox" aria-label="For bedrifter">
+                      <li><a href="for-bedrifter-produkter.html" aria-current="page">Produkter</a></li>
+                      <li><a href="annonsering.html">Annonsering</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
 
-    
-    <form class="nav-search" role="search" action="#" aria-label="Søk">
-      <label for="q" class="sr-only">Søk</label>
-      <input id="q" name="q" type="search" placeholder="Søk..." />
-    </form>
-  </div>
-</header>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <form class="nav-search" role="search" action="#" aria-label="Søk">
+        <label for="q" class="sr-only">Søk</label>
+        <input id="q" name="q" type="search" placeholder="Søk..." />
+      </form>
+    </div>
+  </header>
 
   <main id="main">
+    <!-- Intro -->
     <section class="section" aria-labelledby="page-title">
       <div class="container">
         <h1 id="page-title">Produkttips for regnbyen</h1>
@@ -67,95 +72,116 @@
       </div>
     </section>
 
-    <!-- Kategorier -->
+    <!-- Kategorier & eksempler -->
     <section class="section" aria-labelledby="kategori">
       <div class="container">
         <h2 id="kategori">Kategorier & eksempler</h2>
 
         <div class="grid two">
-         
-          <article class="card" aria-labelledby="k1">
-            <h3 id="k1">Regnklær & tilbehør</h3>
-            <ul>
-              <li>Skalljakker, regnbukser</li>
-              <li>Paraplyer, vanntette sekker</li>
-              <li>Refleksdetaljer, regntrekk</li>
-            </ul>
+          <!-- Kategori 1 -->
+          <div class="section-box section--purple">
+            <div class="category" aria-labelledby="k1">
+              <h3 id="k1">Regnklær & tilbehør</h3>
+              <ul>
+                <li>Skalljakker, regnbukser</li>
+                <li>Paraplyer, vanntette sekker</li>
+                <li>Refleksdetaljer, regntrekk</li>
+              </ul>
 
-            
-            <div class="grid two" style="margin-top:16px">
-              <article class="card feature card--klaer" aria-labelledby="p-k1a">
-                <figure>
-                  <img src="../img/forbedprodu1.jpg" alt="Skalljakke – regnbyer (illustrasjon)">
-                </figure>
-                <h4 id="p-k1a">Skalljakke Pro</h4>
-                <p>Høy vannsøyle, pusting og tapede sømmer.</p>
-                <p><a class="btn-link" href="#">Mer info</a></p>
-              </article>
+              <!-- ÜRÜNLER: üstte renkli şerit sadece burada -->
+              <div class="grid two product-grid" style="margin-top:16px">
+                <article class="card" aria-labelledby="p-k1a">
+                  <figure>
+                    <img src="../img/forbedprodu1.jpg" alt="Skalljakke – regnbyer (illustrasjon)" />
+                  </figure>
+                  <h4 id="p-k1a">Skalljakke Pro</h4>
+                  <p>Høy vannsøyle, pusting og tapede sømmer.</p>
+                  <p class="mt-auto"><a class="btn-link" href="#">Mer info</a></p>
+                </article>
 
-              <article class="card feature card--klaer" aria-labelledby="p-k1b">
-                <figure>
-                  <img src="../img/forbedprodu2.jpg" alt="Vanntett sekk – 20L (illustrasjon)">
-                </figure>
-                <h4 id="p-k1b">Vanntett sekk 20L</h4>
-                <p>Rulltopp, reflekser og regntrekk i lokk.</p>
-                <p><a class="btn-link" href="#">Mer info</a></p>
-              </article>
+                <article class="card" aria-labelledby="p-k1b">
+                  <figure>
+                    <img src="../img/forbedprodu2.jpg" alt="Vanntett sekk – 20L (illustrasjon)" />
+                  </figure>
+                  <h4 id="p-k1b">Vanntett sekk 20L</h4>
+                  <p>Rulltopp, reflekser og regntrekk i lokk.</p>
+                  <p class="mt-auto"><a class="btn-link" href="#">Mer info</a></p>
+                </article>
+              </div>
             </div>
-          </article>
+          </div>
 
-        
-          <article class="card" aria-labelledby="k2">
-            <h3 id="k2">Butikk-tilpasning</h3>
-            <ul>
-              <li>Vitrineløsninger i “regn-tema”</li>
-              <li>Plakat & kampanjeplassering ved inngang</li>
-              <li>Sesongbasert lagerplan (høst/vår)</li>
-            </ul>
+          <!-- Kategori 2 -->
+          <div class="section-box section--blue">
+            <div class="category" aria-labelledby="k2">
+              <h3 id="k2">Butikk-tilpasning</h3>
+              <ul>
+                <li>Vitrineløsninger i “regn-tema”</li>
+                <li>Plakat & kampanjeplassering ved inngang</li>
+                <li>Sesongbasert lagerplan (høst/vår)</li>
+              </ul>
 
-            <div class="grid two" style="margin-top:16px">
-              <article class="card feature card--hus" aria-labelledby="p-k2a">
-                <figure>
-                  <img src="../img/forbedprodu3.jpg" alt="Vitrine set – regntema (illustrasjon)">
-                </figure>
-                <h4 id="p-k2a">Vitrine-sett (regn)</h4>
-                <p>Modulbasert, rask kurulum ve sesong teması.</p>
-                <p><a class="btn-link" href="#">Mer info</a></p>
-              </article>
+              <div class="grid two product-grid" style="margin-top:16px">
+                <article class="card" aria-labelledby="p-k2a">
+                  <figure>
+                    <img src="../img/forbedprodu3.jpg" alt="Vitrine-sett – regntema (illustrasjon)" />
+                  </figure>
+                  <h4 id="p-k2a">Vitrine-sett (regn)</h4>
+                  <p>Modulbasert, rask kurulum ve sesong teması.</p>
+                  <p class="mt-auto"><a class="btn-link" href="#">Mer info</a></p>
+                </article>
 
-              <article class="card feature card--hus" aria-labelledby="p-k2b">
-                <figure>
-                  <img src="../img/forbedprodu4.avif" alt="Plakatpakke – kampanje (illustrasjon)">
-                </figure>
-                <h4 id="p-k2b">Plakatpakke</h4>
-                <p>Inngang, kasse og hylle topper için set.</p>
-                <p><a class="btn-link" href="#">Mer info</a></p>
-              </article>
+                <article class="card" aria-labelledby="p-k2b">
+                  <figure>
+                    <img src="../img/forbedprodu4.avif" alt="Plakatpakke – kampanje (illustrasjon)" />
+                  </figure>
+                  <h4 id="p-k2b">Plakatpakke</h4>
+                  <p>Inngang, kasse og hylle topper için set.</p>
+                  <p class="mt-auto"><a class="btn-link" href="#">Mer info</a></p>
+                </article>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Sesong plan -->
+    <!-- Sesongplan -->
     <section class="section" aria-labelledby="sesong">
       <div class="container">
-        <h2 id="sesong">Sesongplan (eksempel)</h2>
-        <div class="table-wrap">
-          <table class="zebra">
-            <caption>Sesong & fokus</caption>
-            <thead>
-              <tr><th>Sesong</th><th>Fokus</th><th>Kommentar</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Vår</td><td>Lette skalljakker</td><td>Vind/regn kombinasjon</td></tr>
-              <tr><td>Høst</td><td>Støvler, paraply</td><td>Hyppige byger</td></tr>
-              <tr><td>Vinter</td><td>Fôr + vannavvisning</td><td>Slaps & salt</td></tr>
-            </tbody>
-          </table>
+        <div class="section-box section--amber">
+          <h2 id="sesong">Sesongplan (eksempel)</h2>
+          <div class="table-wrap">
+            <table class="zebra">
+              <caption>Sesong & fokus</caption>
+              <thead>
+                <tr>
+                  <th>Sesong</th>
+                  <th>Fokus</th>
+                  <th>Kommentar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Vår</td>
+                  <td>Lette skalljakker</td>
+                  <td>Vind/regn kombinasjon</td>
+                </tr>
+                <tr>
+                  <td>Høst</td>
+                  <td>Støvler, paraply</td>
+                  <td>Hyppige byger</td>
+                </tr>
+                <tr>
+                  <td>Vinter</td>
+                  <td>Fôr + vannavvisning</td>
+                  <td>Slaps & salt</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-
     </section>
 
     <section class="section">
