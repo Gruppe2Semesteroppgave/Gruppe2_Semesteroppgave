@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Regnbyen Bergen A/S – Hjem</title>
+    <title>Regnbyen Bergen A/S – Hus</title>
     <link rel="stylesheet" href="../css/RegnbyenLasse.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -14,15 +14,12 @@
 <body>
 <header class="site-header" id="top">
     <nav class="nav" role="navigation">
-        <!-- Left: logo -->
         <a class="logo" href="hjemside.html">Regnbyen Bergen</a>
 
-        <!-- Right: links -->
         <ul class="nav-links">
             <li><a href="prosjekt.html">Om prosjektet</a></li>
             <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
 
-            <!-- Dropdown: Løsninger -->
             <li class="nav-dropdown">
                 <details class="dropdown">
                     <summary>Løsninger▾</summary>
@@ -31,10 +28,11 @@
                         <li><a href="klaer.html">Klær</a></li>
                         <li><a href="sko.html">Sko</a></li>
                         <li><a href="hus.html">Hus</a></li>
-                        <li><a href="bil.html" >Bil</a></li>
+                        <li><a href="bil.html">Bil</a></li>
                     </ul>
                 </details>
             </li>
+
             <li class="nav-dropdown">
                 <details class="dropdown">
                     <summary>Kontakt▾</summary>
@@ -49,87 +47,80 @@
 </header>
 
 <main>
-    <h1>Vedlikehold av hus i regnvær</h1>
-    <p>
-        I et vått og kystnært klima som Bergen er det lurt å prioritere drenering,
-        takrenner, riktig maling og god ventilasjon. Under finner du en kort
-        oversikt med konkrete anbefalinger.
-    </p>
+    <!-- Card 1 -->
+    <div class="hus-grid">
+        <div class="hus-item hus-item-intro">
+            <h1>Vedlikehold av hus i regnvær</h1>
+            <p>
+                I et vått og kystnært klima som Bergen er det lurt å prioritere drenering,
+                takrenner, riktig maling og god ventilasjon. Under finner du en kort
+                oversikt med konkrete anbefalinger.
+            </p>
+        </div>
+    </div>
 
-    <section>
-        <h2>Anbefalinger (tabell)</h2>
-        <table>
-            <caption>Hus &amp; regnvær – hva bør du prioritere?</caption>
-            <thead>
-            <tr>
-                <th>Tema</th>
-                <th>Anbefaling</th>
-                <th>Hvorfor</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Takrenner &amp; nedløp</td>
-                <td>Rens høst/vår; sjekk lekkasjer og fester</td>
-                <td>Hindrer overløp og vannskader på fasade</td>
-            </tr>
-            <tr>
-                <td>Drenering/terrengfall</td>
-                <td>Sørg for fall bort fra grunnmur; hold sluk åpne</td>
-                <td>Reduserer fuktinntrenging i kjeller/krypkjeller</td>
-            </tr>
-            <tr>
-                <td>Yttervegger/maling</td>
-                <td>Bruk diffusjonsåpen maling til vått klima</td>
-                <td>Veggen “puster” og tørker raskere</td>
-            </tr>
-            <tr>
-                <td>Ventilasjon/lufting</td>
-                <td>Luft daglig; bruk avtrekk på bad/kjøkken</td>
-                <td>Motvirker kondens og mugg</td>
-            </tr>
-            <tr>
-                <td>Vinduer &amp; dører</td>
-                <td>Kontroller tetningslister; skift ved slitasje</td>
-                <td>Bedre tetthet og mindre fukt/trekk</td>
-            </tr>
-            <tr>
-                <td>Kjeller/krypkjeller</td>
-                <td>Mål fukt; bruk avfukter ved behov</td>
-                <td>Reduserer lukt og muggvekst</td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
+    <!-- 1x3 columns using existing solutions-grid/solution -->
+    <h2>Anbefalinger</h2>
+    <div class="solutions-grid">
+        <div class="solution">
+            <h3>Tema</h3>
+            <ul>
+                <li>Takrenner &amp; nedløp</li>
+                <li>Drenering/terrengfall</li>
+                <li>Yttervegger/maling</li>
+                <li>Ventilasjon/lufting</li>
+                <li>Vinduer &amp; dører</li>
+                <li>Kjeller/krypkjeller</li>
+            </ul>
+        </div>
+        <div class="solution">
+            <h3>Anbefaling</h3>
+            <ul>
+                <li>Rens høst/vår; sjekk lekkasjer og fester</li>
+                <li>Sørg for fall bort fra grunnmur; hold sluk åpne</li>
+                <li>Bruk diffusjonsåpen maling til vått klima</li>
+                <li>Luft daglig; bruk avtrekk på bad/kjøkken</li>
+                <li>Kontroller tetningslister; skift ved slitasje</li>
+                <li>Mål fukt; bruk avfukter ved behov</li>
+            </ul>
+        </div>
+        <div class="solution">
+            <h3>Hvorfor</h3>
+            <ul>
+                <li>Hindrer overløp og vannskader på fasade</li>
+                <li>Reduserer fuktinntrenging i kjeller/krypkjeller</li>
+                <li>Veggen “puster” og tørker raskere</li>
+                <li>Motvirker kondens og mugg</li>
+                <li>Bedre tetthet og mindre fukt/trekk</li>
+                <li>Reduserer lukt og muggvekst</li>
+            </ul>
+        </div>
+    </div>
 
-    <section>
-        <h2>Sesongvise sjekklister</h2>
-        <ul>
-            <li><strong>Vår:</strong> Rens takrenner, sjekk nedløp og drenering.</li>
-            <li><strong>Sommer:</strong> Mal/vedlikehold yttervegger ved tørt vær.</li>
-            <li><strong>Høst:</strong> Fjern løv fra rister/sluk; kontroller tetningslister.</li>
-            <li><strong>Vinter:</strong> Følg med på istapper/ising; luft godt etter dusj.</li>
-        </ul>
-    </section>
+    <!-- Card 2 -->
+    <div class="hus-grid">
+        <div class="hus-item hus-item-sjekkliste">
+            <h2>Sesongvise sjekklister</h2>
+            <ul>
+                <li><strong>Vår:</strong> Rens takrenner, sjekk nedløp og drenering.</li>
+                <li><strong>Sommer:</strong> Mal/vedlikehold yttervegger ved tørt vær.</li>
+                <li><strong>Høst:</strong> Fjern løv fra rister/sluk; kontroller tetningslister.</li>
+                <li><strong>Vinter:</strong> Følg med på istapper/ising; luft godt etter dusj.</li>
+            </ul>
+        </div>
+    </div>
 
-    <figure>
-        <img src="../img/hus.jpg" alt="Hus i regnvær i Bergen" width="720" />
-        <figcaption>Illustrasjon: husvedlikehold i vått klima.</figcaption>
-    </figure>
-
-    <aside>
-        <h2>Reklamefelt ()</h2>
-        <p>Annonsør: <strong>DryHome</strong> – «Beskytt huset mot fukt og sopp».</p>
-    </aside>
-
-    <section>
-        <h2>Sikkerhet</h2>
-        <ul>
-            <li>Bruk fallsikring ved arbeid i høyden (tak/renner).</li>
-            <li>Slå av strømmen før arbeid i våtrom.</li>
-            <li>Følg produsentens anvisninger for kjemikalier og maling.</li>
-        </ul>
-    </section>
+    <!-- Card 3 -->
+    <div class="hus-grid">
+        <div class="hus-item hus-item-sikkerhet">
+            <h2>Sikkerhet</h2>
+            <ul>
+                <li>Bruk fallsikring ved arbeid i høyden (tak/renner).</li>
+                <li>Slå av strømmen før arbeid i våtrom.</li>
+                <li>Følg produsentens anvisninger for kjemikalier og maling.</li>
+            </ul>
+        </div>
+    </div>
 </main>
 
 <footer>

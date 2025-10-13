@@ -27,14 +27,15 @@
                 <details class="dropdown">
                     <summary>Løsninger▾</summary>
                     <ul class="dropdown-menu">
-                        <li><a href="transport-sikkerhet.html">Transport</a></li>
+                        <li><a href="transport-sikkerhet.html" aria-current="page">Transport</a></li>
                         <li><a href="klaer.html">Klær</a></li>
                         <li><a href="sko.html">Sko</a></li>
                         <li><a href="hus.html">Hus</a></li>
-                        <li><a href="bil.html" >Bil</a></li>
+                        <li><a href="bil.html">Bil</a></li>
                     </ul>
                 </details>
             </li>
+
             <li class="nav-dropdown">
                 <details class="dropdown">
                     <summary>Kontakt▾</summary>
@@ -48,79 +49,87 @@
     </nav>
 </header>
 
-<main id="main">
-    <h1>Transport i regnvær & sikkerhet</h1>
-    <p>Korte råd for tryggere reiser med buss, Bybanen og til fots i Bergensregnet.</p>
-
-    <section aria-labelledby="kollektiv">
-        <h2 id="kollektiv">Kollektiv: buss & Bybanen</h2>
-        <div class="grid two">
-            <article class="card">
-                <h3>Før avreise</h3>
-                <ul>
-                    <li>Beregn ekstra tid ved kraftig regn/uvær.</li>
-                    <li>Bruk hette – plattformer kan være glatte.</li>
-                    <li>Ha billett klart for å unngå stress i kø.</li>
-                </ul>
-            </article>
-            <article class="card">
-                <h3>Under reisen</h3>
-                <ul>
-                    <li>Hold deg fast (våte gulv = mindre friksjon).</li>
-                    <li>Vær oppmerksom ved stopp – unngå løping.</li>
-                    <li>Utstyret tørt i sekkens hovedrom, ikke åpen lomme.</li>
-                </ul>
-            </article>
+<main>
+    <!-- Intro: 1x1 -->
+    <div class="hus-grid">
+        <div class="hus-item hus-item-intro">
+            <h1>Transport i regnvær &amp; sikkerhet</h1>
+            <p>Korte råd for tryggere reiser med buss, Bybanen og til fots i Bergensregnet.</p>
         </div>
-    </section>
+    </div>
 
-    <section aria-labelledby="fot">
-        <h2 id="fot">Fotgjenger & sykkel</h2>
-        <div class="grid two">
-            <article class="card">
-                <h3>Fotgjengere</h3>
-                <ul>
-                    <li>Refleks på jakke/sekken i skumring/regn.</li>
-                    <li>Unngå blank brostein; gå på ru overflate når mulig.</li>
-                    <li>Se opp for vannpytter – sprut fra kjøretøy.</li>
-                </ul>
-            </article>
-            <article class="card">
-                <h3>Sykkel</h3>
-                <ul>
-                    <li>Brems tidligere; våte felger/rotorer bremser tregere.</li>
-                    <li>Lavere dekktrykk gir bedre grep, men ikke for lavt.</li>
-                    <li>Lys foran/bak + skjermer mot sprut.</li>
-                </ul>
-            </article>
+    <!-- Kollektiv: 1x2 -->
+    <h2>Kollektiv: buss &amp; Bybanen</h2>
+    <div class="pair-grid">
+        <div class="pair-item">
+            <h3>Før avreise</h3>
+            <ul>
+                <li>Beregn ekstra tid ved kraftig regn/uvær.</li>
+                <li>Bruk hette – plattformer kan være glatte.</li>
+                <li>Ha billett klart for å unngå stress i kø.</li>
+            </ul>
         </div>
-    </section>
+        <div class="pair-item">
+            <h3>Under reisen</h3>
+            <ul>
+                <li>Hold deg fast (våte gulv = mindre friksjon).</li>
+                <li>Vær oppmerksom ved stopp – unngå løping.</li>
+                <li>Utstyret tørt i sekkens hovedrom, ikke åpen lomme.</li>
+            </ul>
+        </div>
+    </div>
 
-    <section aria-labelledby="sjekk">
-        <h2 id="sjekk">Sikkerhetssjekk (kort liste)</h2>
-        <ul>
-            <li>Skli-sikre sko (se <a href="sko.html">Sko</a>)</li>
-            <li>Vanntett deksel/pose for mobil og kort</li>
-            <li>Refleks & liten lommelykt ved dårlig sikt</li>
-        </ul>
-    </section>
+    <!-- Fotgjenger & sykkel: 1x2 -->
+    <h2>Fotgjenger &amp; sykkel</h2>
+    <div class="pair-grid">
+        <div class="pair-item">
+            <h3>Fotgjengere</h3>
+            <ul>
+                <li>Refleks på jakke/sekken i skumring/regn.</li>
+                <li>Unngå blank brostein; gå på ru overflate når mulig.</li>
+                <li>Se opp for vannpytter – sprut fra kjøretøy.</li>
+            </ul>
+        </div>
+        <div class="pair-item">
+            <h3>Sykkel</h3>
+            <ul>
+                <li>Brems tidligere; våte felger/rotorer bremser tregere.</li>
+                <li>Lavere dekktrykk gir bedre grep, men ikke for lavt.</li>
+                <li>Lys foran/bak + skjermer mot sprut.</li>
+            </ul>
+        </div>
+    </div>
 
-    <section aria-labelledby="driftsinfo">
-        <h2 id="driftsinfo">Driftsinfo (eksempel-tabell)</h2>
-        <div class="table-wrap">
+    <!-- Sikkerhetssjekk: 1x1 -->
+    <div class="hus-grid">
+        <div class="hus-item hus-item-sikkerhet">
+            <h2>Sikkerhetssjekk (kort liste)</h2>
+            <ul>
+                <li>Skli-sikre sko (se <a href="sko.html">Sko</a>)</li>
+                <li>Vanntett deksel/pose for mobil og kort</li>
+                <li>Refleks &amp; liten lommelykt ved dårlig sikt</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Driftsinfo: 1x1 -->
+    <div class="hus-grid">
+        <div class="hus-item hus-item-sjekkliste">
+            <h2>Driftsinfo (eksempel-tabell)</h2>
             <table class="zebra">
                 <caption>Mulige endringer i regn (eksempel)</caption>
-                <thead><tr><th>Linje</th><th>Type</th><th>Status</th><th>Notat</th></tr></thead>
+                <thead>
+                <tr><th>Linje</th><th>Type</th><th>Status</th><th>Notat</th></tr>
+                </thead>
                 <tbody>
                 <tr><td>Bybanen</td><td>Skinne</td><td>Normal</td><td>Glatt plattform – hold deg fast</td></tr>
                 <tr><td>Buss 12</td><td>Buss</td><td>Forsinket</td><td>Tung trafikk i rushtid + regn</td></tr>
                 <tr><td>Buss 50E</td><td>Buss</td><td>Omvei</td><td>Vann i tunnel – midlertidig rute</td></tr>
                 </tbody>
             </table>
+            <p class="muted">*Kun demodata. Siden er statisk i prosjektet.</p>
         </div>
-        <p class="muted">*Kun demodata. Siden er statisk i prosjektet.</p>
-    </section>
-
+    </div>
 </main>
 
 <footer>

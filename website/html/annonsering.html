@@ -31,7 +31,7 @@
                         <li><a href="klaer.html">Klær</a></li>
                         <li><a href="sko.html">Sko</a></li>
                         <li><a href="hus.html">Hus</a></li>
-                        <li><a href="bil.html" >Bil</a></li>
+                        <li><a href="bil.html">Bil</a></li>
                     </ul>
                 </details>
             </li>
@@ -40,7 +40,7 @@
                     <summary>Kontakt▾</summary>
                     <ul class="dropdown-menu">
                         <li><a href="kontakt.html">Kontakt oss</a></li>
-                        <li><a href="annonsering.html">Annonsering</a></li>
+                        <li><a href="annonsering.html" aria-current="page">Annonsering</a></li>
                     </ul>
                 </details>
             </li>
@@ -48,49 +48,71 @@
     </nav>
 </header>
 
-<main id="main">
-    <h1>Plasser reklamen din hos oss</h1>
-    <p>Vi når innbyggere, studenter og besøkende i Bergen – i et praktisk regnfokus.</p>
-
-    <section aria-labelledby="mediepakke">
-        <h2 id="mediepakke">Mediepakke (kort)</h2>
-        <div class="table-wrap">
-            <table class="zebra">
-                <caption>Formater & plassering (eksempel)</caption>
-                <thead><tr><th>Format</th><th>Størrelse</th><th>Plassering</th></tr></thead>
-                <tbody>
-                <tr><td>Topbanner</td><td>1200×250</td><td>Hjem / Prosjekt</td></tr>
-                <tr><td>Sidebar</td><td>300×600</td><td>Klær / Hus / Bil</td></tr>
-                <tr><td>Innholdsblokk</td><td>728×90</td><td>Aktiviteter</td></tr>
-                </tbody>
-            </table>
+<main>
+    <!-- Intro: 1x1 -->
+    <div class="hus-grid">
+        <div class="hus-item hus-item-sjekkliste">
+            <h2>Plasser reklamen din hos oss</h2>
+            <p>Vi når innbyggere, studenter og besøkende i Bergen – i et praktisk regnfokus.</p>
         </div>
-    </section>
+    </div>
 
-    <section aria-labelledby="kontakt-annonse">
-        <h2 id="kontakt-annonse">Forespørselsskjema</h2>
-        <form class="form" action="#" method="post">
-            <label>Bedriftsnavn
-                <input type="text" name="firma" placeholder="Firmanavn AS" required />
-            </label>
-            <label>E-post
-                <input type="email" name="epost" placeholder="post@firmanavn.no" required />
-            </label>
-            <label>Ønsket plassering
-                <select name="plassering">
-                    <option>Topbanner</option>
-                    <option>Sidebar</option>
-                    <option>Innholdsblokk</option>
-                </select>
-            </label>
-            <label>Melding
-                <textarea name="melding" rows="6" placeholder="Kort om produktet og målgruppe"></textarea>
-            </label>
-            <button class="btn primary" type="submit">Send forespørsel (demo)</button>
-        </form>
-    </section>
+    <!-- Mediepakke heading outside grid -->
+    <h2>Mediepakke (kort)</h2>
 
-    <p><a href="#top">↑ Til toppen</a></p>
+    <!-- Mediepakke tråder: 1x3 -->
+    <div class="solutions-grid">
+        <div class="solution">
+            <h3>Format</h3>
+            <ul>
+                <li>Topbanner</li>
+                <li>Sidebar</li>
+                <li>Innholdsblokk</li>
+            </ul>
+        </div>
+        <div class="solution">
+            <h3>Størrelse</h3>
+            <ul>
+                <li>1200×250</li>
+                <li>300×600</li>
+                <li>728×90</li>
+            </ul>
+        </div>
+        <div class="solution">
+            <h3>Plassering</h3>
+            <ul>
+                <li>Hjem / Prosjekt</li>
+                <li>Klær / Hus / Bil</li>
+                <li>Aktiviteter</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Forespørselsskjema: 1x1 -->
+    <div class="hus-grid">
+        <div class="hus-item hus-item-intro">
+            <h2>Forespørselsskjema</h2>
+            <form class="form" action="#" method="post">
+                <label>Bedriftsnavn
+                    <input type="text" name="firma" placeholder="Firmanavn AS" required />
+                </label>
+                <label>E-post
+                    <input type="email" name="epost" placeholder="post@firmanavn.no" required />
+                </label>
+                <label>Ønsket plassering
+                    <select name="plassering">
+                        <option>Topbanner</option>
+                        <option>Sidebar</option>
+                        <option>Innholdsblokk</option>
+                    </select>
+                </label>
+                <label>Melding
+                    <textarea name="melding" rows="6" placeholder="Kort om produktet og målgruppe"></textarea>
+                </label>
+                <button class="btn primary" type="submit">Send forespørsel (demo)</button>
+            </form>
+        </div>
+    </div>
 </main>
 
 <footer>

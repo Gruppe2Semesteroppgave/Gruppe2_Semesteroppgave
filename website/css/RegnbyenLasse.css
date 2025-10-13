@@ -129,7 +129,7 @@ body {
     object-position: center 49%;
     filter: grayscale(22%);
     box-sizing: border-box;
-    border: 6px solid #6b7280;
+    border: 5px solid #6b7280;
 }
 
 .hero-title {
@@ -309,5 +309,60 @@ footer {
     font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
+
+/* Hus */
+
+/* 1x2 grid */
+.pair-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 1100px;
+    margin: 4px auto 80px;
+}
+
+.pair-item {
+    border: 1px solid #cfd8e3;
+    border-radius: 12px;
+    padding: 16px;
+    background: #ffffff;
+    background-clip: padding-box;
+    box-shadow:
+            0 4px 8px rgba(0,0,0,0.12),
+            0 8px 24px rgba(0,0,0,0.10);
+    border-top: 6px solid #cfd8e3; /* accent strip like solutions */
+}
+
+/* optional per-card accent colors */
+.pair-grid .pair-item:nth-child(1) { border-top-color: #3d197e; }
+.pair-grid .pair-item:nth-child(2) { border-top-color: #6b7280; }
+
+/* Parent: 1x1 grid */
+.hus-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 24px auto;
+}
+
+/* Base card */
+.hus-item {
+    border: 1px solid #cfd8e3;
+    border-radius: 12px;
+    padding: 16px;
+    background: #ffffff;
+    background-clip: padding-box;
+    box-shadow:
+            0 4px 8px rgba(0, 0, 0, 0.12),
+            0 8px 24px rgba(0, 0, 0, 0.10);
+    border-left: 6px solid #cfd8e3; /* default */
+}
+
+/* Per-card color modifiers */
+.hus-item-intro     { border-left-color: #7a0a2b; } /* choose any color */
+.hus-item-sjekkliste { border-left-color: #6b7280; }
+.hus-item-sikkerhet   { border-left-color: #37069a; }
+
 
 footer p { margin: 0; }
