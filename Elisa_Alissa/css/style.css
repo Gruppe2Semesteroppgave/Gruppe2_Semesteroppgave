@@ -580,19 +580,21 @@ table {
 }
 table caption {
   text-align: left;
-  color: var(--muted);
+  color: var(--muted) ;
   margin: 0 0 var(--s2);
   font-weight: 600;
   letter-spacing: 0.2px;
+  
 }
 table thead th {
   text-align: left;
-  font-weight: 700;
+  font-weight: 500;
   background: #f8fafc;
-  color: #0f172a;
+  color: #797b7f;
   border-bottom: 1px solid var(--border);
   padding: 12px;
   white-space: nowrap;
+  font-size: 1.3rem;
 }
 table tbody td {
   padding: 12px;
