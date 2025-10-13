@@ -3,47 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Regnbyen Bergen A/S – For bedrifter</title>
-
-  <!-- Stil -->
+  <title>Team – Elisa Rumeysa Solberg</title>
+  <meta name="description" content="Profilside for Elisa Rumeysa Solberg – prosjektmedlem, frontend og universell utforming (UU)." />
   <link rel="stylesheet" href="../css/style.css" />
-
-  <!-- Fontlar -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bedrifter">
-  <a class="skip-link" href="#main">Hopp til innhold</a>
+<body>
+  <div id="top"></div>
+  <a class="skip-link" href="#main">Hopp til hovedinnhold</a>
 
   <!-- HEADER / NAVBAR -->
-  <header class="site-header" id="top">
+  <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
       <nav class="navbar" aria-label="Hovedmeny">
         <ul class="menu">
           <li><a href="hjemside.html">Hjem</a></li>
-          <li><a href="prosjekt.html">Om prosjektet</a></li>
 
-          <!-- Løsninger -->
           <li class="dropdown">
             <details>
-              <summary aria-haspopup="listbox">Løsninger</summary>
-              <ul class="submenu" role="listbox" aria-label="Løsninger">
+              <summary>Om prosjektet</summary>
+              <ul class="submenu" aria-label="Om prosjektet">
+                <li><a href="prosjekt.html">Prosjektbeskrivelse</a></li>
+                <li><a href="kontakt.html">Team (Kontakt)</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="dropdown">
+            <details>
+              <summary>Løsninger</summary>
+              <ul class="submenu" aria-label="Løsninger">
                 <li><a href="bil.html">Bil</a></li>
                 <li><a href="hus.html">Hus</a></li>
                 <li><a href="klaer.html">Klær</a></li>
                 <li><a href="sko.html">Sko</a></li>
                 <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
                 <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-                <li><a href="transport-sikkerhet.html">Transport & sikkerhet</a></li>
-
-                <!-- For bedrifter -->
+                <li><a href="transport-sikkerhet.html">Transport-sikkerhet</a></li>
                 <li class="dropdown">
                   <details>
-                    <summary aria-haspopup="listbox">For bedrifter</summary>
-                    <ul class="submenu" role="listbox" aria-label="For bedrifter">
-                      <li><a href="for-bedrifter-produkter.html" aria-current="page">Produkter</a></li>
+                    <summary>For bedrifter</summary>
+                    <ul class="submenu" aria-label="For bedrifter">
+                      <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
                       <li><a href="annonsering.html">Annonsering</a></li>
                     </ul>
                   </details>
@@ -56,139 +59,69 @@
         </ul>
       </nav>
 
-      <form class="nav-search" role="search" action="#" aria-label="Søk">
-        <label for="q" class="sr-only">Søk</label>
-        <input id="q" name="q" type="search" placeholder="Søk..." />
+      <form class="nav-search" role="search" action="sok.html" method="get" aria-label="Søk">
+        <label for="q" class="sr-only">Søk på nettstedet</label>
+        <input id="q" name="q" type="search" placeholder="Søk…" autocomplete="on" />
+        <button type="submit">Søk</button>
       </form>
     </div>
   </header>
 
   <main id="main">
-    <!-- Intro -->
-    <section class="section" aria-labelledby="page-title">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Brødsmuler" class="breadcrumbs container">
+      <a href="hjemside.html">Hjem</a> › <a href="kontakt.html">Kontakt</a> › Elisa
+    </nav>
+
+    <!-- Profil -->
+    <section class="section" aria-labelledby="name">
       <div class="container">
-        <h1 id="page-title">Produkttips for regnbyen</h1>
-        <p>Hva lønner seg å selge i regnfulle perioder? Under er et kort utvalg.</p>
-      </div>
-    </section>
-
-    <!-- Kategorier & eksempler -->
-    <section class="section" aria-labelledby="kategori">
-      <div class="container">
-        <h2 id="kategori">Kategorier & eksempler</h2>
-
-        <div class="grid two">
-          <!-- Kategori 1 -->
-          <div class="section-box section--purple">
-            <div class="category" aria-labelledby="k1">
-              <h3 id="k1">Regnklær & tilbehør</h3>
-              <ul>
-                <li>Skalljakker, regnbukser</li>
-                <li>Paraplyer, vanntette sekker</li>
-                <li>Refleksdetaljer, regntrekk</li>
-              </ul>
-
-              <!-- ÜRÜNLER: üstte renkli şerit sadece burada -->
-              <div class="grid two product-grid" style="margin-top:16px">
-                <article class="card" aria-labelledby="p-k1a">
-                  <figure>
-                    <img src="../img/forbedprodu1.jpg" alt="Skalljakke – regnbyer (illustrasjon)" />
-                  </figure>
-                  <h4 id="p-k1a">Skalljakke Pro</h4>
-                  <p>Høy vannsøyle, pusting og tapede sømmer.</p>
-                  <p class="mt-auto"><a class="btn-link" href="#">Mer info</a></p>
-                </article>
-
-                <article class="card" aria-labelledby="p-k1b">
-                  <figure>
-                    <img src="../img/forbedprodu2.jpg" alt="Vanntett sekk – 20L (illustrasjon)" />
-                  </figure>
-                  <h4 id="p-k1b">Vanntett sekk 20L</h4>
-                  <p>Rulltopp, reflekser og regntrekk i lokk.</p>
-                  <p class="mt-auto"><a class="btn-link" href="#">Mer info</a></p>
-                </article>
-              </div>
+        <article class="profile" aria-labelledby="name">
+          <!-- Solda foto, sağda bilgiler (flex) -->
+          <header class="profile-header">
+            <img src="../img/elisa.jpg" alt="Elisa Rumeysa Solberg, frontend og universell utforming" class="profile-photo" />
+            <div class="profile-title">
+              <h1 id="name">Elisa Rumeysa Solberg</h1>
+              <p class="role">Prosjektmedlem – Frontend & Universell utforming (UU)</p>
+              <p class="email">E-post: <a href="mailto:elsol0297@hvl.no">elsol0297@hvl.no</a></p>
             </div>
-          </div>
+          </header>
 
-          <!-- Kategori 2 -->
-          <div class="section-box section--blue">
-            <div class="category" aria-labelledby="k2">
-              <h3 id="k2">Butikk-tilpasning</h3>
-              <ul>
-                <li>Vitrineløsninger i “regn-tema”</li>
-                <li>Plakat & kampanjeplassering ved inngang</li>
-                <li>Sesongbasert lagerplan (høst/vår)</li>
-              </ul>
+          <!-- Ansvarsområder -->
+          <section aria-labelledby="ansvar">
+            <h2 id="ansvar">Ansvarsområder</h2>
+            <ul>
+              <li>Semantiske landemerker (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>) og korrekt overskriftsstruktur.</li>
+              <li>Universell utforming: skip-link, synlig <code>:focus-visible</code>, tastaturnavigasjon, meningsfulle alt-tekster.</li>
+              <li>Kontrast/typografi (rem-basert) og responsive kort/grid komponenter.</li>
+            </ul>
+          </section>
 
-              <div class="grid two product-grid" style="margin-top:16px">
-                <article class="card" aria-labelledby="p-k2a">
-                  <figure>
-                    <img src="../img/forbedprodu3.jpg" alt="Vitrine-sett – regntema (illustrasjon)" />
-                  </figure>
-                  <h4 id="p-k2a">Vitrine-sett (regn)</h4>
-                  <p>Modulbasert, rask kurulum ve sesong teması.</p>
-                  <p class="mt-auto"><a class="btn-link" href="#">Mer info</a></p>
-                </article>
+          <!-- Del 2 bidrag -->
+          <section aria-labelledby="bidrag">
+            <h2 id="bidrag">Bidrag i Semesteroppgave – Del 2</h2>
+            <ul>
+              <li>“Hopp til hovedinnhold” lenke; gereksiz ARIA rollerinin temizlenmesi.</li>
+              <li>Tabellerde <code>caption</code> + <code>scope</code>; görsel alt metinlerinin iyileştirilmesi.</li>
+              <li>Lighthouse Accessibility, klavye og %200–%400 zoom testleri (skjermbilder i rapport).</li>
+            </ul>
+          </section>
 
-                <article class="card" aria-labelledby="p-k2b">
-                  <figure>
-                    <img src="../img/forbedprodu4.avif" alt="Plakatpakke – kampanje (illustrasjon)" />
-                  </figure>
-                  <h4 id="p-k2b">Plakatpakke</h4>
-                  <p>Inngang, kasse og hylle topper için set.</p>
-                  <p class="mt-auto"><a class="btn-link" href="#">Mer info</a></p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
+          <!-- Kısa bio -->
+          <section aria-labelledby="om">
+            <h2 id="om">Kort om meg</h2>
+            <p>Jeg jobber med HTML/CSS og UU-tiltak som gjør siden lett å bruke på tvers av enheter og brukerbehov.</p>
+          </section>
+
+          <!-- Geri bağlantı -->
+          <p class="backlinks">
+            <a class="btn-link" href="kontakt.html" aria-label="Tilbake til Kontakt">← Tilbake til Kontakt</a>
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- Sesongplan -->
-    <section class="section" aria-labelledby="sesong">
-      <div class="container">
-        <div class="section-box section--amber">
-          <h2 id="sesong">Sesongplan (eksempel)</h2>
-          <div class="table-wrap">
-            <table class="zebra">
-              <caption>Sesong & fokus</caption>
-              <thead>
-                <tr>
-                  <th>Sesong</th>
-                  <th>Fokus</th>
-                  <th>Kommentar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Vår</td>
-                  <td>Lette skalljakker</td>
-                  <td>Vind/regn kombinasjon</td>
-                </tr>
-                <tr>
-                  <td>Høst</td>
-                  <td>Støvler, paraply</td>
-                  <td>Hyppige byger</td>
-                </tr>
-                <tr>
-                  <td>Vinter</td>
-                  <td>Fôr + vannavvisning</td>
-                  <td>Slaps & salt</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <p><a href="#top">↑ Til toppen</a></p>
-      </div>
-    </section>
+    <p class="container"><a class="toplink" href="#top" aria-label="Til toppen">↑ Til toppen</a></p>
   </main>
 
   <footer class="site-footer">

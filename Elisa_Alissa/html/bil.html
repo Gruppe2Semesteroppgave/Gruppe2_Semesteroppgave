@@ -1,294 +1,243 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Regnbyen Bergen A/S – Bil</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regnbyen Bergen A/S – Bil</title>
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bil">
-    <a class="skip-link" href="#main">Hopp til innhold</a>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="bil">
+  <!-- Hopp-anker for toppen -->
+  <div id="top"></div>
 
-    <!-- HEADER / NAVBAR -->
-    <div id="top"></div>
-    <header class="site-header" id="top">
-      <div class="container nav-wrap">
-        <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+  <!-- Universell utforming: skip-lenke til hovedinnhold -->
+  <a class="skip-link" href="#main">Hopp til innhold</a>
 
-        <nav class="navbar" aria-label="Hovedmeny">
-          <ul class="menu">
-            <li><a href="hjemside.html">Hjem</a></li>
-            <li><a href="prosjekt.html">Om prosjektet</a></li>
-           
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <!-- Nettstedets merke/lenke til hjem -->
+      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-            <!-- Løsninger -->
-            <li class="dropdown">
-              <details>
-                <summary aria-haspopup="listbox">Løsninger</summary>
-                <ul class="submenu" role="listbox" aria-label="Løsninger">
-                  <li><a href="bil.html">Bil</a></li>
-                  <li><a href="hus.html">Hus</a></li>
-                  <li><a href="klaer.html">Klær</a></li>
-                  <li><a href="sko.html">Sko</a></li>
-                  <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-                  <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-                  <li>
-                    <a href="transport-sikkerhet.html">Transport-Sikkerhet</a>
-                  </li>
+      <!-- Hovednavigasjon: bruk innebygd semantikk, unngå unødvendig ARIA -->
+      <nav class="navbar" aria-label="Hovedmeny">
+        <ul class="menu">
+          <li><a href="hjemside.html">Hjem</a></li>
+          <li><a href="prosjekt.html">Om prosjektet</a></li>
 
-                  <!-- For bedrifter (nested under Løsninger) -->
-                  <li class="dropdown">
-                    <details>
-                      <summary aria-haspopup="listbox">For bedrifter</summary>
-                      <ul
-                        class="submenu"
-                        role="listbox"
-                        aria-label="For bedrifter"
-                      >
-                        <li>
-                          <a href="for-bedrifter-produkter.html">Produkter</a>
-                        </li>
-                        <li><a href="annonsering.html">Annonsering</a></li>
-                      </ul>
-                    </details>
-                  </li>
-                </ul>
-              </details>
-            </li>
-             <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </nav>
+          <!-- Nedtrekksmeny for Løsninger -->
+          <li class="dropdown">
+            <details>
+              <summary>Løsninger</summary>
+              <ul class="submenu" aria-label="Løsninger">
+                <!-- Merk gjeldende underside med aria-current="page" -->
+                <li><a href="bil.html" aria-current="page">Bil</a></li>
+                <li><a href="hus.html">Hus</a></li>
+                <li><a href="klaer.html">Klær</a></li>
+                <li><a href="sko.html">Sko</a></li>
+                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+                <li><a href="transport-sikkerhet.html">Transport-sikkerhet</a></li>
 
-        <form class="nav-search" role="search" action="#" aria-label="Søk">
-          <label for="q" class="sr-only">Søk</label>
-          <input id="q" name="q" type="search" placeholder="Søk..." />
-        </form>
-      </div>
-    </header>
+                <!-- Undermeny for bedrifter -->
+                <li class="dropdown">
+                  <details>
+                    <summary>For bedrifter</summary>
+                    <ul class="submenu" aria-label="For bedrifter">
+                      <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                      <li><a href="annonsering.html">Annonsering</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
 
-    <!-- HERO: -->
-    <section
-      class="hero section"
-      style="--hero-image: url('../img/bil.jpg')"
-      aria-labelledby="hero-title"
-    >
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Søk i navigasjonen -->
+      <form class="nav-search" role="search" action="#" aria-label="Søk">
+        <label for="q" class="sr-only">Søk</label>
+        <input id="q" name="q" type="search" placeholder="Søk..." />
+      </form>
+    </div>
+  </header>
+
+  <!-- HERO: bakgrunnsbilde via CSS-variabel -->
+  <section class="hero section" style="--hero-image: url('../img/bil.jpg')" aria-labelledby="hero-title">
+    <div class="container">
+      <h1 id="hero-title" class="hero-title">Bil i Bergensregnet</h1>
+    </div>
+  </section>
+
+  <!-- HOVEDINNHOLD: gjør fokusérbar som mål for skip-lenken -->
+  <main id="main" tabindex="-1">
+    <!-- Intro -->
+    <section class="section" aria-labelledby="intro">
       <div class="container">
-        <h1 id="hero-title" class="hero-title">Bil i Bergensregnet</h1>
+        <h2 id="intro" class="sr-only">Introduksjon</h2>
+        <p>
+          Her finner du en enkel oversikt over hva som er lurt å tenke på for bilhold i et vått og kystnært klima:
+          dekk, sikt, vedlikehold og enkle servicetips.
+        </p>
       </div>
     </section>
 
-    <main id="main">
-      
-      <!-- Intro -->
-      <section class="section" aria-labelledby="intro">
-        <div class="container">
-          <h2 id="intro" class="sr-only">Introduksjon</h2>
-          <p>
-            Her finner du en enkel oversikt over hva som er lurt å tenke på for
-            bilhold i et vått og kystnært klima: dekk, sikt, vedlikehold og
-            enkle servicetips.
-          </p>
-        </div>
-      </section>
-
-
-      
-      <!-- Vedlikehold -->
-      <section
-        class="section section-box section--teal"
-        aria-labelledby="vedlikehold"
-      >
-        <div class="container">
-          <h2 id="vedlikehold">Enkle vedlikeholdstips</h2>
-          <ul>
-            <li>Kontroller lufttrykk månedlig og før lengre turer.</li>
-            <li>
-              Rengjør frontruten inni/utenpå for mindre dugg og gjenskinn.
-            </li>
-            <li>
-              Smør dørlister med silikon for å unngå fastfrysing og lekkasje.
-            </li>
-            <li>
-              Følg serviceintervaller; sjekk bremser og væskenivåer jevnlig.
-            </li>
-            <li>Vask bilen regelmessig, også i hjulbuer og understell.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Verksted -->
-      <section
-        class="section section-box section--blue"
-        aria-labelledby="verksted"
-      >
-        <div class="container">
-          <h2 id="verksted">Verksted i Bergen</h2>
-          <p>
-            Det er flere forskjellige bilverksteder både i og rundt Bergen. Her
-            har vi listet opp noen firma med verksted i Bergen:
-          </p>
-          <ul>
-            <li>
-              NAF bilverksted:
-              <a href="https://www.naf.no/" target="_blank" rel="noopener"
-                >naf.no</a
-              >
-            </li>
-            <li>
-              MECA bilverksted:
-              <a
-                href="https://www.meca.no/bilverksted/bergen"
-                target="_blank"
-                rel="noopener"
-                >meca.no/bilverksted/bergen</a
-              >
-            </li>
-            <li>
-              Mekonomen:
-              <a
-                href="https://www.mekonomen.no/tjenester/bilservice/bergen"
-                target="_blank"
-                rel="noopener"
-                >mekonomen.no/tjenester/bilservice/bergen</a
-              >
-            </li>
-          </ul>
-          <p>
-            De spesifikke adressene til hvert verksted finnes på nettsidene
-            deres.
-          </p>
-        </div>
-      </section>
-
-        <!--  -->
-      <section class="section" aria-labelledby="produkter">
-        <div class="container">
-          <h2 id="produkter">Anbefalte produkter</h2>
-
-          <div id="produkterbil" class="cards grid-3">
-            <article class="card feature card--bil" aria-labelledby="p1-tittel">
-              <figure>
-                <!-- -->
-                <img src="../img/bil_product1.jpg" alt="Regnvær-dekk modell" />
-                <figcaption class="sr-only">Regnvær-dekk</figcaption>
-              </figure>
-              <h3 id="p1-tittel">Regnvær-dekk – Modell X</h3>
-              <p>
-                Høyt våtgrep, effektiv drenering og stabilitet på kystveier.
-              </p>
-              <p><a class="btn-link" href="#">Mer info</a></p>
-            </article>
-
-            <article class="card feature card--bil" aria-labelledby="p2-tittel">
-              <figure>
-                <img
-                  src="../img/bil_product2.webp"
-                  alt="Premium vindusvisker (illustrasjon)"
-                />
-                <figcaption class="sr-only">Premium vindusvisker</figcaption>
-              </figure>
-              <h3 id="p2-tittel">Premium vindusvisker</h3>
-              <p>Stille bruk, strykesiz sikt og lang levetid i kraftig regn.</p>
-              <p><a class="btn-link" href="#">Mer info</a></p>
-            </article>
-
-            <article class="card feature card--bil" aria-labelledby="p3-tittel">
-              <figure>
-                <img
-                  src="../img/bil_product3.jpg"
-                  alt="Understellsbehandling pakke (illustrasjon)"
-                />
-                <figcaption class="sr-only">Understellsbehandling</figcaption>
-              </figure>
-              <h3 id="p3-tittel">Understellsbehandling</h3>
-              <p>Rustbeskyttelse for fukt/salt – anbefalt i kystklima.</p>
-              <p><a class="btn-link" href="#">Mer info</a></p>
-            </article>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Anbefalinger tabl -->
-      <section class="section" aria-labelledby="anbefalinger">
-        <div class="container">
-          <div class="section-box section--amber">
-            <h2 id="anbefalinger">Anbefalte egenskaper og utstyr</h2>
-            <div class="table-wrap">
-              <table class="zebra">
-                <caption>
-                  Bil og regnvær – hva lønner seg?
-                </caption>
-                <thead>
-                  <tr>
-                    <th>Tema</th>
-                    <th>Anbefaling</th>
-                    <th>Hvorfor</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Dekk / våtgrep</td>
-                    <td>Velg dekk med godt våtgrep og riktig lufttrykk</td>
-                    <td>Bedre kontroll og kortere bremselengde på våt vei</td>
-                  </tr>
-                  <tr>
-                    <td>Mønsterdybde</td>
-                    <td>Sjekk jevnlig at mønsterdybden er tilstrekkelig</td>
-                    <td>Reduserer risiko for vannplaning</td>
-                  </tr>
-                  <tr>
-                    <td>Drivlinje</td>
-                    <td>AWD/4x4 kan være nyttig i bratte, våte bakker</td>
-                    <td>Stabilitet og bedre fremkommelighet</td>
-                  </tr>
-                  <tr>
-                    <td>Vindusviskere</td>
-                    <td>Bytt viskerblader når de striper eller lager støy</td>
-                    <td>Klar sikt i kraftig regn</td>
-                  </tr>
-                  <tr>
-                    <td>Rustbeskyttelse</td>
-                    <td>Vurder understellsbehandling og vask under bilen</td>
-                    <td>Fukt og salt kan fremskynde rust</td>
-                  </tr>
-                  <tr>
-                    <td>Lys og sikt</td>
-                    <td>Hold lykter rene; bruk avdugging effektivt</td>
-                    <td>Bedre synlighet for deg og andre trafikanter</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Reklamfelt -->
-      <section class="section" aria-labelledby="reklame">
-        <div class="container">
-          <aside class="card card--partners">
-            <h2 id="reklame">Reklamefelt</h2>
-            <p>Annonsør: WetGrip Dekk – «Bedre kontroll på våt vei».</p>
-          </aside>
-        </div>
-      </section>
-      <p><a href="#top">↑ Til toppen</a></p>
-    </main>
-
-    <footer class="site-footer">
+    <!-- Vedlikehold -->
+    <section class="section section-box section--teal" aria-labelledby="vedlikehold">
       <div class="container">
-        <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
+        <h2 id="vedlikehold">Enkle vedlikeholdstips</h2>
+        <ul>
+          <li>Kontroller lufttrykk månedlig og før lengre turer.</li>
+          <li>Rengjør frontruten inni/utenpå for mindre dugg og gjenskinn.</li>
+          <li>Smør dørlister med silikon for å unngå fastfrysing og lekkasje.</li>
+          <li>Følg serviceintervaller; sjekk bremser og væskenivåer jevnlig.</li>
+          <li>Vask bilen regelmessig, også i hjulbuer og understell.</li>
+        </ul>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- Verkstedliste (eksterne lenker) -->
+    <section class="section section-box section--blue" aria-labelledby="verksted">
+      <div class="container">
+        <h2 id="verksted">Verksted i Bergen</h2>
+        <p>Det er flere forskjellige bilverksteder både i og rundt Bergen. Her har vi listet opp noen firma med verksted i Bergen:</p>
+        <ul>
+          <li>
+            NAF bilverksted:
+            <a href="https://www.naf.no/" target="_blank" rel="noopener">naf.no</a>
+          </li>
+          <li>
+            MECA bilverksted:
+            <a href="https://www.meca.no/bilverksted/bergen" target="_blank" rel="noopener">meca.no/bilverksted/bergen</a>
+          </li>
+          <li>
+            Mekonomen:
+            <a href="https://www.mekonomen.no/tjenester/bilservice/bergen" target="_blank" rel="noopener">mekonomen.no/tjenester/bilservice/bergen</a>
+          </li>
+        </ul>
+        <p>De spesifikke adressene til hvert verksted finnes på nettsidene deres.</p>
+      </div>
+    </section>
+
+    <!-- Produktkort -->
+    <section class="section" aria-labelledby="produkter">
+      <div class="container">
+        <h2 id="produkter">Anbefalte produkter</h2>
+
+        <div id="produkterbil" class="cards grid-3">
+          <article class="card feature card--bil" aria-labelledby="p1-tittel">
+            <figure>
+              <!-- Bilde med informativ alt-tekst -->
+              <img src="../img/bil_product1.jpg" alt="Regnvær-dekk, modell X" />
+              <figcaption class="sr-only">Regnvær-dekk</figcaption>
+            </figure>
+            <h3 id="p1-tittel">Regnvær-dekk – Modell X</h3>
+            <p>Høyt våtgrep, effektiv drenering og stabilitet på kystveier.</p>
+            <p><a class="btn-link" href="#">Mer info</a></p>
+          </article>
+
+          <article class="card feature card--bil" aria-labelledby="p2-tittel">
+            <figure>
+              <img src="../img/bil_product2.webp" alt="Premium vindusvisker (illustrasjon)" />
+              <figcaption class="sr-only">Premium vindusvisker</figcaption>
+            </figure>
+            <h3 id="p2-tittel">Premium vindusvisker</h3>
+            <p>Stille bruk, strykefri sikt og lang levetid i kraftig regn.</p>
+            <p><a class="btn-link" href="#">Mer info</a></p>
+          </article>
+
+          <article class="card feature card--bil" aria-labelledby="p3-tittel">
+            <figure>
+              <img src="../img/bil_product3.jpg" alt="Understellsbehandling pakke (illustrasjon)" />
+              <figcaption class="sr-only">Understellsbehandling</figcaption>
+            </figure>
+            <h3 id="p3-tittel">Understellsbehandling</h3>
+            <p>Rustbeskyttelse for fukt/salt – anbefalt i kystklima.</p>
+            <p><a class="btn-link" href="#">Mer info</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anbefalingstabell -->
+    <section class="section" aria-labelledby="anbefalinger">
+      <div class="container">
+        <div class="section-box section--amber">
+          <h2 id="anbefalinger">Anbefalte egenskaper og utstyr</h2>
+          <div class="table-wrap">
+            <table class="zebra table">
+              <caption>Bil og regnvær – hva lønner seg?</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Tema</th>
+                  <th scope="col">Anbefaling</th>
+                  <th scope="col">Hvorfor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Dekk / våtgrep</th>
+                  <td>Velg dekk med godt våtgrep og riktig lufttrykk</td>
+                  <td>Bedre kontroll og kortere bremselengde på våt vei</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mønsterdybde</th>
+                  <td>Sjekk jevnlig at mønsterdybden er tilstrekkelig</td>
+                  <td>Reduserer risiko for vannplaning</td>
+                </tr>
+                <tr>
+                  <th scope="row">Drivlinje</th>
+                  <td>AWD/4x4 kan være nyttig i bratte, våte bakker</td>
+                  <td>Stabilitet og bedre fremkommelighet</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vindusviskere</th>
+                  <td>Bytt viskerblader når de striper eller lager støy</td>
+                  <td>Klar sikt i kraftig regn</td>
+                </tr>
+                <tr>
+                  <th scope="row">Rustbeskyttelse</th>
+                  <td>Vurder understellsbehandling og vask under bilen</td>
+                  <td>Fukt og salt kan fremskynde rust</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lys og sikt</th>
+                  <td>Hold lykter rene; bruk avdugging effektivt</td>
+                  <td>Bedre synlighet for deg og andre trafikanter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /table-wrap -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Reklamefelt (sekundært innhold) -->
+    <section class="section" aria-labelledby="reklame">
+      <div class="container">
+        <aside class="card card--partners">
+          <h2 id="reklame">Reklamefelt</h2>
+          <p>Annonsør: WetGrip Dekk – «Bedre kontroll på våt vei».</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Lenke tilbake til toppen -->
+    <p><a href="#top" class="toplink">↑ Til toppen</a></p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
+    </div>
+  </footer>
+</body>
 </html>

@@ -3,72 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Regnbyen Bergen  – Hjem</title>
+  <title>Regnbyen Bergen – Hjem</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  
 </head>
 <body>
-<div id="top"></div>
+
+  <div id="top"></div>
+
+  <!-- Universell utforming: gir tastatursnarvei til hovedinnhold -->
   <a class="skip-link" href="#main">Hopp til innhold</a>
- <!-- HEADER / NAVBAR -->
-  <header class="site-header" >
-  <div class="container nav-wrap">
-    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-    <nav class="navbar" aria-label="Hovedmeny">
-      <ul class="menu">
-        <li><a href="hjemside.html" >Hjem</a></li>
-        <li><a href="prosjekt.html">Om prosjektet</a></li>
-      
-        <!-- Løsninger -->
-        <li class="dropdown">
-          <details>
-            <summary aria-haspopup="listbox">Løsninger</summary>
-            <ul class="submenu" role="listbox" aria-label="Løsninger">
-              <li><a href="bil.html">Bil</a></li>
-              <li><a href="hus.html">Hus</a></li>
-              <li><a href="klaer.html">Klær</a></li>
-              <li><a href="sko.html">Sko</a></li>
-              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-              <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-              <li><a href="transport-sikkerhet.html"> transport-sikkerhet</a></li>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container nav-wrap">
 
-              <!-- For bedrifter (nested under Løsninger) -->
-              <li class="dropdown">
-                <details>
-                  <summary aria-haspopup="listbox">For bedrifter</summary>
-                  <ul class="submenu" role="listbox" aria-label="For bedrifter">
-                    <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
-                    <li><a href="annonsering.html">Annonsering</a></li>
-                  </ul>
-                </details>
-              </li>
-            </ul>
-          </details>
-        </li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+      <!-- Logo / merke -->
+      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-      </ul>
-    </nav>
+      <!-- Hovednavigasjon -->
+      <nav class="navbar" aria-label="Hovedmeny">
+        <ul class="menu">
+          <li><a href="hjemside.html" aria-current="page">Hjem</a></li>
+          <li><a href="prosjekt.html">Om prosjektet</a></li>
 
-    
-    <form class="nav-search" role="search" action="#" aria-label="Søk">
-      <label for="q" class="sr-only">Søk</label>
-      <input id="q" name="q" type="search" placeholder="Søk..." />
-    </form>
-  </div>
-</header>
+          <!-- Nedtrekksmeny for Løsninger -->
+          <li class="dropdown">
+            <details>
+              <summary>Løsninger</summary>
+              <ul class="submenu" aria-label="Løsninger">
+                <li><a href="bil.html">Bil</a></li>
+                <li><a href="hus.html">Hus</a></li>
+                <li><a href="klaer.html">Klær</a></li>
+                <li><a href="sko.html">Sko</a></li>
+                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
 
-  <main id="main">
+                <!-- Undermeny for bedrifter -->
+                <li class="dropdown">
+                  <details>
+                    <summary>For bedrifter</summary>
+                    <ul class="submenu" aria-label="For bedrifter">
+                      <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                      <li><a href="annonsering.html">Annonsering</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
 
-    <!-- HERO -->
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Søkefelt -->
+      <form class="nav-search" role="search" action="#" aria-label="Søk">
+        <label for="q" class="sr-only">Søk</label>
+        <input id="q" name="q" type="search" placeholder="Søk..." />
+      </form>
+    </div>
+  </header>
+
+  <!-- HOVEDINNHOLD -->
+  <main id="main" tabindex="-1">
+
+    <!-- HERO-seksjon -->
     <section class="hero section" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-text">
+
+          <!-- Dekorativt bilde (ingen alt-tekst nødvendig) -->
           <figure class="hero-media sr-only">
-            <img src="../img/bryggen2.jpg" alt="Bryggen i Bergen i regnvær">
+            <img src="../img/bryggen2.jpg" alt="" />
             <figcaption class="sr-only">Bergen i regn – bakteppet for prosjektet.</figcaption>
           </figure>
 
@@ -77,6 +85,7 @@
       </div>
     </section>
 
+    <!-- Introduksjon etter hero -->
     <section class="intro-after-hero section">
       <div class="container">
         <p class="lead">
@@ -87,67 +96,70 @@
       </div>
     </section>
 
-    <!-- LØSNINGER  -->
+    <!-- LØSNINGER (kortoversikt) -->
     <section id="losninger" class="section" aria-labelledby="losninger-tittel">
-  <div class="container">
-    <h2 id="losninger-tittel">Løsninger</h2>
+      <div class="container">
+        <h2 id="losninger-tittel">Løsninger</h2>
 
-    <div class="cards grid-3">
-      <!-- Klær / Hus / Bil  -->
-      <article class="card feature card--klaer">
-        <h3>Klær</h3>
-        <p>Lag-på-lag, vannsøyle (mm) og sklisikkert fottøy.</p>
-        <p><a class="btn-link" href="klaer.html">Gå til siden</a></p>
-      </article>
+        <div class="cards grid-3">
 
-      <article class="card feature card--hus">
-        <h3>Hus</h3>
-        <p>Drenering, maling og ventilasjon i vått klima.</p>
-        <p><a class="btn-link" href="hus.html">Gå til siden</a></p>
-      </article>
+          <!-- Klær -->
+          <article class="card feature card--klaer">
+            <h3>Klær</h3>
+            <p>Lag-på-lag, vannsøyle (mm) og sklisikkert fottøy.</p>
+            <p><a class="btn-link" href="klaer.html">Gå til siden</a></p>
+          </article>
 
-      <article class="card feature card--bil">
-        <h3>Bil</h3>
-        <p>Våtgrep, sikt og enkelt vedlikehold.</p>
-        <p><a class="btn-link" href="bil.html">Gå til siden</a></p>
-      </article>
+          <!-- Hus -->
+          <article class="card feature card--hus">
+            <h3>Hus</h3>
+            <p>Drenering, maling og ventilasjon i vått klima.</p>
+            <p><a class="btn-link" href="hus.html">Gå til siden</a></p>
+          </article>
 
-      <!-- ny: Sko -->
-      <article class="card feature" style="--card-accent:#0ea5e9">
-        <h3>Sko</h3>
-        <p>Sålemønster, membran og vedlikehold for våte underlag.</p>
-        <p><a class="btn-link" href="sko.html">Gå til siden</a></p>
-      </article>
+          <!-- Bil -->
+          <article class="card feature card--bil">
+            <h3>Bil</h3>
+            <p>Våtgrep, sikt og enkelt vedlikehold.</p>
+            <p><a class="btn-link" href="bil.html">Gå til siden</a></p>
+          </article>
 
-      <!-- ny: Aktiviteter -->
-      <article class="card feature" style="--card-accent:#d946ef">
-        <h3>Aktiviteter</h3>
-        <p>Innendørs idéer, kafeer og korte ruter for regnværsdager.</p>
-        <p><a class="btn-link" href="regn-aktiviteter.html">Gå til siden</a></p>
-      </article>
+          <!-- Sko -->
+          <article class="card feature" style="--card-accent:#0ea5e9">
+            <h3>Sko</h3>
+            <p>Sålemønster, membran og vedlikehold for våte underlag.</p>
+            <p><a class="btn-link" href="sko.html">Gå til siden</a></p>
+          </article>
 
-      <!-- ny: Vær (daglig) -->
-      <article class="card feature" style="--card-accent:#22c55e">
-        <h3>Vær (daglig)</h3>
-        <p>Enkel daglig oversikt + praktiske regn-tips.</p>
-        <p><a class="btn-link" href="vaer-daglig.html">Gå til siden</a></p>
-      </article>
+          <!-- Aktiviteter -->
+          <article class="card feature" style="--card-accent:#d946ef">
+            <h3>Aktiviteter</h3>
+            <p>Innendørs idéer, kafeer og korte ruter for regnværsdager.</p>
+            <p><a class="btn-link" href="regn-aktiviteter.html">Gå til siden</a></p>
+          </article>
 
-      <!-- ny: For bedrifter -->
-      <article class="card feature" style="--card-accent:#0ea5e9">
-        <h3>For bedrifter</h3>
-        <p>Hva lønner seg å selge i regn? Sesongplan & eksempler.</p>
-        <p><a class="btn-link" href="for-bedrifter-produkter.html">Se produkttips</a>
-          &nbsp;·&nbsp;
-           <a href="annonsering.html">Annonsering</a>
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
+          <!-- Vær -->
+          <article class="card feature" style="--card-accent:#22c55e">
+            <h3>Vær (daglig)</h3>
+            <p>Enkel daglig oversikt + praktiske regn-tips.</p>
+            <p><a class="btn-link" href="vaer-daglig.html">Gå til siden</a></p>
+          </article>
 
+          <!-- For bedrifter -->
+          <article class="card feature" style="--card-accent:#0ea5e9">
+            <h3>For bedrifter</h3>
+            <p>Hva lønner seg å selge i regn? Sesongplan & eksempler.</p>
+            <p>
+              <a class="btn-link" href="for-bedrifter-produkter.html">Se produkttips</a>
+              &nbsp;·&nbsp;
+              <a href="annonsering.html">Annonsering</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <!-- OM RB (FİKTİF ŞİRKET) -->
+    <!-- OM REGNBYEN BERGEN (fiktivt selskap) -->
     <aside id="om-rb" class="section" aria-labelledby="om-rb-tittel">
       <div class="container">
         <div class="card card--info">
@@ -158,7 +170,7 @@
       </div>
     </aside>
 
-    <!-- MINI SKJEMA / DEMO -->
+    <!-- DEMO-SKJEMA (ikke funksjonell) -->
     <section id="hjelp" class="section" aria-labelledby="hjelp-tittel">
       <div class="container">
         <div class="card card--help">
@@ -181,7 +193,7 @@
       </div>
     </section>
 
-    <!-- SAMARBEID / PARTNERE -->
+    <!-- SAMARBEIDSPARTNERE -->
     <section id="samarbeid" class="section" aria-labelledby="samarbeid-tittel">
       <div class="container">
         <div class="card card--partners">
@@ -205,18 +217,20 @@
           <ul>
             <li>16.09 – Første HTML-versjon klar (Innlevering 1)</li>
           </ul>
-          
         </div>
       </div>
     </section>
-    <p><a class="toplink" href="#top">↑ Til toppen</a></p>
 
+    <!-- Lenke tilbake til toppen -->
+    <p><a class="toplink" href="#top">↑ Til toppen</a></p>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
     </div>
   </footer>
+
 </body>
 </html>

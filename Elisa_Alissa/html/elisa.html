@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regnbyen Bergen A/S – Elisa</title>
+
+  <!-- Stilark -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Fonter -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="profil elisa">
+  <!-- Universell utforming: hopp-lenke til hovedinnhold -->
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <!-- Nettstedsmerke / lenke til hjem -->
+      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+
+      <!-- Hovedmeny (samme struktur/samme klasser som andre sider) -->
+      <nav class="navbar" aria-label="Hovedmeny">
+        <ul class="menu">
+          <li><a href="hjemside.html">Hjem</a></li>
+          <li><a href="prosjekt.html">Om prosjektet</a></li>
+
+          <!-- Løsninger -->
+          <li class="dropdown">
+            <details>
+              <summary>Løsninger</summary>
+              <ul class="submenu" aria-label="Løsninger">
+                <li><a href="bil.html">Bil</a></li>
+                <li><a href="hus.html">Hus</a></li>
+                <li><a href="klaer.html">Klær</a></li>
+                <li><a href="sko.html">Sko</a></li>
+                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+                <li><a href="transport-sikkerhet.html">Transport-sikkerhet</a></li>
+
+                <!-- For bedrifter -->
+                <li class="dropdown">
+                  <details>
+                    <summary>For bedrifter</summary>
+                    <ul class="submenu" aria-label="For bedrifter">
+                      <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                      <li><a href="annonsering.html">Annonsering</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Søk -->
+      <form class="nav-search" role="search" action="#" aria-label="Søk">
+        <label for="q" class="sr-only">Søk</label>
+        <input id="q" name="q" type="search" placeholder="Søk..." />
+      </form>
+    </div>
+  </header>
+
+  <!-- HOVEDINNHOLD: gjør fokusérbar som mål for skip-lenken -->
+  <main id="main" tabindex="-1">
+
+    <!-- HERO / toppseksjon -->
+    <section class="hero section" aria-labelledby="hero-title" style="--hero-image: url('../img/hero-elisa.jpg')">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <!-- Hero-bilde er dekorativt i denne sammenhengen -->
+          <figure class="hero-media sr-only">
+            <img src="../img/hero-elisa.jpg" alt="" />
+            <figcaption class="sr-only">Bakgrunnsbilde (dekorativt)</figcaption>
+          </figure>
+
+          <h1 id="hero-title" class="hero-title">Elisa – <br>Frontend & Universell utforming</h1>
+          <p class="lead">Ansvar: HTML, CSS, tilgjengelighet, komponentbibliotek og sideoppsett.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profilkort -->
+    <section class="section" aria-labelledby="profil">
+      <div class="container">
+        <h2 id="profil" class="sr-only">Profil</h2>
+
+        <!-- Fleksibel todelt layout med eksisterende grid-klasser -->
+        <div class="grid two">
+          <!-- Venstre: bilde/kort -->
+          <article class="card feature" aria-labelledby="elisa-navn">
+            <figure>
+              <!-- Portrett med informativ alt-tekst -->
+              <img src="../img/elisa.jpg" alt="Portrett av Elisa" />
+              <figcaption class="sr-only">Elisa</figcaption>
+            </figure>
+            <h3 id="elisa-navn">Elisa</h3>
+            <p>Student ved HVL (Data inginior).</p>
+            <ul class="tags">
+              <li><span class="tag">HTML</span></li>
+              <li><span class="tag">CSS</span></li>
+              <li><span class="tag">UU (WCAG)</span></li>
+              <li><span class="tag">Java</span></li>
+              <li><span class="tag">Python</span></li>
+              <li><span class="tag">Komponenter</span></li>
+            </ul>
+          </article>
+
+          <!-- Høyre: nøkkelinformasjon -->
+          <article class="card" aria-labelledby="om-meg">
+            <h3 id="om-meg">Om meg</h3>
+            <p>Jeg liker rene strukturer med fokus på lesbarhet og gjenbruk. I prosjektet har jeg laget grunnoppsett for alle sider, tokens i CSS, kort/grid, tabeller og skjemaer.</p>
+
+            <!-- Rask info-tabell med riktige scopinger -->
+            <div class="table-wrap">
+              <table class="zebra table">
+                <caption>Rolle &amp; kontakt</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Tema</th>
+                    <th scope="col">Detalj</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Rolle</th>
+                    <td>Frontend &amp; UU-ansvarlig</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">E-post</th>
+                    <td><a href="mailto:elisa@example.com">elisa@example.com</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">GitHub</th>
+                    <td><a href="#" rel="noopener">github.com/elisa</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bidrag i prosjektet -->
+    <section class="section" aria-labelledby="bidrag">
+      <div class="container">
+        <h2 id="bidrag">Bidrag i prosjektet</h2>
+
+        <!-- Tre kort i rad – gjenbruker cards/grid-3 -->
+        <div class="cards grid-3">
+          <article class="card" aria-labelledby="b1">
+            <h3 id="b1">Semantisk base</h3>
+            <p>Opprettet felles HTML-mal (header/nav/main/footer, skip-lenke, H1–H3-hierarki).</p>
+          </article>
+
+          <article class="card" aria-labelledby="b2">
+            <h3 id="b2">Komponentbibliotek</h3>
+            <p>Definerte kort, grid, tabell-innpakning og skjema-stil for gjenbruk.</p>
+          </article>
+
+          <article class="card" aria-labelledby="b3">
+            <h3 id="b3">Tilgjengelighet</h3>
+            <p>La inn synlige fokusmarkører, beskrivende alt-tekster og `prefers-reduced-motion`-hensyn.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Kontakt meg (enkelt skjema – demo) -->
+    <section class="section" aria-labelledby="kontakt">
+      <div class="container">
+        <div class="card card--help">
+          <h2 id="kontakt">Kontakt meg</h2>
+          <p>Send gjerne en melding (demo – ikke funksjonell):</p>
+
+          <!-- Skjema: label/for-koblinger og tydelige feltnavn -->
+          <form class="form" action="#" method="post" novalidate>
+            <label for="navn">Navn</label>
+            <input id="navn" name="navn" type="text" placeholder="Ditt navn" />
+
+            <label for="epost">E-post</label>
+            <input id="epost" name="epost" type="email" placeholder="deg@eksempel.no" />
+
+            <label for="melding">Melding</label>
+            <textarea id="melding" name="melding" rows="5" placeholder="Hei Elisa!"></textarea>
+
+            <button class="btn primary" type="submit">Send (demo)</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Til toppen-lenke -->
+    <p class="container"><a href="#top" class="toplink">↑ Til toppen</a></p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
+    </div>
+  </footer>
+</body>
+</html>
