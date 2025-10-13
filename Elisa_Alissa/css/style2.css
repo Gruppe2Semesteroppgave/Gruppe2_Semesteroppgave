@@ -10,7 +10,7 @@
   --border: #e5e7eb;
   --navy: #003366;
 
-  --accent: #2563eb; /* FIXED */
+  --accent: #2563eb;
   --accent-600: #1d4ed8;
 
   --accent-blue: #0ea5e9;
@@ -175,7 +175,7 @@ nav {
   border-bottom-color: var(--navy);
 }
 
-/* Dropdown (using <details>) */
+/* Dropdown (details) */
 .menu .dropdown details {
   position: relative;
 }
@@ -214,39 +214,29 @@ nav {
   background: #f8fafc;
 }
 
+/* Nested submenu */
 .menu .dropdown .submenu li > a,
 .menu .dropdown .submenu li > details > summary {
   display: block;
-  padding: 10px 14px; 
+  padding: 10px 14px;
   margin: 0;
   color: var(--navy);
   font-weight: 600;
   line-height: 1.4;
   cursor: pointer;
-  border-radius: 0;
 }
-
-
-.menu .dropdown .submenu li > a:hover,
-.menu .dropdown .submenu li > details > summary:hover {
-  background: #f8fafc;
-}
-
 .menu .dropdown .submenu li > details > summary::-webkit-details-marker {
   display: none;
 }
 .menu .dropdown .submenu li > details > summary::after {
-  content: "›"; 
+  content: "›";
   float: right;
-  transform: translateX(0);
   transition: transform 0.15s ease;
   opacity: 0.85;
 }
 .menu .dropdown .submenu li > details[open] > summary::after {
-  transform: rotate(90deg); 
+  transform: rotate(90deg);
 }
-
-
 .menu .dropdown .submenu li > details {
   position: relative;
 }
@@ -254,7 +244,7 @@ nav {
   position: absolute;
   top: 0;
   left: 100%;
-  margin-left: 8px; 
+  margin-left: 8px;
   min-width: 220px;
 }
 
@@ -276,7 +266,7 @@ nav {
 }
 
 /* ===========================
-   HERO (GLOBAL) + INTRO
+   HERO + INTRO
    =========================== */
 .hero {
   position: relative;
@@ -383,39 +373,7 @@ nav {
   border-color: #dfe6ee;
 }
 
-/* Hjemside → Løsninger  */
-#losninger .card {
-  --card-accent: #2563eb;
-} /* default */
-#losninger .card::before {
-  background: var(--card-accent);
-}
-
-/* læsninger opp farger */
-#losninger .card:nth-child(1) {
-  --card-accent: #2563eb;
-} /* Klær (mavi) */
-#losninger .card:nth-child(2) {
-  --card-accent: #16a34a;
-} /* Hus (yeşil) */
-#losninger .card:nth-child(3) {
-  --card-accent: #1e3a8a;
-} /* Bil (lacivert) */
-#losninger .card:nth-child(4) {
-  --card-accent: #7c3aed;
-} /* Sko (mor) */
-#losninger .card:nth-child(5) {
-  --card-accent: #f59e0b;
-} /* Aktiviteter (amber) */
-#losninger .card:nth-child(6) {
-  --card-accent: #e11d48;
-} /* Vær (rose) */
-#losninger .card:nth-child(7) {
-  --card-accent: #14b8a6;
-} /* For bedrifter (teal) */
-
-/* oppe farger */
-
+/* Top stripe for any card via modifier or CSS var */
 .card::before {
   content: "";
   position: absolute;
@@ -425,7 +383,7 @@ nav {
   height: 6px;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
-  background: transparent;
+  background: var(--card-accent, transparent);
 }
 .card--blue::before {
   background: #2563eb;
@@ -473,7 +431,7 @@ nav {
   transform: translateX(3px);
 }
 
-/* Info panels */
+/* Info panels (left border accent + soft bg) */
 .card--info {
   border-left: 4px solid var(--accent-blue);
   background: radial-gradient(
@@ -543,7 +501,6 @@ nav {
   border-color: var(--accent-purple);
   background: #f3e8ff;
 }
-
 .form input[type="text"],
 .form input[type="email"],
 .form textarea,
@@ -556,7 +513,6 @@ nav {
   color: var(--text);
 }
 .form button {
-  /* CSS Modules  button*/
   background: var(--accent-purple);
   color: #fff;
   padding: 10px 16px;
@@ -624,19 +580,21 @@ table {
 }
 table caption {
   text-align: left;
-  color: var(--muted);
+  color: var(--muted) ;
   margin: 0 0 var(--s2);
   font-weight: 600;
   letter-spacing: 0.2px;
+  
 }
 table thead th {
   text-align: left;
-  font-weight: 700;
+  font-weight: 500;
   background: #f8fafc;
-  color: #0f172a;
+  color: #797b7f;
   border-bottom: 1px solid var(--border);
   padding: 12px;
   white-space: nowrap;
+  font-size: 1.3rem;
 }
 table tbody td {
   padding: 12px;
@@ -662,8 +620,6 @@ table.zebra tbody tr:hover {
   z-index: 1;
 }
 
-
-
 /* ===========================
    PROSJEKT (OM PROSJEKTET)
    =========================== */
@@ -673,16 +629,16 @@ table.zebra tbody tr:hover {
 }
 .prosjekt .stack > .card {
   position: relative;
-  border-left: 4px solid var(--panel-accent, #64748b);
-  background: var(--surface);
   margin: 0;
   border-radius: var(--radius);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--panel-accent, #64748b);
+  border-right-color: var(--border);
+  border-top-color: var(--border);
+  border-bottom-color: var(--border);
   box-shadow: var(--shadow);
-  border-right: 1px solid var(--border);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  background: var(--surface);
 }
-
 @supports (background: color-mix(in srgb, #000 10%, transparent)) {
   .prosjekt .stack > .card {
     background: radial-gradient(
@@ -693,7 +649,6 @@ table.zebra tbody tr:hover {
       var(--surface);
   }
 }
-
 .prosjekt .stack > .card:nth-of-type(1) {
   --panel-accent: #0ea5e9;
 } /* intro */
@@ -771,7 +726,7 @@ table.zebra tbody tr:hover {
     var(--surface);
 }
 
-/* Sosyal medya */
+/* Social */
 #kontakt .social {
   list-style: none;
   padding: 0;
@@ -805,7 +760,7 @@ table.zebra tbody tr:hover {
    TEAM / MEMBERS
    =========================== */
 nav[aria-label="Gruppemedlemmer"] {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
@@ -858,7 +813,7 @@ nav[aria-label="Gruppemedlemmer"] a[aria-current="page"] {
 }
 
 .member {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
@@ -867,14 +822,13 @@ nav[aria-label="Gruppemedlemmer"] a[aria-current="page"] {
   position: relative;
   transition: transform 0.18s ease, box-shadow 0.18s ease,
     border-color 0.18s ease;
-  border-top: 6px solid transparent; /* renk sınıfları için */
+  border-top: 6px solid transparent;
 }
 .member:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
   border-color: #dfe6ee;
 }
-
 .member figure {
   margin: 0 0 12px;
   position: relative;
@@ -925,7 +879,7 @@ nav[aria-label="Gruppemedlemmer"] a[aria-current="page"] {
   color: #0f172a;
 }
 
-/* farger*/
+/* Member color variants */
 .member.member--blue {
   border-top-color: #2563eb;
 }
@@ -947,7 +901,6 @@ nav[aria-label="Gruppemedlemmer"] a[aria-current="page"] {
 .member.member--orange {
   border-top-color: #f97316;
 }
-
 .member.member--green figure::after {
   background: linear-gradient(
     to bottom,
@@ -992,27 +945,34 @@ nav[aria-label="Gruppemedlemmer"] a[aria-current="page"] {
 }
 
 /* ===========================
-   SECTION BOXES (venstre farget stripe)
+   SECTION BOXES (left stripe)
    =========================== */
-.section-box {
-  background: #ffffff;
+.section-box,
+.stripe-box,
+#kontakt {
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+.section-box,
+.stripe-box {
+  background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 14px;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   padding: 16px 18px;
   margin: 18px 0;
-  position: relative;
 }
-.section-box::before {
+.section-box::before,
+.stripe-box::before {
   content: "";
   position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 6px;
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
-  background: #2563eb; /* default mavi */
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background: #2563eb;
 }
 .section--blue::before {
   background: #2563eb;
@@ -1032,93 +992,30 @@ nav[aria-label="Gruppemedlemmer"] a[aria-current="page"] {
 .section--rose::before {
   background: #e11d48;
 }
-.section-box h2 {
-  margin-top: 0;
-}
-
-/* Stripe box (varyant) */
-.stripe-box {
-  position: relative;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-  padding: 16px 18px;
-  margin: 18px 0;
-}
-.stripe-box::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
-  width: 6px;
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
-  background: #2563eb;
-}
-.stripe-blue::before {
-  background: #2563eb;
-}
-.stripe-purple::before {
-  background: #7c3aed;
-}
-/* Radius*/
-.section-box,
-.stripe-box,
-#kontakt {
-  border-radius: var(--radius);
-  position: relative;
-  overflow: hidden;
-}
-
-.section-box::before,
-.stripe-box::before {
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 6px;
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
 
 /* ===========================
    PAGE SCOPES
    =========================== */
 
-/* KLAER sayfası */
+/* KLAER */
 .klaer .cards {
   margin-bottom: 32px;
-}
-.klaer .card p {
-  color: #475569;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.klaer .cards {
   align-items: stretch;
 }
-
 .klaer .card {
   display: flex;
-  flex-direction: column; /* vertical layout */
+  flex-direction: column;
 }
-
-/* make the media area push the text to the bottom */
 .klaer .card figure {
   margin: 0 0 12px;
-  margin-bottom: auto; /* pushes next content to the bottom */
+  margin-bottom: auto;
 }
-
-/* ensure images have a consistent height */
 .klaer .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 12px;
 }
-
-/* small spacing tweaks */
 .klaer .card h3 {
   margin-top: 0;
 }
@@ -1126,16 +1023,14 @@ nav[aria-label="Gruppemedlemmer"] a[aria-current="page"] {
   margin-top: 12px;
 }
 
-/* Thumbnail state */
+/* Lightbox */
 a.zoomable img {
   cursor: zoom-in;
 }
-
-/* Lightbox overlay (opens with :target) */
 .lightbox {
   position: fixed;
   inset: 0;
-  display: none; /* hidden by default */
+  display: none;
   place-items: center;
   background: rgba(2, 6, 23, 0.8);
   padding: min(6vh, 32px);
@@ -1143,23 +1038,19 @@ a.zoomable img {
 }
 .lightbox:target {
   display: grid;
-} /* open when hash matches */
-
+}
 .lightbox__bg {
   position: absolute;
   inset: 0;
   display: block;
   cursor: zoom-out;
 }
-
 .lightbox img {
   max-width: min(96vw, 1200px);
   max-height: 90vh;
   border-radius: 12px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
-
-/* Optional close button */
 .lightbox .lb-close {
   position: absolute;
   top: 10px;
@@ -1177,7 +1068,7 @@ a.zoomable img {
   line-height: 1;
 }
 
-/* BIL sayfası */
+/* BIL */
 .bil .hero {
   min-height: 42vh;
   align-items: end;
@@ -1195,7 +1086,7 @@ a.zoomable img {
 }
 .bil .card.card--bil::before {
   background: #1e3a8a;
-} /* navy */
+}
 .bil .card figure {
   margin: 0 0 12px;
 }
@@ -1204,6 +1095,391 @@ a.zoomable img {
   height: 180px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+/* PRODUKTER BIL (tepe şeritleri) */
+.bil #produkterbil .card {
+  position: relative;
+}
+.bil #produkterbil .card::before {
+  background: var(--prod-accent, #1e3a8a);
+}
+.bil #produkterbil .card:nth-child(1) {
+  --prod-accent: #16a34a;
+}
+.bil #produkterbil .card:nth-child(2) {
+  --prod-accent: #7c3aed;
+}
+.bil #produkterbil .card:nth-child(3) {
+  --prod-accent: #f59e0b;
+}
+.bil #produkterbil .card figure {
+  margin: 0 0 12px;
+}
+.bil #produkterbil .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* HUS */
+.hus .hero {
+  min-height: 48vh;
+  align-items: end;
+}
+.hus .hero .container {
+  padding: 56px 0 28px;
+}
+.hus .hero-title {
+  font-weight: 800;
+  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+}
+.hus .card figure {
+  margin: 0 0 12px;
+}
+.hus .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* HUS → Anbefalte produkter */
+.hus #produkterhus .card {
+  position: relative;
+}
+.hus #produkterhus .card::before {
+  background: var(--prod-accent, #16a34a);
+}
+.hus #produkterhus .card:nth-child(1) {
+  --prod-accent: #16a34a;
+}
+.hus #produkterhus .card:nth-child(2) {
+  --prod-accent: #f59e0b;
+}
+.hus #produkterhus .card:nth-child(3) {
+  --prod-accent: #0ea5e9;
+}
+.hus #produkterhus .card:nth-child(4) {
+  --prod-accent: #2563eb;
+}
+.hus #produkterhus .card:nth-child(5) {
+  --prod-accent: #7c3aed;
+}
+.hus #produkterhus .card:nth-child(6) {
+  --prod-accent: #e11d48;
+}
+
+/* Section background patterns */
+.hus #sjekkliste .section-box {
+  background: radial-gradient(
+      1200px 200px at 10% -20%,
+      rgba(22, 163, 74, 0.06),
+      transparent 60%
+    ),
+    var(--surface);
+}
+.hus #sikkerhet .section-box {
+  background: radial-gradient(
+      1200px 200px at 10% -20%,
+      rgba(245, 158, 11, 0.06),
+      transparent 60%
+    ),
+    var(--surface);
+}
+.hus #sjekkliste .section-box ul,
+.hus #sikkerhet .section-box ul {
+  margin: 8px 0 0;
+}
+.hus #sjekkliste .section-box h2,
+.hus #sikkerhet .section-box h2 {
+  margin-top: 0;
+}
+
+/* SKO –  */
+.sko #produkter .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.sko #produkter .card::before {
+  background: var(--prod-accent, #2563eb);
+}
+.sko #produkter .card > :last-child {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/*produkt og bilder */
+section[aria-labelledby="produkter"] .cards .card figure {
+  margin: 12px 0 16px;
+  height: clamp(160px, 24vw, 220px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
+}
+section[aria-labelledby="produkter"] .cards .card figure > img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  height: auto;
+  width: auto;
+  filter: drop-shadow(0 6px 12px rgba(2, 6, 23, 0.12));
+}
+
+/* SKO → aksan renkleri */
+.sko #produkter .card:nth-child(1) {
+  --prod-accent: #2563eb;
+}
+.sko #produkter .card:nth-child(2) {
+  --prod-accent: #7c3aed;
+}
+.sko #produkter .card:nth-child(3) {
+  --prod-accent: #16a34a;
+}
+
+/* grid two */
+.grid.two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* LEFT-STRIPE CARD  */
+.card.card--ls {
+  position: relative;
+  overflow: hidden;
+}
+.card.card--ls::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: var(--ls-color, #2563eb);
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+/* VÆR / AKTIVITETER vesntre side*/
+.vaer .card.card--ls,
+.aktiviteter .card.card--ls,
+.sko .card.card--ls,
+.transport .card.card--ls {
+}
+
+/* AKTIVITETER grid */
+.aktiviteter .grid.two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* TRANSPORT – Hero kort */
+.transport [role="group"][aria-label="Bybanen og buss i regn"] .card {
+  position: relative;
+  padding: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.transport [role="group"][aria-label="Bybanen og buss i regn"] .card img {
+  width: 100%;
+  height: clamp(200px, 32vw, 300px);
+  object-fit: cover;
+  border-radius: inherit;
+}
+.transport [role="group"][aria-label="Bybanen og buss i regn"] .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 10px;
+  background: rgba(2, 6, 23, 0.85);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.18);
+}
+
+/* TRANSPORT –  */
+.transport #kollektiv .grid.two > .card,
+.transport #fot .grid.two > .card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.transport #kollektiv .grid.two > .card::after,
+.transport #fot .grid.two > .card::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: var(--ls-color, #2563eb);
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.transport #kollektiv .grid.two > .card:nth-child(1) {
+  --ls-color: #2563eb;
+}
+.transport #kollektiv .grid.two > .card:nth-child(2) {
+  --ls-color: #7c3aed;
+}
+.transport #fot .grid.two > .card:nth-child(1) {
+  --ls-color: #16a34a;
+}
+.transport #fot .grid.two > .card:nth-child(2) {
+  --ls-color: #f59e0b;
+}
+
+/* ===========================
+   LØSNINGER – top stripe colors
+   =========================== */
+#losninger .card {
+  --card-accent: #2563eb;
+} /* default */
+#losninger .card:nth-child(1) {
+  --card-accent: #2563eb;
+} /* Klær */
+#losninger .card:nth-child(2) {
+  --card-accent: #16a34a;
+} /* Hus */
+#losninger .card:nth-child(3) {
+  --card-accent: #1e3a8a;
+} /* Bil */
+#losninger .card:nth-child(4) {
+  --card-accent: #7c3aed;
+} /* Sko */
+#losninger .card:nth-child(5) {
+  --card-accent: #f59e0b;
+} /* Aktiviteter */
+#losninger .card:nth-child(6) {
+  --card-accent: #e11d48;
+} /* Vær */
+#losninger .card:nth-child(7) {
+  --card-accent: #14b8a6;
+} /* For bedrifter */
+
+/* ===========================
+   FOR BEDRIFTER – Produktgrid (FULL)
+   =========================== */
+
+/* Kategori-seksjon: start med én kolonne på små skjermer */
+section[aria-labelledby="kategori"] > .container > .grid.two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Produktgrid: mobil = 1 kolonne, >=700px = 2 kolonner */
+.product-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+/* Nøytral kategoriwrapper (tittel o.l.) */
+.category {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* ===========================
+   KORT – runde hjørner + toppstripe fiks
+   =========================== */
+.bedrifter .product-grid > .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;        /* ytre hjørner */
+  box-shadow: var(--shadow);
+  padding: 16px;
+  overflow: hidden;           /* klipp toppstripen i hjørnene */
+}
+
+/* Farget toppstripe inni kortet */
+.bedrifter .product-grid > .card::before {
+  content: "";
+  position: absolute;
+  left: 0;                    /* ingen -1px offset */
+  right: 0;
+  top: 0;
+  height: 6px;
+  background: var(--prod-accent, #2563eb);
+  border-top-left-radius: inherit;   /* arver kortets radius */
+  border-top-right-radius: inherit;
+  pointer-events: none;
+}
+
+/* Bildesone inni kortet */
+.bedrifter .product-grid > .card figure {
+  margin: 0 0 14px;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;        /* litt mindre radius enn kortet */
+  padding: 8px;
+  overflow: hidden;
+}
+
+/* Bildet skaleres pent i rammen */
+.bedrifter .product-grid > .card figure > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Tekstblokker: konsistent høyde for jevn layout */
+.bedrifter .product-grid > .card h4 {
+  margin: 8px 0 6px;
+  min-height: 2.5em;          /* reserver ~2 linjer */
+}
+
+.bedrifter .product-grid > .card h4 + p {
+  min-height: 4.5em;          /* reserver ~3 linjer */
+}
+
+/* Skyv knapper/lenker til bunnen */
+.bedrifter .product-grid > .card .mt-auto {
+  margin-top: auto;
+}
+
+/* ===========================
+   Aksentfarger per produkt
+   =========================== */
+.section--purple .product-grid > .card:nth-child(1) {
+  --prod-accent: #7c3aed;     /* Skalljakke Pro */
+}
+.section--purple .product-grid > .card:nth-child(2) {
+  --prod-accent: #2563eb;     /* Vanntett sekk 20L */
+}
+.section--blue .product-grid > .card:nth-child(1) {
+  --prod-accent: #16a34a;     /* Vitrine-sett */
+}
+.section--blue .product-grid > .card:nth-child(2) {
+  --prod-accent: #f59e0b;     /* Plakatpakke */
 }
 
 /* ===========================
@@ -1248,436 +1524,3 @@ a.zoomable img {
     padding: var(--s3);
   }
 }
-/* PRODUKTER BIL  */
-.bil #produkterbil .card {
-  position: relative;
-}
-.bil #produkterbil .card::before {
-  background: var(--prod-accent, #1e3a8a) !important;
-}
-
-.bil #produkterbil .card:nth-child(1) {
-  --prod-accent: #16a34a;
-}
-.bil #produkterbil .card:nth-child(2) {
-  --prod-accent: #7c3aed;
-}
-.bil #produkterbil .card:nth-child(3) {
-  --prod-accent: #f59e0b;
-}
-
-.bil #produkterbil .card figure {
-  margin: 0 0 12px;
-}
-.bil #produkterbil .card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* hus sider */
-.hus .hero {
-  min-height: 48vh;
-  align-items: end;
-}
-.hus .hero .container {
-  padding: 56px 0 28px;
-}
-.hus .hero-title {
-  font-weight: 800;
-  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
-}
-
-.hus .card figure {
-  margin: 0 0 12px;
-}
-.hus .card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* HUS → Anbefalte produkter:*/
-.hus #produkterhus .card {
-  position: relative;
-}
-.hus #produkterhus .card::before {
-  background: var(--prod-accent, #16a34a) !important; /* default: green */
-}
-
-.hus #produkterhus .card:nth-child(1) {
-  --prod-accent: #16a34a;
-} /* green  */
-.hus #produkterhus .card:nth-child(2) {
-  --prod-accent: #f59e0b;
-} /* amber  */
-.hus #produkterhus .card:nth-child(3) {
-  --prod-accent: #0ea5e9;
-} /* cyan   */
-.hus #produkterhus .card:nth-child(4) {
-  --prod-accent: #2563eb;
-} /* blue   */
-.hus #produkterhus .card:nth-child(5) {
-  --prod-accent: #7c3aed;
-} /* purple */
-.hus #produkterhus .card:nth-child(6) {
-  --prod-accent: #e11d48;
-} /* rose   */
-/* Section boxes with background patterns */
-.hus #sjekkliste .section-box {
-  background: radial-gradient(
-      1200px 200px at 10% -20%,
-      rgba(22, 163, 74, 0.06),
-      transparent 60%
-    ),
-    var(--surface);
-}
-.hus #sikkerhet .section-box {
-  background: radial-gradient(
-      1200px 200px at 10% -20%,
-      rgba(245, 158, 11, 0.06),
-      transparent 60%
-    ),
-    var(--surface);
-}
-
-.hus #sjekkliste .section-box ul,
-.hus #sikkerhet .section-box ul {
-  margin: 8px 0 0;
-}
-
-.hus #sjekkliste .section-box h2,
-.hus #sikkerhet .section-box h2 {
-  margin-top: 0;
-}
-
-/* sko*/
-
-.sko #produkter .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.sko #produkter .card::before {
-  /* global .card::before */
-  background: var(--prod-accent, #2563eb);
-}
-.sko #produkter .card > :last-child {
-  margin-top: auto; /* "Mer info →"  */
-  align-self: flex-start;
-}
-/* SKO → Anbefalte produkter:*/
-section[aria-labelledby="produkter"] .cards .card figure {
-  margin: 12px 0 16px;
-  height: clamp(160px, 24vw, 220px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f3f4f6;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 10px;
-}
-
-section[aria-labelledby="produkter"] .cards .card figure > img {
-  height: auto !important;
-  width: auto !important;
-  max-height: 100% !important;
-  max-width: 100% !important;
-  object-fit: contain !important;
-  filter: drop-shadow(0 6px 12px rgba(2, 6, 23, 0.12));
-  border-radius: 8px;
-}
-
-/* opp farger */
-.sko #produkter .card:nth-child(1) {
-  --prod-accent: #2563eb;
-}
-.sko #produkter .card:nth-child(2) {
-  --prod-accent: #7c3aed;
-}
-.sko #produkter .card:nth-child(3) {
-  --prod-accent: #16a34a;
-}
-
-/* (.grid.two */
-.grid.two {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.sko .card.card--ls {
-  position: relative;
-  overflow: hidden;
-}
-.sko .card.card--ls::after {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background: var(--ls-color, #2563eb);
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
-.sko #passform + .container,
-.sko #vedlikehold + .container {
-  padding: 0;
-}
-
-.sko #passform + .container > *,
-.sko #vedlikehold + .container > * {
-  margin: 0;
-}
-
-.sko #passform + .container {
-  position: relative;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 16px 18px;
-  overflow: hidden;
-}
-.sko #passform + .container::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background: #a24304; /* amber */
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
-.sko #vedlikehold + .container {
-  position: relative;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 16px 18px;
-  overflow: hidden;
-}
-.sko #vedlikehold + .container::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background: #600f96; /* purple */
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
-/* vær daglig */
-
-.vaer .muted {
-  color: var(--muted);
-  font-size: 14px;
-}
-.vaer .grid.two {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-/* 2) Tips kort venstre side  (card--ls) */
-.vaer .card.card--ls {
-  position: relative;
-  overflow: hidden;
-}
-.vaer .card.card--ls::after {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background: var(--ls-color, #2563eb);
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-/*  AKTIVETER — */
-
-/*  (card--ls) */
-.aktiviteter .card.card--ls {
-  position: relative;
-  overflow: hidden;
-}
-.aktiviteter .card.card--ls::after {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background: var(--ls-color, #2563eb);
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
-.aktiviteter .grid.two {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.aktiviteter .card.card--ls {
-  position: relative;
-  overflow: hidden;
-}
-.aktiviteter .card.card--ls::after {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0; /* left stripe */
-  width: 6px;
-  background: var(--ls-color, #2563eb);
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-/* ========== TRANSPORT */
-/* ========== TRANSPORT – Hero  ========== */
-.transport [role="group"][aria-label="Bybanen og buss i regn"] .card {
-  position: relative;
-  padding: 0;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-.transport [role="group"][aria-label="Bybanen og buss i regn"] .card img {
-  display: block;
-  width: 100%;
-  height: clamp(200px, 32vw, 300px); /* aynı yükseklik */
-  object-fit: cover;
-  border-radius: inherit;
-}
-.transport [role="group"][aria-label="Bybanen og buss i regn"] .badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 6px 10px;
-  background: rgba(2, 6, 23, 0.85);
-  color: #fff;
-  font-weight: 700;
-  border-radius: 999px;
-  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.18);
-}
-
-.transport #kollektiv .grid.two > .card::before,
-.transport #fot .grid.two > .card::before {
-  content: none !important;
-}
-
-.transport #kollektiv .grid.two > .card,
-.transport #fot .grid.two > .card {
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.transport #kollektiv .grid.two > .card::after,
-.transport #fot .grid.two > .card::after {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 6px;
-  background: var(--ls-color, #2563eb);
-  border-top-left-radius: inherit;
-  border-bottom-left-radius: inherit;
-}
-
-.transport #kollektiv .grid.two > .card:nth-child(1) {
-  --ls-color: #2563eb;
-}
-.transport #kollektiv .grid.two > .card:nth-child(2) {
-  --ls-color: #7c3aed;
-}
-.transport #fot .grid.two > .card:nth-child(1) {
-  --ls-color: #16a34a;
-}
-.transport #fot .grid.two > .card:nth-child(2) {
-  --ls-color: #f59e0b;
-}
-
-/* ===========================
-   For bedrifter — kategori içi ürünler
-   =========================== */
-
-/* Dış kategori listesi tek kolonda kalsın */
-section[aria-labelledby="kategori"] > .container > .grid.two{
-  display:grid; grid-template-columns:1fr; gap:24px;
-}
-
-/* Ürün grid'i: mobil 1, >=700px 2 sütun */
-.product-grid{
-  display:grid; gap:16px; grid-template-columns:1fr;
-}
-@media (min-width:700px){
-  .product-grid{ grid-template-columns:repeat(2, minmax(260px,1fr)); }
-}
-
-/* 1) ÜÇ KUTU MESLESİ: dış category kutusu kart değil → gölge/çerçeve yok */
-.category{ padding:0; border:0; background:transparent; }
-
-
-/* 3) YAZILAR EŞİT HİZA: görsel sabit yükseklik + linki alta it */
-.bedrifter .product-grid > .card figure{ margin:0 0 12px; }
-.bedrifter .product-grid > .card img{
-  width:100%; height:220px; object-fit:cover; border-radius:12px;
-}
-.bedrifter .product-grid > .card h4{ margin:8px 0 6px; line-height:1.25; }
-.bedrifter .product-grid > .card p{ margin:0 0 10px; }
-.bedrifter .product-grid > .card .mt-auto{ margin-top:auto; }
-/* === BEDRIFTER: ÜRÜN KARTI DÜZELTMELERİ === */
-
-
-.bedrifter .product-grid > .card figure > img{
-  height: 100% !important;
-  width: 100% !important;
-  object-fit: contain !important;  
-  object-position: center;
-  display: block;
-  border-radius: 8px;
-}
-
-
-.bedrifter .product-grid > .card figure{
-  margin: 0 0 14px;
-  aspect-ratio: 4 / 3;             
-  height: auto;                     
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 8px;
-  overflow: hidden;
-}
-
-
-.bedrifter .product-grid > .card{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.bedrifter .product-grid > .card::before{
-  content: "";
-  position: absolute; left: -1px; right: -1px; top: -1px;
-  height: 6px;
-  background: var(--prod-accent, #2563eb);
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-
-.bedrifter .product-grid > .card h4{ margin: 8px 0 6px; min-height: 2.5em; }
-.bedrifter .product-grid > .card h4 + p{ min-height: 4.5em; }
-.bedrifter .product-grid > .card .mt-auto{ margin-top: auto; }
-
-
-.section--purple .product-grid > .card:nth-child(1){ --prod-accent:#7c3aed; } /* Skalljakke Pro */
-.section--purple .product-grid > .card:nth-child(2){ --prod-accent:#2563eb; } /* Vanntett sekk 20L */
-
-.section--blue   .product-grid > .card:nth-child(1){ --prod-accent:#16a34a; } /* Vitrine-sett */
-.section--blue   .product-grid > .card:nth-child(2){ --prod-accent:#f59e0b; } /* Plakatpakke */

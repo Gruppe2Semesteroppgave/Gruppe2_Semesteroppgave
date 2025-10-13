@@ -10,6 +10,8 @@
 </head>
 <body>
   <div id="top"></div>
+
+  <!-- Skip-lenke: hopper til hovedinnhold og setter fokus -->
   <a class="skip-link" href="#main">Hopp til hovedinnhold</a>
 
   <!-- HEADER / NAVBAR -->
@@ -17,6 +19,7 @@
     <div class="container nav-wrap">
       <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
+      <!-- Semantisk navigasjon; ARIA kun der det trengs -->
       <nav class="navbar" aria-label="Hovedmeny">
         <ul class="menu">
           <li><a href="hjemside.html">Hjem</a></li>
@@ -24,7 +27,7 @@
           <!-- Om prosjektet + Team -->
           <li class="dropdown">
             <details>
-              <summary>Om prosjektet</summary>
+              <summary>Om prosjektet <span class="sr-only">– åpne/lukke</span></summary>
               <ul class="submenu" aria-label="Om prosjektet">
                 <li><a href="prosjekt.html">Prosjektbeskrivelse</a></li>
                 <li><a href="team.html">Team</a></li>
@@ -35,7 +38,7 @@
           <!-- Løsninger -->
           <li class="dropdown">
             <details>
-              <summary>Løsninger</summary>
+              <summary>Løsninger <span class="sr-only">– åpne/lukke</span></summary>
               <ul class="submenu" aria-label="Løsninger">
                 <li><a href="bil.html">Bil</a></li>
                 <li><a href="hus.html">Hus</a></li>
@@ -46,7 +49,7 @@
                 <li><a href="transport-sikkerhet.html">Transport-sikkerhet</a></li>
                 <li class="dropdown">
                   <details>
-                    <summary>For bedrifter</summary>
+                    <summary>For bedrifter <span class="sr-only">– åpne/lukke</span></summary>
                     <ul class="submenu" aria-label="For bedrifter">
                       <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
                       <li><a href="annonsering.html">Annonsering</a></li>
@@ -57,11 +60,12 @@
             </details>
           </li>
 
+          <!-- Aktiv side markeres med aria-current -->
           <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
         </ul>
       </nav>
 
-      <!-- Search -->
+      <!-- Søk: synlig knapp og ekte label -->
       <form class="nav-search" role="search" action="sok.html" method="get" aria-label="Søk">
         <label for="q" class="sr-only">Søk på nettstedet</label>
         <input id="q" name="q" type="search" placeholder="Søk…" autocomplete="on" />
@@ -70,7 +74,8 @@
     </div>
   </header>
 
-  <main id="main">
+  <!-- MAIN: fokusmål for skip-lenken -->
+  <main id="main" tabindex="-1">
     <!-- Intro -->
     <section class="section" aria-labelledby="page-title">
       <div class="container">
@@ -78,7 +83,8 @@
         <p>Her finner du prosjektgruppen vår. Klikk på et navn for mer informasjon eller kontakt via e-post.</p>
       </div>
     </section>
-'    <!-- Navigasjon team -->'
+
+    <!-- Navigasjon til medlemssider -->
     <section class="section stripe-box stripe-blue" aria-labelledby="nav-team">
       <div class="container">
         <nav aria-label="Gruppemedlemmer">
@@ -95,88 +101,89 @@
       </div>
     </section>
 
-    <!-- Kartlar -->
+    <!-- Medlemskort (bruk <article> for selvstendige innholdsenheter) -->
     <section id="team" class="section" aria-labelledby="team-title">
       <div class="container">
         <h2 id="team-title">Prosjektgruppen</h2>
 
         <div class="team-grid">
           <!-- Yelyzaveta -->
-          <section class="member member--blue" aria-labelledby="yel-title">
+          <article class="member member--blue" aria-labelledby="yel-title">
             <figure>
-              <img src="../img/yelyza.jpg" alt="Yelyzaveta Lahniuk, Scrum Master">
+              <img src="../img/yelyza.jpg" alt="Yelyzaveta Lahniuk, Scrum Master" loading="lazy">
               <figcaption>Scrum Master</figcaption>
             </figure>
             <h3 id="yel-title">Yelyzaveta Lahniuk</h3>
             <p class="role">Scrum Master</p>
-            <p class="email"><a href="mailto:yelyzavetalahniuk@gmail.com">yelyzavetalahniuk@gmail.com</a></p>
+            <!-- address gir mer semantikk for kontaktinfo -->
+            <address class="email"><a href="mailto:yelyzavetalahniuk@gmail.com">yelyzavetalahniuk@gmail.com</a></address>
             <p><a class="more-link" href="yelyzaveta.html" aria-label="Mer info om Yelyzaveta Lahniuk">Mer info →</a></p>
-          </section>
+          </article>
 
           <!-- Elisa -->
-          <section class="member member--green" aria-labelledby="eli-title">
+          <article class="member member--green" aria-labelledby="eli-title">
             <figure>
-              <img src="../img/elisa.jpg" alt="Elisa Rumeysa Solberg, prosjektmedlem">
+              <img src="../img/elisa.jpg" alt="Elisa Rumeysa Solberg, prosjektmedlem" loading="lazy">
               <figcaption>Prosjektmedlem</figcaption>
             </figure>
             <h3 id="eli-title">Elisa Rumeysa Solberg</h3>
             <p class="role">Prosjektmedlem</p>
-            <p class="email"><a href="mailto:elsol0297@hvl.no">elsol0297@hvl.no</a></p>
+            <address class="email"><a href="mailto:elsol0297@hvl.no">elsol0297@hvl.no</a></address>
             <p><a class="more-link" href="elisa.html" aria-label="Mer info om Elisa Rumeysa Solberg">Mer info →</a></p>
-          </section>
+          </article>
 
           <!-- Alissa -->
-          <section class="member member--amber" aria-labelledby="ali-title">
+          <article class="member member--amber" aria-labelledby="ali-title">
             <figure>
-              <img src="../img/alissa.jpg" alt="Alissa Ruya Aksel, prosjektmedlem">
+              <img src="../img/alissa.jpg" alt="Alissa Ruya Aksel, prosjektmedlem" loading="lazy">
               <figcaption>Prosjektmedlem</figcaption>
             </figure>
             <h3 id="ali-title">Alissa Ruya Aksel</h3>
             <p class="role">Prosjektmedlem</p>
-            <p class="email"><a href="mailto:alaks9670@hvl.no">alaks9670@hvl.no</a></p>
+            <address class="email"><a href="mailto:alaks9670@hvl.no">alaks9670@hvl.no</a></address>
             <p><a class="more-link" href="alissa.html" aria-label="Mer info om Alissa Ruya Aksel">Mer info →</a></p>
-          </section>
+          </article>
 
           <!-- Lasse -->
-          <section class="member member--orange" aria-labelledby="las-title">
+          <article class="member member--orange" aria-labelledby="las-title">
             <figure>
-              <img src="../img/lasse.jpg" alt="Lasse Aas Johannessen, prosjektmedlem">
+              <img src="../img/lasse.jpg" alt="Lasse Aas Johannessen, prosjektmedlem" loading="lazy">
               <figcaption>Prosjektmedlem</figcaption>
             </figure>
             <h3 id="las-title">Lasse Aas Johannessen</h3>
             <p class="role">Prosjektmedlem</p>
-            <p class="email"><a href="mailto:laaajo@gmail.com">laaajo@gmail.com</a></p>
+            <address class="email"><a href="mailto:laaajo@gmail.com">laaajo@gmail.com</a></address>
             <p><a class="more-link" href="lasse.html" aria-label="Mer info om Lasse Aas Johannessen">Mer info →</a></p>
-          </section>
+          </article>
 
           <!-- Emma -->
-          <section class="member member--rose" aria-labelledby="emm-title">
+          <article class="member member--rose" aria-labelledby="emm-title">
             <figure>
-              <img src="../img/emma.jpg" alt="Emma Wergedahl, prosjektmedlem">
+              <img src="../img/emma.jpg" alt="Emma Wergedahl, prosjektmedlem" loading="lazy">
               <figcaption>Prosjektmedlem</figcaption>
             </figure>
             <h3 id="emm-title">Emma Wergedahl</h3>
             <p class="role">Prosjektmedlem</p>
-            <p class="email"><a href="mailto:emmawergedahl1@gmail.com">emmawergedahl1@gmail.com</a></p>
+            <address class="email"><a href="mailto:emmawergedahl1@gmail.com">emmawergedahl1@gmail.com</a></address>
             <p><a class="more-link" href="emma.html" aria-label="Mer info om Emma Wergedahl">Mer info →</a></p>
-          </section>
+          </article>
 
           <!-- Samsam -->
-          <section class="member member--teal" aria-labelledby="sam-title">
+          <article class="member member--teal" aria-labelledby="sam-title">
             <figure>
-              <img src="../img/samsam.jpg" alt="Samsam Abdi-Karim, prosjektmedlem">
+              <img src="../img/samsam.jpg" alt="Samsam Abdi-Karim, prosjektmedlem" loading="lazy">
               <figcaption>Prosjektmedlem</figcaption>
             </figure>
             <h3 id="sam-title">Samsam Abdi-Karim</h3>
             <p class="role">Prosjektmedlem</p>
-            <p class="email"><a href="mailto:samsamabdikarim@gmail.com">samsamabdikarim@gmail.com</a></p>
+            <address class="email"><a href="mailto:samsamabdikarim@gmail.com">samsamabdikarim@gmail.com</a></address>
             <p><a class="more-link" href="samsam.html" aria-label="Mer info om Samsam Abdi-Karim">Mer info →</a></p>
-          </section>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Tablo -->
+    <!-- Rolle- og kontaktoversikt (tabell) -->
     <section class="section stripe-box stripe-purple" aria-labelledby="oversikt">
       <div class="container">
         <h2 id="oversikt">Rolleoversikt (tabell)</h2>
@@ -224,10 +231,10 @@
             </tbody>
           </table>
         </div>
-        <p class="muted">Tips: Se også <a href="team.html">Team</a>-siden for oversikt.</p>
       </div>
     </section>
 
+    <!-- Til toppen-lenke med tydelig mål -->
     <p class="container"><a class="toplink" href="#top" aria-label="Til toppen">↑ Til toppen</a></p>
   </main>
 

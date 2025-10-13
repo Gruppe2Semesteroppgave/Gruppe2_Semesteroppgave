@@ -22,16 +22,20 @@
       <!-- Nettstedsmerke / lenke til hjem -->
       <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-      <!-- Hovedmeny: bruk innebygd semantikk; unngå unødvendig ARIA -->
+      <!-- Hovedmeny: semantikk først; ARIA kun ved behov -->
       <nav class="navbar" aria-label="Hovedmeny">
         <ul class="menu">
           <li><a href="hjemside.html">Hjem</a></li>
           <li><a href="prosjekt.html">Om prosjektet</a></li>
 
-          <!-- Løsninger (tastaturvennlig via <details>/<summary>) -->
+          <!-- Tastaturvennlig nedtrekk via <details>/<summary> -->
           <li class="dropdown">
             <details>
-              <summary>Løsninger</summary>
+              <!-- Legg til skjermleser-tekst for å tydeliggjøre formålet -->
+              <summary>
+                Løsninger
+                <span class="sr-only"> – åpne/lukke meny</span>
+              </summary>
               <ul class="submenu" aria-label="Løsninger">
                 <li><a href="bil.html">Bil</a></li>
                 <li><a href="hus.html">Hus</a></li>
@@ -44,9 +48,12 @@
                 <!-- Undermeny for bedrifter -->
                 <li class="dropdown">
                   <details>
-                    <summary>For bedrifter</summary>
+                    <summary>
+                      For bedrifter
+                      <span class="sr-only"> – åpne/lukke undermeny</span>
+                    </summary>
                     <ul class="submenu" aria-label="For bedrifter">
-                      <!-- Merk gjeldende underside -->
+                      <!-- Merk gjeldende underside med aria-current -->
                       <li><a href="for-bedrifter-produkter.html" aria-current="page">Produkter</a></li>
                       <li><a href="annonsering.html">Annonsering</a></li>
                     </ul>
@@ -62,8 +69,10 @@
 
       <!-- Søk i navigasjonen -->
       <form class="nav-search" role="search" action="#" aria-label="Søk">
-        <label for="q" class="sr-only">Søk</label>
-        <input id="q" name="q" type="search" placeholder="Søk..." />
+        <!-- Skjult, men tilgjengelig ledetekst -->
+        <label for="q" class="sr-only">Søk på siden</label>
+        <input id="q" name="q" type="search" placeholder="Søk..." autocomplete="off" />
+        <!-- Valgfritt: <button type="submit">Søk</button> for eksplisitt handling -->
       </form>
     </div>
   </header>
@@ -73,6 +82,7 @@
     <!-- Intro -->
     <section class="section" aria-labelledby="page-title">
       <div class="container">
+        <!-- Én H1 per side er riktig -->
         <h1 id="page-title">Produkttips for regnbyen</h1>
         <p>Hva lønner seg å selge i regnfulle perioder? Under er et kort utvalg.</p>
       </div>
@@ -98,7 +108,11 @@
               <div class="grid two product-grid" style="margin-top:16px">
                 <article class="card" aria-labelledby="p-k1a">
                   <figure>
-                    <img src="../img/forbedprodu1.jpg" alt="Skalljakke for regnbyger (illustrasjon)" />
+                    <!-- legg til width/height om du kjenner dimensjoner -->
+                    <img src="../img/forbedprodu1.jpg"
+                         alt="Skalljakke for regnbyger (illustrasjon)"
+                         loading="lazy" />
+                    <!-- <figcaption>Valgfritt: kort beskrivelse</figcaption> -->
                   </figure>
                   <h4 id="p-k1a">Skalljakke Pro</h4>
                   <p>Høy vannsøyle, pusteevne og tapede sømmer.</p>
@@ -107,7 +121,9 @@
 
                 <article class="card" aria-labelledby="p-k1b">
                   <figure>
-                    <img src="../img/forbedprodu2.jpg" alt="Vanntett sekk – 20L (illustrasjon)" />
+                    <img src="../img/forbedprodu2.jpg"
+                         alt="Vanntett sekk – 20L (illustrasjon)"
+                         loading="lazy" />
                   </figure>
                   <h4 id="p-k1b">Vanntett sekk 20L</h4>
                   <p>Rulltopp, reflekser og regntrekk i lokk.</p>
@@ -130,7 +146,9 @@
               <div class="grid two product-grid" style="margin-top:16px">
                 <article class="card" aria-labelledby="p-k2a">
                   <figure>
-                    <img src="../img/forbedprodu3.jpg" alt="Vitrine-sett – regntema (illustrasjon)" />
+                    <img src="../img/forbedprodu3.jpg"
+                         alt="Vitrine-sett – regntema (illustrasjon)"
+                         loading="lazy" />
                   </figure>
                   <h4 id="p-k2a">Vitrine-sett (regn)</h4>
                   <p>Modulbasert, rask montering og tydelig sesongtema.</p>
@@ -139,7 +157,9 @@
 
                 <article class="card" aria-labelledby="p-k2b">
                   <figure>
-                    <img src="../img/forbedprodu4.avif" alt="Plakatpakke – kampanje (illustrasjon)" />
+                    <img src="../img/forbedprodu4.avif"
+                         alt="Plakatpakke – kampanje (illustrasjon)"
+                         loading="lazy" />
                   </figure>
                   <h4 id="p-k2b">Plakatpakke</h4>
                   <p>Sett for inngang, kasse og hylletopper.</p>
@@ -185,7 +205,7 @@
                 </tr>
                 <tr>
                   <th scope="row">Vinter</th>
-                  <td>vannavvisning</td>
+                  <td>Vannavvisning</td>
                   <td>Slaps &amp; salt</td>
                 </tr>
               </tbody>

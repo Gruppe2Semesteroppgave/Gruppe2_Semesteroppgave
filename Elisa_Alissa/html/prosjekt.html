@@ -6,71 +6,75 @@
     <title>Regnbyen Bergen A/S – Om prosjekt</title>
 
     <link rel="stylesheet" href="../css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body class="prosjekt">
-
+    <!-- Skip-lenke: gjør det mulig å hoppe forbi navigasjon -->
     <a class="skip-link" href="#main">Hopp til innhold</a>
 
     <div id="top"></div>
-     <!-- HEADER / NAVBAR -->
-  <header class="site-header" id="top">
-  <div class="container nav-wrap">
-    <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-    <nav class="navbar" aria-label="Hovedmeny">
-      <ul class="menu">
-        <li><a href="hjemside.html" >Hjem</a></li>
-        <li><a href="prosjekt.html">Om prosjektet</a></li>
-        
-        <!-- Løsninger -->
-        <li class="dropdown">
-          <details>
-            <summary aria-haspopup="listbox">Løsninger</summary>
-            <ul class="submenu" role="listbox" aria-label="Løsninger">
-              <li><a href="bil.html">Bil</a></li>
-              <li><a href="hus.html">Hus</a></li>
-              <li><a href="klaer.html">Klær</a></li>
-              <li><a href="sko.html">Sko</a></li>
-              <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-              <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-              <li><a href="transport-sikkerhet.html"> transport-sikkerhet</a></li>
+    <!-- HEADER / NAVBAR -->
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-              <!-- For bedrifter (nested under Løsninger) -->
-              <li class="dropdown">
-                <details>
-                  <summary aria-haspopup="listbox">For bedrifter</summary>
-                  <ul class="submenu" role="listbox" aria-label="For bedrifter">
-                    <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
-                    <li><a href="annonsering.html">Annonsering</a></li>
-                  </ul>
-                </details>
-              </li>
-            </ul>
-          </details>
-        </li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <!-- Semantisk nav; unngå listbox-roller i meny -->
+        <nav class="navbar" aria-label="Hovedmeny">
+          <ul class="menu">
+            <li><a href="hjemside.html">Hjem</a></li>
+            <!-- Merk aktiv side med aria-current -->
+            <li><a href="prosjekt.html" aria-current="page">Om prosjektet</a></li>
 
-      </ul>
-    </nav>
+            <!-- Tastaturvennlig meny via <details>/<summary> -->
+            <li class="dropdown">
+              <details>
+                <summary>
+                  Løsninger
+                  <span class="sr-only"> – åpne/lukke meny</span>
+                </summary>
+                <ul class="submenu" aria-label="Løsninger">
+                  <li><a href="bil.html">Bil</a></li>
+                  <li><a href="hus.html">Hus</a></li>
+                  <li><a href="klaer.html">Klær</a></li>
+                  <li><a href="sko.html">Sko</a></li>
+                  <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                  <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+                  <li><a href="transport-sikkerhet.html">Transport-sikkerhet</a></li>
 
-    
-    <form class="nav-search" role="search" action="#" aria-label="Søk">
-      <label for="q" class="sr-only">Søk</label>
-      <input id="q" name="q" type="search" placeholder="Søk..." />
-    </form>
-  </div>
-</header>
+                  <!-- Nestet undermeny: For bedrifter -->
+                  <li class="dropdown">
+                    <details>
+                      <summary>
+                        For bedrifter
+                        <span class="sr-only"> – åpne/lukke undermeny</span>
+                      </summary>
+                      <ul class="submenu" aria-label="For bedrifter">
+                        <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                        <li><a href="annonsering.html">Annonsering</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </details>
+            </li>
 
-    <!-- INNHOLD -->
-    <main id="main">
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <!-- Søk: skjult label + valgfri knapp -->
+        <form class="nav-search" role="search" action="#" aria-label="Søk">
+          <label for="q" class="sr-only">Søk</label>
+          <input id="q" name="q" type="search" placeholder="Søk..." autocomplete="off" />
+          <!-- <button type="submit">Søk</button> -->
+        </form>
+      </div>
+    </header>
+
+    <!-- MAIN: fokusmål for skip-lenken -->
+    <main id="main" tabindex="-1">
       <section class="section" aria-labelledby="page-title">
         <div class="container">
           <h1 id="page-title">Om prosjektet</h1>
@@ -99,30 +103,14 @@
             <article class="card" id="mal" aria-labelledby="mal-tittel">
               <h2 id="mal-tittel">Målsetting</h2>
               <ul>
-                <li>
-                  <strong>Nettsted:</strong> Klar, tilgjengelig info om klær,
-                  bolig, transport.
-                </li>
-                <li>
-                  <strong>Dokumentasjon:</strong> Rapport iht. ING100 (backlog,
-                  Gantt, wireframes).
-                </li>
-                <li>
-                  <strong>Teknologi:</strong> Enkel Python-estimering
-                  (Innlevering 3).
-                </li>
-                <li>
-                  <strong>Samarbeid:</strong> Scrum-inspirert arbeidsflyt og
-                  roller.
-                </li>
+                <li><strong>Nettsted:</strong> Klar, tilgjengelig info om klær, bolig, transport.</li>
+                <li><strong>Dokumentasjon:</strong> Rapport iht. ING100 (backlog, Gantt, wireframes).</li>
+                <li><strong>Teknologi:</strong> Enkel Python-estimering (Innlevering 3).</li>
+                <li><strong>Samarbeid:</strong> Scrum-inspirert arbeidsflyt og roller.</li>
               </ul>
             </article>
 
-            <article
-              class="card"
-              id="leveranser"
-              aria-labelledby="leveranser-tittel"
-            >
+            <article class="card" id="leveranser" aria-labelledby="leveranser-tittel">
               <h2 id="leveranser-tittel">Leveranser</h2>
               <ul>
                 <li>Nettsted (HTML → senere CSS)</li>
@@ -131,11 +119,7 @@
               </ul>
             </article>
 
-            <article
-              class="card"
-              id="metodikk"
-              aria-labelledby="metodikk-tittel"
-            >
+            <article class="card" id="metodikk" aria-labelledby="metodikk-tittel">
               <h2 id="metodikk-tittel">Metodikk</h2>
               <ul>
                 <li>3 sprint med milepæler</li>
@@ -145,11 +129,7 @@
               </ul>
             </article>
 
-            <article
-              class="card"
-              id="milepaler"
-              aria-labelledby="milepaler-tittel"
-            >
+            <article class="card" id="milepaler" aria-labelledby="milepaler-tittel">
               <h2 id="milepaler-tittel">Milepæler</h2>
               <ul>
                 <li>Innlevering 1 (uke 38): HTML-grunnstruktur</li>
@@ -158,40 +138,37 @@
               </ul>
             </article>
 
+            <!-- Tabell: bruk scope=col/row for tydelig struktur -->
             <article class="card" aria-labelledby="oversikt-tittel">
               <h2 id="oversikt-tittel">Oversikt (tabell)</h2>
               <div class="table-wrap">
                 <table class="zebra">
-                  <caption>
-                    Hovedområder i prosjektet
-                  </caption>
+                  <caption>Hovedområder i prosjektet</caption>
                   <thead>
                     <tr>
-                      <th>Område</th>
-                      <th>Beskrivelse</th>
-                      <th>Status</th>
+                      <th scope="col">Område</th>
+                      <th scope="col">Beskrivelse</th>
+                      <th scope="col">Status</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Klær</td>
+                      <th scope="row">Klær</th>
                       <td>Råd om klær/skotøy og produktlister</td>
                       <td>Planlagt</td>
                     </tr>
                     <tr>
-                      <td>Hus</td>
+                      <th scope="row">Hus</th>
                       <td>Vedlikeholdstips for vått klima</td>
                       <td>Planlagt</td>
                     </tr>
                     <tr>
-                      <td>Bil</td>
-                      <td>
-                        Råd om bilhold i regnvær (våtgrep, sikt, vedlikehold)
-                      </td>
+                      <th scope="row">Bil</th>
+                      <td>Råd om bilhold i regnvær (våtgrep, sikt, vedlikehold)</td>
                       <td>Planlagt</td>
                     </tr>
                     <tr>
-                      <td>Python</td>
+                      <th scope="row">Python</th>
                       <td>Nedbør-estimering (enkel ML)</td>
                       <td>Del 3</td>
                     </tr>
@@ -203,15 +180,14 @@
             <article class="card" id="kontakt" aria-labelledby="kontakt-tittel">
               <h2 id="kontakt-tittel">Kontakt oss</h2>
 
+              <!-- address gir semantikk for kontaktinformasjon -->
               <address>
                 <p class="contact-item tel">
                   Telefon: <a href="tel:+4712332112">+47 123 12 123</a>
                 </p>
                 <p class="contact-item mail">
                   E-post:
-                  <a href="mailto:kontakt@regnbyen-bergen.no"
-                    >kontakt@regnbyen-bergen.no</a
-                  >
+                  <a href="mailto:kontakt@regnbyen-bergen.no">kontakt@regnbyen-bergen.no</a>
                 </p>
                 <p class="contact-item map">
                   Adresse:
@@ -227,30 +203,15 @@
 
               <h3>Følg oss</h3>
               <ul class="social">
-                <li>
-                  <a
-                    class="social-link fb"
-                    href="https://www.facebook.com/hvl.no"
-                    target="_blank"
-                    rel="noopener"
-                    >Facebook</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="social-link ig"
-                    href="https://www.instagram.com/hvl.no/"
-                    target="_blank"
-                    rel="noopener"
-                    >Instagram</a
-                  >
-                </li>
+                <li><a class="social-link fb" href="https://www.facebook.com/hvl.no" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a class="social-link ig" href="https://www.instagram.com/hvl.no/" target="_blank" rel="noopener">Instagram</a></li>
               </ul>
             </article>
           </div>
           <!-- /.stack -->
         </div>
       </section>
+
       <p><a class="toplink" href="#top">↑ Til toppen</a></p>
     </main>
 

@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Regnbyen Bergen A/S – Vær (daglig)</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body class="vaer">
+    <!-- Skip-lenke: lar brukere hoppe forbi navigasjonen med tastatur -->
     <a class="skip-link" href="#main">Hopp til innhold</a>
 
     <!-- HEADER / NAVBAR -->
@@ -23,35 +18,37 @@
       <div class="container nav-wrap">
         <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
+        <!-- Semantisk nav; unngå listbox-roller i meny -->
         <nav class="navbar" aria-label="Hovedmeny">
           <ul class="menu">
             <li><a href="hjemside.html">Hjem</a></li>
             <li><a href="prosjekt.html">Om prosjektet</a></li>
 
-            <!-- Løsninger -->
+            <!-- Tastaturvennlig meny via <details>/<summary> -->
             <li class="dropdown">
               <details>
-                <summary aria-haspopup="listbox">Løsninger</summary>
-                <ul class="submenu" role="listbox" aria-label="Løsninger">
+                <summary>
+                  Løsninger
+                  <span class="sr-only"> – åpne/lukke meny</span>
+                </summary>
+                <ul class="submenu" aria-label="Løsninger">
                   <li><a href="bil.html">Bil</a></li>
                   <li><a href="hus.html">Hus</a></li>
                   <li><a href="klaer.html">Klær</a></li>
                   <li><a href="sko.html">Sko</a></li>
-                  <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                  <!-- Merk aktiv underside med aria-current -->
+                  <li><a href="vaer-daglig.html" aria-current="page">Vær (daglig)</a></li>
                   <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
 
-                  <!-- For bedrifter (nested under Løsninger) -->
+                  <!-- Nestet undermeny: For bedrifter -->
                   <li class="dropdown">
                     <details>
-                      <summary aria-haspopup="listbox">For bedrifter</summary>
-                      <ul
-                        class="submenu"
-                        role="listbox"
-                        aria-label="For bedrifter"
-                      >
-                        <li>
-                          <a href="for-bedrifter-produkter.html">Produkter</a>
-                        </li>
+                      <summary>
+                        For bedrifter
+                        <span class="sr-only"> – åpne/lukke undermeny</span>
+                      </summary>
+                      <ul class="submenu" aria-label="For bedrifter">
+                        <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
                         <li><a href="annonsering.html">Annonsering</a></li>
                       </ul>
                     </details>
@@ -63,22 +60,21 @@
           </ul>
         </nav>
 
+        <!-- Søk: skjult label gir tilgjengelig navn -->
         <form class="nav-search" role="search" action="#" aria-label="Søk">
           <label for="q" class="sr-only">Søk</label>
-          <input id="q" name="q" type="search" placeholder="Søk..." />
+          <input id="q" name="q" type="search" placeholder="Søk..." autocomplete="off" />
         </form>
       </div>
     </header>
 
-    <main id="main">
+    <!-- MAIN: fokusmål for skip-lenken -->
+    <main id="main" tabindex="-1">
       <!-- Intro -->
       <section class="section" aria-labelledby="page-title">
         <div class="container">
-          <h1 id="page-title">Vær (daglig) & regn-tips</h1>
-          <p>
-            Denne siden gir en enkel daglig oversikt og korte råd for våte
-            dager.
-          </p>
+          <h1 id="page-title">Vær (daglig) &amp; regn-tips</h1>
+          <p>Denne siden gir en enkel daglig oversikt og korte råd for våte dager.</p>
         </div>
       </section>
 
@@ -89,15 +85,14 @@
             <h2 id="daglig">Daglig oversikt (eksempel)</h2>
             <div class="table-wrap">
               <table class="zebra">
-                <caption>
-                  Vær i dag – timesvis (eksempel)
-                </caption>
+                <caption>Vær i dag – timesvis (eksempel)</caption>
                 <thead>
                   <tr>
-                    <th>Klokkeslett</th>
-                    <th>Nedbør</th>
-                    <th>Vind</th>
-                    <th>Note</th>
+                    <!-- Kolonneoverskrifter bør ha scope="col" -->
+                    <th scope="col">Klokkeslett</th>
+                    <th scope="col">Nedbør</th>
+                    <th scope="col">Vind</th>
+                    <th scope="col">Note</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -162,16 +157,17 @@
       <section class="section" aria-labelledby="pakke">
         <div class="container">
           <div class="section-box section--teal">
-            <h2 id="pakke">Liten “regn-pakke”</h2>
+            <h2 id="pakke">Liten «regn-pakke»</h2>
             <ul>
               <li>Mini-paraply eller hette</li>
               <li>Vanntett pose for elektronikk</li>
-              <li>Ekstra sokker & lite håndkle</li>
+              <li>Ekstra sokker &amp; lite håndkle</li>
             </ul>
           </div>
         </div>
       </section>
-      <!-- Reklamfelt -->
+
+      <!-- Reklamefelt -->
       <section class="section" aria-labelledby="reklame">
         <div class="container">
           <aside class="card card--partners">
@@ -180,7 +176,8 @@
           </aside>
         </div>
       </section>
-      <p><a href="#top">↑ Til toppen</a></p>
+
+      <p><a href="#top" class="toplink">↑ Til toppen</a></p>
     </main>
 
     <footer class="site-footer">
