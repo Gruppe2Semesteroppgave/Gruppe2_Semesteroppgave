@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regnbyen Bergen – Hjem</title>
+  <link rel="stylesheet" href="samsam.css">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="top"></div>
+
+  <!-- Universell utforming: gir tastatursnarvei til hovedinnhold -->
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <!-- Logo / merke -->
+      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+
+      <!-- Hovednavigasjon -->
+      <nav class="navbar" aria-label="Hovedmeny">
+        <ul class="menu">
+          <li><a href="hjemside.html" aria-current="page">Hjem</a></li>
+          <li><a href="prosjekt.html">Om prosjektet</a></li>
+
+          <!-- Nedtrekksmeny for Løsninger -->
+          <li class="dropdown">
+            <details>
+              <summary>Løsninger</summary>
+              <ul class="submenu" aria-label="Løsninger">
+                <li><a href="bil.html">Bil</a></li>
+                <li><a href="hus.html">Hus</a></li>
+                <li><a href="klaer.html">Klær</a></li>
+                <li><a href="sko.html">Sko</a></li>
+                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+
+                <!-- Undermeny for bedrifter -->
+                <li class="dropdown">
+                  <details>
+                    <summary>For bedrifter</summary>
+                    <ul class="submenu" aria-label="For bedrifter">
+                      <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                      <li><a href="annonsering.html">Annonsering</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Søkefelt -->
+      <form class="nav-search" role="search" action="#" aria-label="Søk">
+        <label for="q" class="sr-only">Søk</label>
+        <input id="q" name="q" type="search" placeholder="Søk..." />
+      </form>
+    </div>
+  </header>
+<div>
+ <section class="section" aria-labelledby="profil">
+      <div class="container">
+        <h2 id="profil" class="sr-only">Profil</h2>
+
+        <!-- Fleksibel todelt layout med eksisterende grid-klasser -->
+        <div class="grid two">
+          <!-- Venstre: bilde/kort -->
+          <article class="card feature" aria-labelledby="samsam-navn">
+            <figure>
+              <!-- Portrett med informativ alt-tekst -->
+              <img src="../img/samsam.jpg" alt="Portrett av Samsam" />
+              <figcaption class="sr-only">Samsam</figcaption>
+            </figure>
+            <h3 id="samsam">Samsam Abdi-Karim</h3>
+            <p>Student ved HVL (Data ingeniør).</p>
+            
+          </article>
+
+          <!-- Høyre: nøkkelinformasjon -->
+          <article class="card" aria-labelledby="om-meg">
+            <h3 id="om-meg"> Om meg  </h3>
+            <p> Hei! Jeg heter Samsam, er 20 år gammel og kommer fra Bergen. Jeg studerer dataingeniør ved Høgskulen på Vestlandet. Jeg er prosjektmedlem i Regnbyen AS, og har ansvar for å skrive rapporter og dokumentere arbeidet i prosjektet. Jeg liker å jobbe med teknologi og programmering, og synes det er spennende å finne løsninger på utfordringer. På fritiden leser jeg bøker, og går turer i naturen rundt Bergen. </p>
+
+<section >
+      <div class="container">
+        <div class="card card--help">
+          <h2 id="kontakt">Kontakt meg</h2>
+          <p>Send gjerne en melding (demo – ikke funksjonell):</p>
+
+          <!-- Skjema: label/for-koblinger og tydelige feltnavn -->
+          <form class="form" action="#" method="post" novalidate>
+            <label for="navn">Navn</label>
+            <input id="navn" name="navn" type="text" placeholder="Ditt navn" />
+
+            <label for="epost">E-post</label>
+            <input id="epost" name="epost" type="email" placeholder="deg@eksempel.no" />
+
+            <label for="melding">Melding</label>
+            <textarea id="melding" name="melding" rows="5" placeholder="Hei Samsam!"></textarea>
+
+            <button class="btn primary" type="submit">Send (demo)</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- SIST OPPDATERT -->
+    <section id="oppdatert" class="section" aria-labelledby="oppdatert-tittel">
+      <div class="container">
+        <div class="card muted card--update">
+          <h2 id="oppdatert-tittel">Sist oppdatert</h2>
+          <ul>
+            <li>16.09 – Første HTML-versjon klar (Innlevering 1)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Lenke tilbake til toppen -->
+    <p><a class="toplink" href="#top">↑ Til toppen</a></p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+<body>
