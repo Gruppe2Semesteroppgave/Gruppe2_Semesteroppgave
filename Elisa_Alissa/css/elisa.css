@@ -283,7 +283,7 @@
 }
 
 /* =========================================================
-   DARK MODE – page-level tweaks (global dark varsa ek rötuş)
+   DARK MODE – page-level tweaks 
    ========================================================= */
 @media (prefers-color-scheme: dark){
   .profil.elisa .card,
