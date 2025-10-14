@@ -136,3 +136,13 @@
     .katt-left, .katt-left2, .katt-left3, .katt-right { animation: none; }
 }
 
+.back-link {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+
