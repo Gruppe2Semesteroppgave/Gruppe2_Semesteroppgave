@@ -1,0 +1,281 @@
+/* =========================================================
+   ALISSA PROFILE THEME (scoped to .profil.alissa)
+   Violet / Purple variant + water-drop bullets
+   ========================================================= */
+
+/* -------------------- TOKENS -------------------- */
+.profil.alissa:root,
+.profil.alissa {
+  /* Primary (violet) */
+  --accent: #7c3aed;          /* violet-600 */
+  --accent-600: #6d28d9;      /* violet-700 */
+
+  /* Violet scale */
+  --violet-200: #ddd6fe;
+  --violet-300: #c4b5fd;
+  --violet-400: #a78bfa;
+  --violet-500: #8b5cf6;
+  --violet-600: #7c3aed;
+
+  /* Generic tokens (local use; won’t clash with global) */
+  --radius: 16px;
+  --shadow-sm: 0 4px 12px rgba(15,23,42,.06);
+  --shadow: 0 10px 24px rgba(15,23,42,.08);
+  --border: #e5e7eb;
+  --muted: #475569;
+  --surface: #ffffff;
+
+  --s1: 8px;
+  --s2: 12px;
+  --s3: 16px;
+  --s4: 24px;
+  --s5: 32px;
+}
+
+/* Subtle page texture */
+.profil.alissa body {
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(2,6,23,.05) 1px, transparent 2px),
+    radial-gradient(1px 1px at 80% 60%, rgba(2,6,23,.04) 1px, transparent 2px);
+  background-size: 120px 120px, 160px 160px;
+}
+
+/* -------------------- HERO -------------------- */
+.profil.alissa .hero {
+  position: relative;
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(164,145,255,.22), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%,   rgba(124,58,237,.20),  transparent 60%),
+    linear-gradient(180deg, rgba(15,23,42,.55), rgba(15,23,42,.25)),
+    var(--hero-image, none);
+  background-size: cover;
+  background-position: center;
+  min-height: clamp(42vh, 52vh, 64vh);
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+  isolation: isolate;
+}
+.profil.alissa .hero::after {
+  content:"";
+  position:absolute; inset:0;
+  background-image: linear-gradient(120deg, rgba(0,0,0,.07) 1px, transparent 1px);
+  background-size: 14px 24px;
+  mix-blend-mode: multiply;
+  opacity:.05;
+  pointer-events:none;
+  z-index:0;
+}
+@media (prefers-reduced-motion: no-preference){
+  .profil.alissa .hero::after { animation: alissa-drizzle 6s linear infinite; }
+  @keyframes alissa-drizzle {
+    from { background-position:0 0; }
+    to   { background-position:0 24px; }
+  }
+}
+.profil.alissa .hero-title {
+  position: relative;
+  display:inline-block;
+  font-family:"Playfair Display", serif;
+  letter-spacing:.3px;
+  text-wrap:balance;
+  text-shadow:0 2px 16px rgba(118, 90, 185, .35);
+}
+.profil.alissa .hero-title::after {
+  content:"";
+  position:absolute; left:6px; right:6px; bottom:-8px; height:10px;
+  border-radius:999px;
+  background: linear-gradient(90deg, var(--violet-400), var(--violet-200));
+  opacity:.9; z-index:-1;
+}
+.profil.alissa .hero-text,
+.profil.alissa .hero-text.hero-glass {
+  position:relative; z-index:1;
+  backdrop-filter: blur(4px) saturate(1.05);
+  -webkit-backdrop-filter: blur(4px) saturate(1.05);
+  background: rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius: calc(var(--radius) + 4px);
+  padding: clamp(var(--s3), 2vw, var(--s5));
+  color:#fff;
+}
+
+/* -------------------- PROFILE CARD -------------------- */
+.profil.alissa .avatar-xl {
+  width:100%; height:auto; aspect-ratio:4/5; object-fit:cover;
+  border-radius:22px;
+  border:1px solid rgba(55,87,164,.08);
+  box-shadow:var(--shadow-sm);
+}
+.profil.alissa .card.feature {
+  background: linear-gradient(180deg,#fff,#f9fafb);
+}
+
+/* Tags / chips */
+.profil.alissa .tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem; }
+.profil.alissa .tag {
+  display:inline-block; padding:.35rem .6rem; border-radius:999px; font-size:.85rem;
+  background: var(--violet-200);
+  border: 1px solid #b39afc; /* between v300–v400 */
+  color:#0f172a;
+  box-shadow:var(--shadow-sm);
+}
+.profil.alissa .chips { display:flex; flex-wrap:wrap; gap:.5rem; margin:.75rem 0 0; padding:0; list-style:none; }
+.profil.alissa .chip  {
+  padding:.45rem .75rem; border-radius:999px; font-size:.92rem;
+  background:#efe8ff; border:1px solid #b39afc; color:#0f172a; box-shadow:var(--shadow-sm);
+}
+
+/* Quote & mini info */
+.profil.alissa .quote {
+  margin:.75rem 0 1rem; padding:.75rem 1rem;
+  border-left:4px solid var(--accent);
+  background:#f8fafc; border-radius:6px; color:var(--muted); font-style:italic;
+}
+.profil.alissa .mini-info {
+  display:flex; flex-wrap:wrap; gap:.5rem 1rem; padding:0; margin:.5rem 0 0; list-style:none;
+  color:var(--muted); font-size:.95rem;
+}
+
+/* -------------------- CARDS -------------------- */
+.profil.alissa .cards .card {
+  background:#fff;
+  background-image:
+    radial-gradient(10px 10px at 20% 30%, rgba(124,58,237,.08), transparent 40%),
+    radial-gradient(10px 10px at 80% 70%, rgba(164,145,255,.08), transparent 40%);
+  transition: transform .25s ease, box-shadow .25s ease;
+  transform: perspective(800px) translateZ(0);
+}
+.profil.alissa .cards .card:hover,
+.profil.alissa .cards .card:focus-within {
+  transform: perspective(800px) rotateX(2deg) translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15,23,42,.12);
+}
+@media (prefers-reduced-motion: reduce){
+  .profil.alissa .cards .card { transition:none; transform:none; }
+}
+
+/* -------------------- LINK LIST -------------------- */
+.profil.alissa .linklist { list-style:none; padding-left:0; }
+.profil.alissa .linklist li { position:relative; padding-left:1.6rem; margin:.5rem 0; }
+.profil.alissa .linklist li::before {
+  content:"💧"; position:absolute; left:0; top:0; transform:translateY(2px); filter:saturate(.95);
+}
+.profil.alissa .linklist a { text-decoration:underline; text-underline-offset:2px; }
+
+/* -------------------- FUN FACTS -------------------- */
+.profil.alissa .funfacts { display:grid; gap:12px; grid-template-columns:1fr; }
+@media (min-width:700px){ .profil.alissa .funfacts { grid-template-columns:repeat(3,1fr); } }
+.profil.alissa .ff {
+  background: linear-gradient(180deg,#fff,#f8fafc);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:12px 14px;
+  box-shadow:var(--shadow-sm);
+  display:flex; align-items:center; gap:.6rem; font-size:1rem;
+}
+.profil.alissa .ff span { font-size:1.2rem; }
+
+/* -------------------- SOCIALS -------------------- */
+.profil.alissa .socials{ display:flex; gap:.5rem; list-style:none; padding:0; margin:.75rem 0 0; }
+.profil.alissa .socials a{
+  display:grid; place-items:center; width:38px; height:38px; border-radius:999px;
+  background:#eef2f6; border:1px solid #e5e7eb; font-size:1.05rem; text-decoration:none;
+  transition: transform .15s ease, background .2s ease;
+}
+.profil.alissa .socials a:hover{ transform:translateY(-1px); background:#e2e8f0; }
+
+/* -------------------- SECTION HEADERS -------------------- */
+.profil.alissa .section > .container > h2 {
+  position:relative; padding-bottom:.6rem; margin-bottom:1rem;
+}
+.profil.alissa .section > .container > h2::after {
+  content:""; position:absolute; left:0; bottom:0; width:64px; height:3px; border-radius:3px;
+  background: linear-gradient(90deg, var(--violet-400), var(--violet-200));
+}
+
+/* -------------------- FORM -------------------- */
+.profil.alissa .form input,
+.profil.alissa .form textarea {
+  border:1px solid var(--border);
+  border-radius:12px; padding:.75rem .9rem; background:#fff;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.profil.alissa .form input:focus,
+.profil.alissa .form textarea:focus {
+  outline:none; border-color:var(--accent);
+  box-shadow:0 0 0 4px rgba(124,58,237,.15);
+}
+
+/* -------------------- BUTTON -------------------- */
+.profil.alissa .btn.primary {
+  position:relative; isolation:isolate;
+  border:none; border-radius:14px; padding:.8rem 1.1rem;
+  background: linear-gradient(180deg, var(--accent), var(--accent-600));
+  color:#fff; font-weight:600;
+  box-shadow:0 8px 16px rgba(124,58,237,.22);
+  transition: transform .12s ease, box-shadow .2s ease, filter .2s ease;
+}
+.profil.alissa .btn.primary:hover { transform:translateY(-1px); filter:brightness(1.03); }
+.profil.alissa .btn.primary::after {
+  content:""; position:absolute; inset:-2px; border-radius:inherit;
+  box-shadow:0 0 0 0 rgba(124,58,237,.28); opacity:0; transition:opacity .2s ease;
+}
+.profil.alissa .btn.primary:hover::after { animation: alissa-pulse 1.2s ease-out; }
+@keyframes alissa-pulse {
+  0%   { box-shadow:0 0 0 0 rgba(124,58,237,.28); opacity:1; }
+  100% { box-shadow:0 0 0 18px rgba(124,58,237,0); opacity:0; }
+}
+@media (prefers-reduced-motion: reduce){
+  .profil.alissa .btn.primary::after{ animation:none!important; }
+}
+
+/* -------------------- TABLE WRAP -------------------- */
+.profil.alissa .table-wrap {
+  background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:var(--s3); overflow:auto;
+}
+
+/* -------------------- DARK MODE -------------------- */
+@media (prefers-color-scheme: dark){
+  .profil.alissa .card,
+  .profil.alissa .table-wrap { background: var(--surface,#111827); }
+  .profil.alissa .quote { background:#0f172a; color:#cbd5e1; }
+  .profil.alissa .tag  { background:#ac83dc; border-color:#6b5dd4; color:#f3f4f6; }
+  .profil.alissa .chip { background:#342c63; border-color:#6b5dd4; color:#f3f4f6; }
+  .profil.alissa .socials a { background:#0f172a; border-color:#1f2937; color:#e5e7eb; }
+}
+
+/* =========================================================
+   CONTACT CARD OVERRIDES (green → purple) — NO HTML CHANGE
+   This section turns the green accent of #kontakt/card--help
+   into purple only on the Alissa page.
+   ========================================================= */
+.profil.alissa .card--help {
+  /* Left accent bar: purple */
+  border-left: 4px solid #7c3aed;
+
+  /* Soft purple glow background */
+  background:
+    radial-gradient(
+      1100px 180px at 10% -25%,
+      rgba(124, 58, 237, 0.06),
+      transparent 60%
+    ),
+    var(--surface);
+}
+
+/* Small purple underline for the heading (optional) */
+.profil.alissa .card--help h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.profil.alissa .card--help h2::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px; height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #a78bfa, #ddd6fe);
+}
