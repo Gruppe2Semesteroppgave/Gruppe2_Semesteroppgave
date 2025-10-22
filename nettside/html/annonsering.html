@@ -1,174 +1,247 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Regnbyen Bergen A/S – Annonsering</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regnbyen Bergen A/S – Annonsering</title>
 
-  <link rel="stylesheet" href="../css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
-</head>
-<body class="annonsering">
-  <!-- Hopp-anker til toppen -->
-  <div id="top"></div>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="annonsering">
+    <!-- Hopp-anker til toppen -->
+    <div id="top"></div>
 
-  <!-- Universell utforming: skip-lenke til hovedinnholdet -->
-  <a class="skip-link" href="#main">Hopp til innhold</a>
+    <!-- Universell utforming: skip-lenke til hovedinnholdet -->
+    <a class="skip-link" href="#main">Hopp til innhold</a>
 
-  <!-- HEADER / NAVBAR -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <!-- Nettstedets merke/lenke til hjem -->
-      <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
+    <!-- HEADER / NAVBAR -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <!-- Nettstedets merke/lenke til hjem -->
+        <a class="brand" href="hjemside.html">Regnbyen Bergen</a>
 
-      <!-- Hovednavigasjon – bruk native semantikk, unngå unødvendig ARIA -->
-      <nav class="navbar" aria-label="Hovedmeny">
-        <ul class="menu">
-          <!-- Merk aktiv toppnivå-side ved behov; her er undersiden aktiv -->
-          <li><a href="hjemside.html">Hjem</a></li>
-          <li><a href="prosjekt.html">Om prosjektet</a></li>
+        <!-- Hovednavigasjon – bruk native semantikk, unngå unødvendig ARIA -->
+        <nav class="navbar" aria-label="Hovedmeny">
+          <ul class="menu">
+            <!-- Merk aktiv toppnivå-side ved behov; her er undersiden aktiv -->
+            <li><a href="hjemside.html">Hjem</a></li>
+            <li><a href="prosjekt.html">Om prosjektet</a></li>
 
-          <!-- Løsninger (detaljer/summary gir tastatur- og skjermleserstøtte) -->
-          <li class="dropdown">
-            <details>
-              <summary>Løsninger</summary>
-              <!-- Native <ul> holder; aria-label for gruppenavn -->
-              <ul class="submenu" aria-label="Løsninger">
-                <li><a href="bil.html">Bil</a></li>
-                <li><a href="hus.html">Hus</a></li>
-                <li><a href="klaer.html">Klær</a></li>
-                <li><a href="sko.html">Sko</a></li>
-                <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
-                <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
-                <li><a href="transport-sikkerhet.html">Transport-sikkerhet</a></li>
+            <!-- Løsninger (detaljer/summary gir tastatur- og skjermleserstøtte) -->
+            <li class="dropdown">
+              <details>
+                <summary>Løsninger</summary>
+                <!-- Native <ul> holder; aria-label for gruppenavn -->
+                <ul class="submenu" aria-label="Løsninger">
+                  <li><a href="bil.html">Bil</a></li>
+                  <li><a href="hus.html">Hus</a></li>
+                  <li><a href="klaer.html">Klær</a></li>
+                  <li><a href="sko.html">Sko</a></li>
+                  <li><a href="vaer-daglig.html">Vær (daglig)</a></li>
+                  <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+                  <li>
+                    <a href="transport-sikkerhet.html">Transport-sikkerhet</a>
+                  </li>
 
-                <!-- Undermeny for bedrifter -->
-                <li class="dropdown">
-                  <details>
-                    <summary>For bedrifter</summary>
-                    <ul class="submenu" aria-label="For bedrifter">
-                      <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
-                      <!-- Merk gjeldende underside med aria-current -->
-                      <li><a href="annonsering.html" aria-current="page">Annonsering</a></li>
-                    </ul>
-                  </details>
-                </li>
-              </ul>
-            </details>
-          </li>
+                  <!-- Undermeny for bedrifter -->
+                  <li class="dropdown">
+                    <details>
+                      <summary>For bedrifter</summary>
+                      <ul class="submenu" aria-label="For bedrifter">
+                        <li>
+                          <a href="for-bedrifter-produkter.html">Produkter</a>
+                        </li>
+                        <!-- Merk gjeldende underside med aria-current -->
+                        <li>
+                          <a href="annonsering.html" aria-current="page"
+                            >Annonsering</a
+                          >
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </details>
+            </li>
 
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+        <!-- Verktøylinje: søk og vær -->
 
-      <!-- Søk i navigasjonen -->
-      <form class="nav-search" role="search" action="#" aria-label="Søk">
-        <!-- Skjermleservennlig etikett -->
-        <label for="q" class="sr-only">Søk</label>
-        <input id="q" name="q" type="search" placeholder="Søk..." />
-      </form>
-    </div>
-  </header>
-
-  <!-- HOVEDINNHOLD: gjør fokusérbar som mål for skip-lenken -->
-  <main id="main" tabindex="-1">
-    <!-- Tittel og ingress -->
-    <section class="section" aria-labelledby="page-title">
-      <div class="container">
-        <h1 id="page-title">Plasser reklamen din hos oss</h1>
-        <p>Vi når innbyggere, studenter og besøkende i Bergen – i et praktisk regnfokus.</p>
-      </div>
-    </section>
-
-    <!-- Mediepakke-tabell -->
-    <section class="section" aria-labelledby="mediepakke">
-      <div class="container">
-        <div class="section-box section--amber">
-          <h2 id="mediepakke">Mediepakke (kort)</h2>
-
-          <!-- Tabell-innpakning for horisontal scrolling på små skjermer -->
-          <div class="table-wrap">
-            <table class="zebra table">
-              <!-- Beskriv hva tabellen viser -->
-              <caption>Formater &amp; plassering (eksempel)</caption>
-              <thead>
-                <tr>
-                  <!-- Kolonneoverskrifter: legg til scope="col" -->
-                  <th scope="col">Format</th>
-                  <th scope="col">Størrelse</th>
-                  <th scope="col">Plassering</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <!-- Første celle som radoverskrift gir bedre navigasjon -->
-                  <th scope="row">Topbanner</th>
-                  <td>1200×250</td>
-                  <td>Hjem / Prosjekt</td>
-                </tr>
-                <tr>
-                  <th scope="row">Sidebar</th>
-                  <td>300×600</td>
-                  <td>Klær / Hus / Bil</td>
-                </tr>
-                <tr>
-                  <th scope="row">Innholdsblokk</th>
-                  <td>728×90</td>
-                  <td>Aktiviteter</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- /table-wrap -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Forespørselsskjema (demo) -->
-    <section class="section" aria-labelledby="kontakt-annonse">
-      <div class="container">
-        <div class="section-box section--purple">
-          <h2 id="kontakt-annonse">Forespørselsskjema</h2>
-
-          <!-- Skjema: alle felter har label/for-kobling; nødvendig felter markert -->
-          <form class="form" action="#" method="post" novalidate>
-            <!-- Bedriftsnavn -->
-            <label for="firma">Bedriftsnavn</label>
-            <input id="firma" type="text" name="firma" placeholder="Firmanavn AS" required />
-
-            <!-- E-post -->
-            <label for="epost">E-post</label>
-            <input id="epost" type="email" name="epost" placeholder="post@firmanavn.no" required />
-
-            <!-- Ønsket plassering -->
-            <label for="plassering">Ønsket plassering</label>
-            <select id="plassering" name="plassering">
-              <option value="topbanner">Topbanner</option>
-              <option value="sidebar">Sidebar</option>
-              <option value="innholdsblokk">Innholdsblokk</option>
-            </select>
-
-            <!-- Melding -->
-            <label for="melding">Melding</label>
-            <textarea id="melding" name="melding" rows="6" placeholder="Kort om produktet og målgruppe"></textarea>
-
-            <!-- Send-knapp (demo) -->
-            <button class="btn primary" type="submit">Send forespørsel (demo)</button>
+        <div class="toolrow">
+          <form class="nav-search" role="search" aria-label="Søk">
+            <label for="q" class="sr-only">Søk</label>
+            <input id="q" name="q" type="search" placeholder="Søk..." />
           </form>
+
+          <div class="wx-mini-wrap">
+            <button
+              id="wx-mini"
+              class="wx-mini"
+              aria-expanded="false"
+              aria-controls="wx-popover"
+            >
+              <span class="wx-loc">📍 Bergen</span>
+              <span id="wx-mini-icon" aria-hidden="true">⛅</span>
+              <span id="wx-mini-temp">--°C</span>
+              <span class="sr-only">Åpne værdetaljer</span>
+            </button>
+            <div
+              id="wx-popover"
+              class="wx-popover"
+              role="dialog"
+              aria-label="Vær i Bergen"
+              hidden
+            >
+              <div class="wx-card">
+                <div class="wx-row">
+                  <div id="wx-icon" class="wx-icon" aria-hidden="true">⛅</div>
+                  <div class="wx-main">
+                    <div id="nowcast-status" class="wx-temp">Laster…</div>
+                    <div id="wx-desc" class="wx-desc">—</div>
+                  </div>
+                </div>
+                <ul id="nowcast-list" class="wx-tags"></ul>
+                <small id="nowcast-source" class="muted"></small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- Til toppen-lenke -->
-    <p><a href="#top" class="toplink">↑ Til toppen</a></p>
-  </main>
+    <!-- HOVEDINNHOLD: gjør fokusérbar som mål for skip-lenken -->
+    <main id="main" tabindex="-1">
+      <!-- Tittel og ingress -->
+      <section class="section" aria-labelledby="page-title">
+        <div class="container">
+          <h1 id="page-title">Plasser reklamen din hos oss</h1>
+          <p>
+            Vi når innbyggere, studenter og besøkende i Bergen – i et praktisk
+            regnfokus.
+          </p>
+        </div>
+      </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
-    </div>
-  </footer>
-</body>
+      <!-- Mediepakke-tabell -->
+      <section class="section" aria-labelledby="mediepakke">
+        <div class="container">
+          <div class="section-box section--amber">
+            <h2 id="mediepakke">Mediepakke (kort)</h2>
+
+            <!-- Tabell-innpakning for horisontal scrolling på små skjermer -->
+            <div class="table-wrap">
+              <table class="zebra table">
+                <!-- Beskriv hva tabellen viser -->
+                <caption>
+                  Formater &amp; plassering (eksempel)
+                </caption>
+                <thead>
+                  <tr>
+                    <!-- Kolonneoverskrifter: legg til scope="col" -->
+                    <th scope="col">Format</th>
+                    <th scope="col">Størrelse</th>
+                    <th scope="col">Plassering</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- Første celle som radoverskrift gir bedre navigasjon -->
+                    <th scope="row">Topbanner</th>
+                    <td>1200×250</td>
+                    <td>Hjem / Prosjekt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sidebar</th>
+                    <td>300×600</td>
+                    <td>Klær / Hus / Bil</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Innholdsblokk</th>
+                    <td>728×90</td>
+                    <td>Aktiviteter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /table-wrap -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Forespørselsskjema (demo) -->
+      <section class="section" aria-labelledby="kontakt-annonse">
+        <div class="container">
+          <div class="section-box section--purple">
+            <h2 id="kontakt-annonse">Forespørselsskjema</h2>
+
+            <!-- Skjema: alle felter har label/for-kobling; nødvendig felter markert -->
+            <form class="form" action="#" method="post" novalidate>
+              <!-- Bedriftsnavn -->
+              <label for="firma">Bedriftsnavn</label>
+              <input
+                id="firma"
+                type="text"
+                name="firma"
+                placeholder="Firmanavn AS"
+                required
+              />
+
+              <!-- E-post -->
+              <label for="epost">E-post</label>
+              <input
+                id="epost"
+                type="email"
+                name="epost"
+                placeholder="post@firmanavn.no"
+                required
+              />
+
+              <!-- Ønsket plassering -->
+              <label for="plassering">Ønsket plassering</label>
+              <select id="plassering" name="plassering">
+                <option value="topbanner">Topbanner</option>
+                <option value="sidebar">Sidebar</option>
+                <option value="innholdsblokk">Innholdsblokk</option>
+              </select>
+
+              <!-- Melding -->
+              <label for="melding">Melding</label>
+              <textarea
+                id="melding"
+                name="melding"
+                rows="6"
+                placeholder="Kort om produktet og målgruppe"
+              ></textarea>
+
+              <!-- Send-knapp (demo) -->
+              <button class="btn primary" type="submit">
+                Send forespørsel (demo)
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Til toppen-lenke -->
+      <p><a href="#top" class="toplink">↑ Til toppen</a></p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
+      </div>
+    </footer>
+  <script src="../js/vaer.js" defer></script>
+  </body>
 </html>
