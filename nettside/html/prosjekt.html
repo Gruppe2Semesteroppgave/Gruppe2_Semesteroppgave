@@ -64,47 +64,12 @@
           </ul>
         </nav>
 
-        <!-- Verktøylinje: søk og vær -->
-
-        <div class="toolrow">
-          <form class="nav-search" role="search" aria-label="Søk">
-            <label for="q" class="sr-only">Søk</label>
-            <input id="q" name="q" type="search" placeholder="Søk..." />
-          </form>
-
-          <div class="wx-mini-wrap">
-            <button
-              id="wx-mini"
-              class="wx-mini"
-              aria-expanded="false"
-              aria-controls="wx-popover"
-            >
-              <span class="wx-loc">📍 Bergen</span>
-              <span id="wx-mini-icon" aria-hidden="true">⛅</span>
-              <span id="wx-mini-temp">--°C</span>
-              <span class="sr-only">Åpne værdetaljer</span>
-            </button>
-            <div
-              id="wx-popover"
-              class="wx-popover"
-              role="dialog"
-              aria-label="Vær i Bergen"
-              hidden
-            >
-              <div class="wx-card">
-                <div class="wx-row">
-                  <div id="wx-icon" class="wx-icon" aria-hidden="true">⛅</div>
-                  <div class="wx-main">
-                    <div id="nowcast-status" class="wx-temp">Laster…</div>
-                    <div id="wx-desc" class="wx-desc">—</div>
-                  </div>
-                </div>
-                <ul id="nowcast-list" class="wx-tags"></ul>
-                <small id="nowcast-source" class="muted"></small>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- Søk: skjult label + valgfri knapp -->
+        <form class="nav-search" role="search" action="#" aria-label="Søk">
+          <label for="q" class="sr-only">Søk</label>
+          <input id="q" name="q" type="search" placeholder="Søk..." autocomplete="off" />
+          <!-- <button type="submit">Søk</button> -->
+        </form>
       </div>
     </header>
 
@@ -255,6 +220,5 @@
         <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
       </div>
     </footer>
-    <script src="../js/vaer.js" defer></script>
   </body>
 </html>
