@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Regnbyen Bergen A/S – Python-prosjekt</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-python">
+    <a class="skip-link" href="#main">Hopp til innhold</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <nav class="navbar" aria-label="Hovedmeny">
+          <ul class="menu">
+            <li><a href="hjemside.html">Hjem</a></li>
+            <li><a href="prosjekt.html">Om prosjektet</a></li>
+            <li>
+              <a href="prosjekt-python.html" aria-current="page"
+                >Python-prosjekt</a
+              >
+            </li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        
+      </div>
+    </header>
+
+    <main id="main">
+      
+      <header class="section hero hero--python" style="background:none !important;">
+        <figure class="hero-media">
+          <img
+            src="../img/img_ptyhon/Bergen_Kart2.PNG"
+            alt="Bergen kartvisning"
+          />
+        </figure>
+        <div class="container">
+          <h1>Python-prosjekt: Nedbør i Stor-Bergen</h1>
+          <p class="lead">
+            Maskinlæring + interaktive grafer. Kort, visuelt og forklarende.
+          </p>
+        </div>
+      </header>
+
+      <section class="section section--light intro-text">
+        <div class="container narrow">
+          <h2>Om prosjektet</h2>
+          <p>
+            Dette Python-prosjektet analyserer og visualiserer nedbør i
+            Stor-Bergen ved hjelp av
+            <strong>maskinlæring og polynomregresjon</strong>. Programmet viser
+            hvordan <em>data</em> kan brukes til å forstå lokale værmønstre
+            gjennom interaktive grafer og kart.
+          </p>
+          <p>
+            Målet er å kombinere <strong>datavitenskap</strong> med
+            <strong>brukervennlig design</strong> fra rådata til et visuelt og
+            pedagogisk verktøy som forklarer variasjoner i nedbør gjennom året.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="intro">
+        <div class="container center-block">
+          <figure class="card figure-hero-soft fs-frame">
+            <img
+              class="js-fullscreen fs-img"
+              src="../img/img_ptyhon/bilde1.png"
+              alt="Første visning i Python-appen"
+            />
+            <figcaption>
+              Første visning – kart, graf og kontrollknapper.
+            </figcaption>
+          </figure>
+
+          <div class="info-panels">
+            <details class="section-box section--amber">
+              <summary>Mål 🎯</summary>
+              <ul>
+                <li>Analysere og visualisere nedbør i Stor-Bergen.</li>
+                <li>Forbedre UI & modellpresisjon (R², MAE, σ).</li>
+                <li>Modulær kode (kart · graf · legend · modell).</li>
+              </ul>
+            </details>
+
+            <details class="section-box section--purple">
+              <summary>Bruk ⏯️</summary>
+              <ol class="zebra">
+                <li>Start: <code>python app.py</code> (PyCharm/venv).</li>
+                <li>
+                  Kart: zoom for detaljer · <strong>Reset</strong> for standard.
+                </li>
+                <li>Graf: radioknapp for <strong>Måned/Kvartal</strong>.</li>
+                <li>
+                  Legend: farge = årsnedbør · dråpestørrelse = månedsnedbør.
+                </li>
+              </ol>
+            </details>
+
+            <details class="section-box section--green">
+              <summary>Resultat ✅</summary>
+              <p>
+                Beste modell: grad <strong>5</strong> (R²=0.791, σ=44.32 mm,
+                MAE=33.64 mm).
+              </p>
+            </details>
+
+            <details class="section-box section--blue">
+              <summary>Tips 💡</summary>
+              <ul>
+                <li>«Klikk på kartet for estimat» er informasjons­tekst.</li>
+                <li>Gjennomsnittslinjen vises kun i månedlig modus.</li>
+                <li>Aktiv knapp endrer farge for tydelig tilstand.</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galleri: Oppgave 1–5 -->
+      <section class="section section--light" aria-labelledby="shots">
+        <div class="container">
+          <h2 id="shots">Skjermbilder (Oppgave 1–5)</h2>
+
+          <div class="cards gallery">
+            <figure class="card fs-frame">
+              <div class="img-row">
+                <img
+                  class="js-fullscreen"
+                  src="../img/img_ptyhon/bilde1.png"
+                  alt="Oppgave 2: Legend · graf · kart – visning A"
+                />
+                <img
+                  class="js-fullscreen"
+                  src="../img/img_ptyhon/bilde7.png"
+                  alt="Oppgave 2: Legend · graf · kart – visning B"
+                />
+              </div>
+              <figcaption>
+                Oppg. 1 – Kart, dråper, stedsnavn, Zoom + Reset.
+              </figcaption>
+              <details class="section-box section--amber">
+                <summary>Hva vi gjorde i Oppgave 1</summary>
+                <ul>
+                  <li>Nytt, mer lesbart Bergen-kart (QGIS-basert).</li>
+                  <li>
+                    Byttet sirkler → <strong>dråpe-ikoner</strong> med skalering
+                    etter <em>månedsnedbør</em>.
+                  </li>
+                  <li>
+                    <strong>Fargeskala</strong> (fra blå til lilla) =
+                    <em>årsnedbørsklasser</em>.
+                  </li>
+                  <li>
+                    <strong>Zoom-modus</strong> (scroll) og
+                    <strong>Reset view</strong> knapp.
+                  </li>
+                  <li>
+                    Tekst med outline for lesbarhet; stedsnavn: Bergen, Åsane,
+                    Fana, osv.
+                  </li>
+                  <li>
+                    Informasjonstekster: “Klikk på kartet for estimat” og “Tall
+                    = årsnedbør i hundre mm”.
+                  </li>
+                  <li>
+                    Layoutrettelser for å forhindre tekst-/talloverløp i Zoom.
+                  </li>
+                  <li>
+                    Vi <strong>delte koden i moduler</strong> for bedre
+                    struktur, lesbarhet og gjenbruk.
+                  </li>
+
+                  <li>
+                    <code>data_model.py</code> – Leser/forbereder data, trener
+                    polynom­modell og beregner
+                    <abbr title="Forklaringsgrad">R²</abbr>,
+                    <abbr title="Mean Absolute Error">MAE</abbr> og
+                    standardavvik (σ).
+                  </li>
+
+                  <li>
+                    <code>views_map.py</code> – Tegner kartet (QGIS-bakgrunn),
+                    plasserer <strong>dråper</strong>, stedsnavn og håndterer
+                    zoom/reset.
+                  </li>
+
+                  <li>
+                    <code>views_graph.py</code> – Viser søylegraf
+                    (måned/kvartal), aktiv knapp-stil og
+                    <strong>rød gjennomsnittslinje</strong> (kun i månedlig
+                    modus).
+                  </li>
+
+                  <li>
+                    <code>views_legend.py</code> – Lager
+                    <strong>legend</strong> (dråpestørrelse = månedsnedbør,
+                    farge = årsnedbør), konsekvent palett mot graf/kart.
+                  </li>
+
+                  <li>
+                    <code>viz_utils.py</code> – Hjelpefunksjoner (farger,
+                    etiketter, koordinater, tekst-outline).
+                  </li>
+
+                  <li>
+                    <em>Hvorfor modulært?</em> Enklere feilsøking og testing,
+                    ryddigere ansvar per fil, mindre merge-konflikter og raskere
+                    parallelt teamarbeid.
+                  </li>
+                </ul>
+              </details>
+            </figure>
+
+            <figure class="card fs-frame">
+              <div class="img-row">
+                <img
+                  class="js-fullscreen"
+                  src="../img/img_ptyhon/bilde1.png"
+                  alt="Oppgave 2: Legend · graf · kart – visning A"
+                />
+                <img
+                  class="js-fullscreen"
+                  src="../img/img_ptyhon/bilde3.png"
+                  alt="Oppgave 2: Legend · graf · kart – visning B"
+                />
+              </div>
+
+              <figcaption>
+                Oppg. 2 – 3-kol layout: Legend · Graf · Kart.
+              </figcaption>
+
+              <details class="section-box section--purple">
+                <summary>Hva vi gjorde i Oppgave 2</summary>
+                <ul>
+                  <li>
+                    Visningen ble delt i <strong>tre kolonner</strong>:
+                    <em>Legend</em> · <em>Graf</em> · <em>Kart</em>
+                    — slik at forklaringen alltid er synlig ved siden av
+                    dataene.
+                  </li>
+
+                  <li>
+                    <strong>Dråpestørrelse = månedsnedbør</strong> (mm/mnd):
+                    <br />
+                    vi bruker tre nivåer (≈ 20 · 60 · 120 mm). <br />
+                    Størrelsen skaleres proporsjonalt fra de samme månedstallene
+                    som mates inn i grafen/regresjonen (modell-konsistens).
+                  </li>
+
+                  <li>
+                    <strong>Farge = årsnedbørsklasse</strong> (mm/år) for romlig
+                    sammenlikning (lys blå → mørk lilla): <br />
+                    fem klasser:
+                    <span class="chip chip--c1">‹ 1300</span>
+                    <span class="chip chip--c2">1300–1699</span>
+                    <span class="chip chip--c3">1700–2499</span>
+                    <span class="chip chip--c4">2500–3199</span>
+                    <span class="chip chip--c5">≥ 3200</span>. <br />Samme
+                    palett brukes i grafen for visuell sammenheng.
+                  </li>
+                </ul>
+              </details>
+            </figure>
+
+            <figure class="card fs-frame">
+              <img
+                class="js-lightbox"
+                src="../img/img_ptyhon/bilde4.png"
+                alt="Oppgave 3: Rød stiplet gjennomsnittslinje"
+              />
+              <figcaption>Oppg. 3 – Rød gjennomsnittslinje + grid.</figcaption>
+              <details class="section-box section--green">
+                <summary>Hva vi gjorde i Oppgave 3</summary>
+                <ul>
+                  <li>
+                    La inn <strong>rød stiplet gjennomsnittslinje</strong> i
+                    grafen.
+                  </li>
+                  <li>
+                    Label på linjen (≈ mm/mnd), auto-plassering; grid for
+                    lesbarhet.
+                  </li>
+                  <li>Skygge-effekt; tekstoverløp forhindret.</li>
+                </ul>
+              </details>
+            </figure>
+
+            <figure class="card fs-frame">
+              <div class="img-row">
+                <img
+                  class="js-fullscreen"
+                  src="../img/img_ptyhon/bilde4.png"
+                  alt="Oppgave 2: Legend · graf · kart – visning A"
+                />
+                <img
+                  class="js-fullscreen"
+                  src="../img/img_ptyhon/bilde5.png"
+                  alt="Oppgave 2: Legend · graf · kart – visning B"
+                />
+              </div>
+              <figcaption>
+                Oppg. 4 – Måned ↔ Kvartal, aktiv knapp + tittel.
+                <details class="section-box section--blue">
+                  <summary>Hva vi gjorde i Oppgave 4</summary>
+                  <ul>
+                    <li>
+                      <strong>Radioknapper</strong> for å bytte
+                      <em>Måned ↔ Kvartal</em>.
+                    </li>
+                    <li>
+                      Aktiv knapp skifter farge; tittel oppdateres dynamisk.
+                    </li>
+                    <li>
+                      Gjennomsnittslinje kun i månedlig modus (for å unngå
+                      dobbeltreferanser)
+                    </li>
+                    <li>
+                      <strong>Hva viser «Måned»?</strong><br />
+                      12 stolper (J–D). Hver stolpe = estimert nedbør (mm/mnd)
+                      for valgt område. <br />Rød stiplet linje viser
+                      årsgjennomsnittet omregnet til mm/mnd.
+                    </li>
+
+                    <li>
+                      <strong>Hva viser «Kvartal»?</strong> <br />
+                      4 stolper (Q1=JFM, Q2=AMJ, Q3=JAS, Q4=OND). <br />
+                      Hver stolpe = <em>sum</em> nedbør for kvartalet
+                      (mm/kvartal). <br />
+                      Ingen gjennomsnittslinje i denne modusen; y-aksen angir mm
+                      per kvartal.
+                    </li>
+                  </ul>
+                </details>
+              </figcaption>
+            </figure>
+
+            <figure class="card fs-frame">
+              <img
+                class="js-fullscreen"
+                src="../img/img_ptyhon/bilde6.png"
+                alt="Oppgave 5: Terminalutskrift fra modelltesten"
+              />
+              <figcaption>Oppg. 5 – Modelltest (grad 1–6, KFold=5).</figcaption>
+              <details class="section-box section--indigo">
+                <summary>Hva vi gjorde i Oppgave 5</summary>
+                <ul>
+                  <li>
+                    Modelltest flyttet til egen fil:
+                    <code>oppgave5_degree_search.py</code>.
+                  </li>
+                  <li>
+                    KFold=5, grader 1–6; utskrift av <strong>R²</strong>,
+                    <strong>σ</strong> og <strong>MAE</strong>.
+                  </li>
+                  <li>
+                    Beste resultat: grad <strong>5</strong> (R²=0.791, σ=44.32
+                    mm, MAE=33.64 mm).
+                  </li>
+                  <li>Grad 6 viste svak overtilpasning → anbefalt grad 5.</li>
+                </ul>
+              </details>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Oppsummering + nedlasting -->
+      <section class="section">
+        <div class="container">
+          <div class="section-box section--indigo">
+            <h2>Oppsummering</h2>
+            <p>
+              Programmet er mer visuelt, presist og brukervennlig. Vi anbefaler
+              polynomgrad <strong>5</strong> (R²=0.791).
+            </p>
+            <p>
+              <a class="btn" href="downloads/Regnbyen_Python_Kildekode.zip"
+                >📦 Last ned kildekode (ZIP)</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section">
+      <div class="container">
+        <p class="muted">
+          © Regnbyen Bergen A/S – DAT111/ING100 Semesteroppgave 2025
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back-to-top -->
+    <button id="toTopBtn" aria-label="Til toppen">↑</button>
+
+    <script>
+     
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("img.fs-test").forEach((img) => {
+          img.style.cursor = "zoom-in";
+          img.addEventListener("click", () => {
+            const el = img;
+            const req =
+              el.requestFullscreen ||
+              el.webkitRequestFullscreen ||
+              el.msRequestFullscreen;
+            if (req) req.call(el);
+            else alert("Fullscreen API ikke støttet i denne nettleseren.");
+          });
+        });
+      });
+    </script>
+
+    <!-- Page JS -->
+    <script src="../js/python-page.js" defer></script>
+  </body>
+</html>

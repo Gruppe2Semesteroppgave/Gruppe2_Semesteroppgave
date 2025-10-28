@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Regnbyen Bergen A/S – Vær (daglig)</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="vaer">
     <!-- Skip-lenke: lar brukere hoppe forbi navigasjonen med tastatur -->
@@ -37,8 +43,15 @@
                   <li><a href="klaer.html">Klær</a></li>
                   <li><a href="sko.html">Sko</a></li>
                   <!-- Merk aktiv underside med aria-current -->
-                  <li><a href="vaer-daglig.html" aria-current="page">Vær (daglig)</a></li>
+                  <li>
+                    <a href="vaer-daglig.html" aria-current="page"
+                      >Vær (daglig)</a
+                    >
+                  </li>
                   <li><a href="regn-aktiviteter.html">Aktiviteter</a></li>
+                  <li>
+                    <a href="transport-sikkerhet.html">Transport-sikkerhet</a>
+                  </li>
 
                   <!-- Nestet undermeny: For bedrifter -->
                   <li class="dropdown">
@@ -48,7 +61,9 @@
                         <span class="sr-only"> – åpne/lukke undermeny</span>
                       </summary>
                       <ul class="submenu" aria-label="For bedrifter">
-                        <li><a href="for-bedrifter-produkter.html">Produkter</a></li>
+                        <li>
+                          <a href="for-bedrifter-produkter.html">Produkter</a>
+                        </li>
                         <li><a href="annonsering.html">Annonsering</a></li>
                       </ul>
                     </details>
@@ -57,14 +72,51 @@
               </details>
             </li>
             <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="prosjekt-python.html">Python-prosjekt</a></li>
           </ul>
         </nav>
 
-        <!-- Søk: skjult label gir tilgjengelig navn -->
-        <form class="nav-search" role="search" action="#" aria-label="Søk">
-          <label for="q" class="sr-only">Søk</label>
-          <input id="q" name="q" type="search" placeholder="Søk..." autocomplete="off" />
-        </form>
+        <!-- Verktøylinje: søk og vær -->
+
+        <div class="toolrow">
+          <form class="nav-search" role="search" aria-label="Søk">
+            <label for="q" class="sr-only">Søk</label>
+            <input id="q" name="q" type="search" placeholder="Søk..." />
+          </form>
+
+          <div class="wx-mini-wrap">
+            <button
+              id="wx-mini"
+              class="wx-mini"
+              aria-expanded="false"
+              aria-controls="wx-popover"
+            >
+              <span class="wx-loc">📍 Bergen</span>
+              <span id="wx-mini-icon" aria-hidden="true">⛅</span>
+              <span id="wx-mini-temp">--°C</span>
+              <span class="sr-only">Åpne værdetaljer</span>
+            </button>
+            <div
+              id="wx-popover"
+              class="wx-popover"
+              role="dialog"
+              aria-label="Vær i Bergen"
+              hidden
+            >
+              <div class="wx-card">
+                <div class="wx-row">
+                  <div id="wx-icon" class="wx-icon" aria-hidden="true">⛅</div>
+                  <div class="wx-main">
+                    <div id="nowcast-status" class="wx-temp">Laster…</div>
+                    <div id="wx-desc" class="wx-desc">—</div>
+                  </div>
+                </div>
+                <ul id="nowcast-list" class="wx-tags"></ul>
+                <small id="nowcast-source" class="muted"></small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -74,59 +126,143 @@
       <section class="section" aria-labelledby="page-title">
         <div class="container">
           <h1 id="page-title">Vær (daglig) &amp; regn-tips</h1>
-          <p>Denne siden gir en enkel daglig oversikt og korte råd for våte dager.</p>
+          <p>
+            Denne siden gir en enkel daglig oversikt og korte råd for våte
+            dager.
+          </p>
         </div>
       </section>
 
+      <!-- Været i dag: kartlar -->
+    <section class="section" id="sec-cards" aria-labelledby="wx-cards-title">
+  <div class="container">
+    <h2 id="wx-cards-title">Været i dag</h2>
+
+  
+    <div class="cards-row">
+      <!-- Nå -->
+      <article class="card card--ls" style="--ls-color:#2563eb" aria-labelledby="now-title">
+        <h3 id="now-title">Nå</h3>
+        <div id="now-body" class="wx-bloc" aria-live="polite"></div>
+      </article>
+
+      <!-- I dag -->
+      <article class="card card--ls" style="--ls-color:#7c3aed" aria-labelledby="today-title">
+        <h3 id="today-title">I dag</h3>
+        <div id="today-body" class="wx-bloc" aria-live="polite"></div>
+      </article>
+
+      <!-- I morgen -->
+      <article class="card card--ls" style="--ls-color:#0ea5e9" aria-labelledby="tomorrow-title">
+        <h3 id="tomorrow-title">I morgen</h3>
+        <div id="tomorrow-body" class="wx-bloc" aria-live="polite"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+      <!-- Tid for  (24 t) -->
+
+<section class="section" aria-labelledby="hourly">
+  <div class="container">
+    <div class="section-box section--blue">
+      <h2 id="hourly">Time for time (24 t)</h2>
+      <div class="table-wrap">
+        <table id="tbl-hourly" class="zebra">
+          <caption id="cap-hourly">Vær time for time – i dag</caption>
+          <thead>
+            <tr>
+              <th scope="col">Klokkeslett</th>
+              <th scope="col">Vær</th>
+              <th scope="col">Temp</th>
+              <th scope="col">Vind</th>
+              <th scope="col">Nedbør</th>
+            </tr>
+          </thead>
+          <tbody><!-- JS --></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 dager -->
+<section class="section" aria-labelledby="daily">
+  <div class="container">
+    <div class="section-box section--teal">
+      <h2 id="daily">7 dager</h2>
+      <div class="table-wrap">
+        <table id="tbl-daily" class="zebra">
+          <caption id="cap-daily">Vær — neste 7 dager</caption>
+          <thead>
+            <tr>
+              <th scope="col">Dag</th>
+              <th scope="col">Vær</th>
+              <th scope="col">Min/Max</th>
+              <th scope="col">Vind</th>
+              <th scope="col">Nedbør</th>
+            </tr>
+          </thead>
+          <tbody><!-- JS --></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
       <!-- Daglig tabell -->
-      <section class="section" aria-labelledby="daglig">
-        <div class="container">
-          <div class="section-box section--amber">
-            <h2 id="daglig">Daglig oversikt (eksempel)</h2>
-            <div class="table-wrap">
-              <table class="zebra">
-                <caption>Vær i dag – timesvis (eksempel)</caption>
-                <thead>
-                  <tr>
-                    <!-- Kolonneoverskrifter bør ha scope="col" -->
-                    <th scope="col">Klokkeslett</th>
-                    <th scope="col">Nedbør</th>
-                    <th scope="col">Vind</th>
-                    <th scope="col">Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>08:00</td>
-                    <td>Yr</td>
-                    <td>3 m/s</td>
-                    <td>Lett regnjakke holder</td>
-                  </tr>
-                  <tr>
-                    <td>12:00</td>
-                    <td>Regn</td>
-                    <td>5 m/s</td>
-                    <td>Paraply + hette</td>
-                  </tr>
-                  <tr>
-                    <td>16:00</td>
-                    <td>Regnbyger</td>
-                    <td>7 m/s</td>
-                    <td>Vind: paraply kan være upraktisk</td>
-                  </tr>
-                  <tr>
-                    <td>20:00</td>
-                    <td>Yr</td>
-                    <td>4 m/s</td>
-                    <td>Refleks anbefales</td>
-                  </tr>
-                </tbody>
-              </table>
+      <noscript>
+        <section class="section" aria-labelledby="daglig">
+          <div class="container">
+            <div class="section-box section--amber">
+              <h2 id="daglig">Daglig oversikt (eksempel)</h2>
+              <div class="table-wrap">
+                <table class="zebra">
+                  <caption>
+                    Vær i dag – timesvis (eksempel)
+                  </caption>
+                  <thead>
+                    <tr>
+                      <!-- Kolonneoverskrifter bør ha scope="col" -->
+                      <th scope="col">Klokkeslett</th>
+                      <th scope="col">Nedbør</th>
+                      <th scope="col">Vind</th>
+                      <th scope="col">Notat</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>08:00</td>
+                      <td>Yr</td>
+                      <td>3 m/s</td>
+                      <td>Lett regnjakke holder</td>
+                    </tr>
+                    <tr>
+                      <td>12:00</td>
+                      <td>Regn</td>
+                      <td>5 m/s</td>
+                      <td>Paraply + hette</td>
+                    </tr>
+                    <tr>
+                      <td>16:00</td>
+                      <td>Regnbyger</td>
+                      <td>7 m/s</td>
+                      <td>Vind: paraply kan være upraktisk</td>
+                    </tr>
+                    <tr>
+                      <td>20:00</td>
+                      <td>Yr</td>
+                      <td>4 m/s</td>
+                      <td>Refleks anbefales</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="muted">*Data er kun eksempel for design/testing.</p>
             </div>
-            <p class="muted">*Data er kun eksempel for design/testing.</p>
           </div>
-        </div>
-      </section>
+        </section>
+      </noscript>
 
       <!-- Tips kort -->
       <section class="section" aria-labelledby="tips">
@@ -185,5 +321,7 @@
         <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
       </div>
     </footer>
+    <script src="../js/vaer.js" defer></script>
+    <script src="../js/vaer_daglig.js"></script>
   </body>
 </html>

@@ -62,14 +62,51 @@
             </li>
 
             <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="prosjekt-python.html">Python-prosjekt</a></li>
           </ul>
         </nav>
 
-        <!-- Søk med ekte (skjult) label -->
-        <form class="nav-search" role="search" action="#" aria-label="Søk">
-          <label for="q" class="sr-only">Søk</label>
-          <input id="q" name="q" type="search" placeholder="Søk..." autocomplete="off" />
-        </form>
+        <!-- Verktøylinje: søk og vær -->
+
+        <div class="toolrow">
+          <form class="nav-search" role="search" aria-label="Søk">
+            <label for="q" class="sr-only">Søk</label>
+            <input id="q" name="q" type="search" placeholder="Søk..." />
+          </form>
+
+          <div class="wx-mini-wrap">
+            <button
+              id="wx-mini"
+              class="wx-mini"
+              aria-expanded="false"
+              aria-controls="wx-popover"
+            >
+              <span class="wx-loc">📍 Bergen</span>
+              <span id="wx-mini-icon" aria-hidden="true">⛅</span>
+              <span id="wx-mini-temp">--°C</span>
+              <span class="sr-only">Åpne værdetaljer</span>
+            </button>
+            <div
+              id="wx-popover"
+              class="wx-popover"
+              role="dialog"
+              aria-label="Vær i Bergen"
+              hidden
+            >
+              <div class="wx-card">
+                <div class="wx-row">
+                  <div id="wx-icon" class="wx-icon" aria-hidden="true">⛅</div>
+                  <div class="wx-main">
+                    <div id="nowcast-status" class="wx-temp">Laster…</div>
+                    <div id="wx-desc" class="wx-desc">—</div>
+                  </div>
+                </div>
+                <ul id="nowcast-list" class="wx-tags"></ul>
+                <small id="nowcast-source" class="muted"></small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -100,6 +137,38 @@
             <figcaption class="sr-only">Bybuss i regn</figcaption>
           </figure>
         </div>
+        <section class="section" aria-labelledby="skyss-tools">
+  <div class="container">
+    <h2 id="skyss-tools">Reiseverktøy (Skyss)</h2>
+    <p class="muted">Planlegg rute eller se rutetabeller.</p>
+
+    <div class="transport-links" role="group" aria-label="Skyss verktøy">
+      <!-- 1) Reiseplanlegger -->
+      <a class="btn tlink btn-blue"
+         href="https://reise.skyss.no/planner/travel-plans?timetype=DEPARTURE&ts=2025-10-22T09:23:14Z&service-modes=bus,expressbus,airportbus,train,passengerboat,carferry,tram,others&min-transfer=2&walk-speed=normal"
+         target="_blank" rel="noopener noreferrer">
+        <span class="title">Reiseplanlegger</span>
+        <span class="sub">Bybanen + buss + ..</span>
+      </a>
+
+      <!-- 2) Bybanen rutetabeller -->
+      <a class="btn tlink btn-green"
+         href="https://www.skyss.no/reise/rutetider/rutetabell-bybanen/"
+         target="_blank" rel="noopener noreferrer">
+        <span class="title">Bybanen – rutetabeller</span>
+        <span class="sub">Se alle Bybanen-ruter og tider (offisiell side)</span>
+      </a>
+
+      <!-- 3) Buss kart & rutetider -->
+      <a class="btn tlink btn-orange"
+         href="https://www.skyss.no/en/travel/timetables-and-maps/maps/#7a5ce393_c5f9_4c83_8a48_a995d61d7a78"
+         target="_blank" rel="noopener noreferrer">
+        <span class="title">Buss – kart & rutetider</span>
+        <span class="sub">Kart + tabell (Bergen/Vestland)</span>
+      </a>
+    </div>
+  </div>
+</section>
       </div>
     </section>
 
@@ -169,51 +238,6 @@
         </div>
       </section>
 
-      <!-- Driftsinfo -->
-      <section class="section" id="driftsinfo" aria-labelledby="driftsinfo-title">
-        <div class="container">
-          <div class="section-box section--blue">
-            <h2 id="driftsinfo-title">Driftsinfo (eksempel-tabell)</h2>
-            <div class="table-wrap">
-              <table class="zebra table--left-accent">
-                <caption>Mulige endringer i regn (eksempel)</caption>
-                <thead>
-                  <tr>
-                    <!-- Kolonneoverskrifter -->
-                    <th scope="col">Linje</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Notat</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <!-- Første celle identifiserer raden → scope="row" -->
-                    <th scope="row">Bybanen</th>
-                    <td>Skinne</td>
-                    <td>Normal</td>
-                    <td>Glatt plattform – hold deg fast</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Buss 12</th>
-                    <td>Buss</td>
-                    <td>Forsinket</td>
-                    <td>Tung trafikk i rushtid + regn</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Buss 50E</th>
-                    <td>Buss</td>
-                    <td>Omvei</td>
-                    <td>Vann i tunnel – midlertidig rute</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="muted">*Kun demodata. Siden er statisk i prosjektet.</p>
-          </div>
-        </div>
-      </section>
-
       <!-- Til toppen-lenke med tydelig mål -->
       <p><a class="toplink" href="#top">↑ Til toppen</a></p>
     </main>
@@ -223,5 +247,6 @@
         <p>© 2025 Regnbyen Bergen A/S – Prosjektoppgave DAT111/ING100</p>
       </div>
     </footer>
+    <script src="../js/vaer.js" defer></script>
   </body>
 </html>
